@@ -1,0 +1,106 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    port: 7777
+  
+website:
+    title: "alexfum75"
+    site-url: https://alexfum75.github.io/bb
+    navbar: 
+        background: white
+        pinned: false
+        right:
+          - icon: youtube
+            href: https://www.youtube.com/c/NeeldharaMisra42
+          - icon: linkedin
+            href: https://www.linkedin.com/in/neeldhara-misra-a54b6920/
+          - icon: github
+            href: https://github.com/neeldhara
+        left:
+          - href: about.qmd
+            text: About
+          - href: tt.qmd
+            text: ulla
+          - text: Research
+            menu:
+              - text: Overview
+                href: research/overview.qmd
+              - text: People
+                href: research/people.qmd
+              - text: Publications
+                href: research/publications.qmd
+              - text: Surveys
+                href: research/surveys
+          - text: Teaching
+            menu:
+              - text: Courses
+                href: courses/index.qmd
+              - text: Materials
+                href: materials/index.qmd
+          - text: Lists
+            menu:
+              - text: Puzzles
+                href: tgif/
+              - text: Bookmarks
+                href: bookmarks/
+          - text: Exposition
+            menu:
+              - text: Talks
+                href: talks/
+              - text: Videos
+                href: videos/
+          - href: events/
+            text: Events
+          - href: blog.qmd
+            text: Blog
+    sidebar:
+      - id: dsanotes
+        style: docked
+        search: true
+        sort: order
+        title: "Special Tools"
+        contents:
+          - section: "Titolo sezione"        
+            contents: "materials/dsanotes/*.qmd" 
+      - id: algonotes
+        style: docked
+        search: true
+        sort: order
+        title: "Special Tools"
+        contents:
+          - section: "DSA Notes"        
+            contents: "materials/algorithms/*.qmd" 
+      - id: cpnotes
+        style: docked
+        search: true
+        sort: order
+        title: "Special Tools"
+        contents:
+          - section: "DSA Notes"        
+            contents: "materials/cpnotes/*.qmd" 
+      - id: games
+        style: docked
+        search: true
+        sort: order
+        title: "Special Tools"
+        contents:
+          - section: "DSA Notes"        
+            contents: "materials/games/*.qmd" 
+            
+format:
+  html:
+    theme: 
+      - simplex
+      - custom.scss
+    js: scripts.js
+    css: css/styles.css
+    toc: true
+    html-math-method: katex
+    smooth-scroll: true
+    anchor-sections: true
+    include-in-header: analytics.html
+    include-after-body: footer.html
+    page-layout: full
+    filters:
+      - abstract-section

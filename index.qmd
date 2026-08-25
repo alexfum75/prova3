@@ -1,0 +1,119 @@
+---
+title: ""
+sidebar: false
+toc: false
+css: css/home.css
+include-after-body: footer.html
+layout: full
+listing:
+  - id: latest-blog
+    contents: blog  
+    sort: "date desc"
+    page-size: 7
+    max-items: 7
+    date-format: DD MMM, YYYY
+    template: homepage-blog.ejs
+    type: custom
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [date, title, categories]
+    feed: false
+  - id: latest-news
+    contents: news  
+    sort: "date desc"
+    max-items: 7
+    page-size: 7
+    type: custom
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [date, title, categories]
+    feed: false
+    template: news.ejs
+---
+
+:::{.column-body-outset}
+::: {layout="[[42,8,50]]"}
+
+<div>
+[![Visualizing Baranyai's theorem for the case when n=2.](/images/home.png){.rounded-corners .baranyai}
+[Visualizing Baranyai’s theorem for the case when n=2.]{.small-text}]{.centered-text}
+</div>
+
+<div>
+</div>
+
+<div>
+# Neeldhara Misra
+
+[Smt. Amba and Sri. V S Sastry Chair Associate Professor]{.small-text}<br>[Computer Science and Engineering at IIT Gandhinagar]{.small-text}<br>[(she/her)]{.small-text}
+
+<p>&nbsp;</p>
+
+[Blog](/blog.qmd) ⸱ [Mastodon](https://neeldhara.online) ⸱ [DBLP](https://dblp.org/pid/85/6789.html) ⸱ <a href="contact.html">Contact</a>
+
+<p>&nbsp;</p>
+
+My broad research interests include — in no particular order: algorithm design, computational social choice, combinatorial games. You can find out more about my work [here](research/overview.qmd).
+
+<p>&nbsp;</p>
+
+Recent PCs: FSTTCS 2024 (also co-organizing), Compute 2024 (also co-organizing), IJCAI 2024, ADT 2024, CALDAM 2024, FUN 2024, IWOCA 2024, IJCAI 2024, AAMAS 2023, CALDAM 2023, FSTTCS 2023, FUN 2022, MFCS 2022, IPEC 2022, IJCAI 2022, Compute 2022, CALDAM 2023, IPEC 2023 (co-chair with [Magnus Wahlström](https://pure.royalholloway.ac.uk/en/persons/magnus-wahlström))
+
+<p>&nbsp;</p>
+
+</div>
+
+:::
+:::
+
+:::{.column-body-outset}
+
+## Latest News
+
+::: {#latest-news}
+:::
+
+*[All News](news.qmd)*
+
+:::
+
+:::{.column-body-outset}
+
+## Latest Posts
+
+::: {#latest-blog}
+:::
+
+*[All Posts](blog.qmd)*
+
+:::
+
+
+:::{.column-body-outset}
+
+#### In case you care for (sporadic) updates by email.
+
+I mostly plan to write some notes to self: I can’t imagine that you’d be interested, but if, for some reason, you are, you are welcome.
+
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/neeldhara"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/neeldhara', 'popupwindow')"
+  class="embeddable-buttondown-form"
+>
+  <div class="form-group">
+  <input type="email" class="form-control" aria-describedby="emailHelp"  name="email" id="bd-email" placeholder="Enter your email."/>
+  <small id="emailHelp" class="form-text text-muted">I would (obviously!) never share your email with anyone else.</small>
+  </div>
+  <p>&nbsp;</p>
+  <div class="form-group">
+  <input type="submit" value="Subscribe"  class="btn btn-primary" />
+  </div>
+</form>
+
+:::
+
+

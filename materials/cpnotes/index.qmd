@@ -1,0 +1,10 @@
+---
+css: /css/materials.css
+page-layaout: full
+title: "Competitive Programming"
+sidebar: true
+toc: false
+page-navigation: true
+---
+
+Lecture notes coming soon!
