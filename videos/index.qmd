@@ -1,16 +1,17 @@
 ---
-title: "Videos"
+title: "Video"
 toc: false
 sidebar: false
-page-layout: full
-css: /css/talks.css
+css: /css/about.css
+format:
+  html:
+    page-layout: full
 ---
 
-:::{.column-body-outset}
+Registrazione video
 
-# Videos
-<p>&nbsp;</p>
+ <video width="1280" height="720" controls controlslist="nodownload">
+  <source src="https://www.dropbox.com/scl/fi/auty834iesbawabtvzk37/1968.mp4?rlkey=z9xci1ribvgqr5crt49tyoqgx&dl=1" type="video/mp4">
+  </br>Your browser does not support the video tag.
+</video>
 
-Coming Soon :)
-
-:::

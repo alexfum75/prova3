@@ -1,6 +1,49 @@
 [
   {
-    "listing": "/poems.html",
+    "listing": "/news.html",
+    "items": [
+      "/news/00001.html"
+    ]
+  },
+  {
+    "listing": "/exportober.html",
+    "items": []
+  },
+  {
+    "listing": "/events/2024/index.html",
+    "items": []
+  },
+  {
+    "listing": "/events/2022/index.html",
+    "items": []
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/blog/2023-exportober-workflows/index.html",
+      "/blog/building-interactives/index.html",
+      "/blog/13sheep/index.html",
+      "/blog/15-puzzle/index.html",
+      "/blog/building-websites-with-notion/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/2023-exportober-workflows/index.html",
+      "/blog/building-interactives/index.html",
+      "/blog/13sheep/index.html",
+      "/blog/b-matching-games/index.html",
+      "/blog/15-puzzle/index.html",
+      "/blog/building-websites-with-notion/index.html"
+    ]
+  },
+  {
+    "listing": "/cp.html",
+    "items": []
+  },
+  {
+    "listing": "/events/index.html",
     "items": []
   },
   {
@@ -16,50 +59,7 @@
     ]
   },
   {
-    "listing": "/events/index.html",
+    "listing": "/poems.html",
     "items": []
-  },
-  {
-    "listing": "/cp.html",
-    "items": []
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/2023-exportober-workflows/index.html",
-      "/blog/building-interactives/index.html",
-      "/blog/13sheep/index.html",
-      "/blog/b-matching-games/index.html",
-      "/blog/15-puzzle/index.html",
-      "/blog/building-websites-with-notion/index.html"
-    ]
-  },
-  {
-    "listing": "/archive.html",
-    "items": [
-      "/blog/2023-exportober-workflows/index.html",
-      "/blog/building-interactives/index.html",
-      "/blog/13sheep/index.html",
-      "/blog/15-puzzle/index.html",
-      "/blog/building-websites-with-notion/index.html"
-    ]
-  },
-  {
-    "listing": "/events/2022/index.html",
-    "items": []
-  },
-  {
-    "listing": "/events/2024/index.html",
-    "items": []
-  },
-  {
-    "listing": "/exportober.html",
-    "items": []
-  },
-  {
-    "listing": "/news.html",
-    "items": [
-      "/news/00001.html"
-    ]
   }
 ]

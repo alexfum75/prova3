@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Layout a Due Colonne con Footer – alexfum75</title>
+<title>tt – Articoli di astronomia</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,10 +69,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="https://analytics.neeldhara.website/api/script.js" data-site-id="a31a3a742777" defer=""></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/modules/effect-fade.min.css">
 
 
 <link rel="stylesheet" href="css/styles.css">
@@ -87,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">alexfum75</span>
+    <span class="navbar-title">Articoli di astronomia</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -183,17 +183,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/c/NeeldharaMisra42"> <i class="bi bi-youtube" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/neeldhara-misra-a54b6920/"> <i class="bi bi-linkedin" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/neeldhara"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -212,25 +202,9 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Layout a Due Colonne con Footer</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <div class="quarto-layout-panel" data-layout="[0.80, 0.20]">
@@ -244,25 +218,41 @@ ul.task-list li input[type="checkbox"] {
             </div>
             <!-- Paginazione e Frecce -->
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-        
-        <!-- Inizializzazione -->
         <script>
             const swiper = new Swiper('.swiper', {
+                effect: 'fade',
+                fadeEffect: {
+                crossFade: true // Mantiene fluida la dissolvenza tra la slide corrente e la successiva
+                },                
                 loop: true,
-                autoplay: { delay: 3000 },
+                autoplay: { delay: 2000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             });
         </script>
+<div style="background-color: #f0e4cc; padding: 5px; border-radius: 8px; border: 1px solid #eee;">
+<h2 class="anchored">
+Benvenuti nel mio sito
+</h2>
+<p>Qui potete trovare brevi post di astronomia (ed astronautica): curiosità, storia e personaggi che hanno contribuito a questa antica scienza. Questo blog non rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità. Non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. L’accesso al sito è interamente libero; verranno cancellati:</p>
+<ul>
+<li>commenti ritenuti offensivi, lesivi dell’immagine o dell’onorabilità di terzi, di genere spam e razzisti che appoggiano ideologie comuniste, fasciste, teocratiche o comunque appoggiano sistemi totalitari e reazionari non in linea con i valori della democrazia.</li>
+<li>commenti che contengono dati personali non conformi al rispetto delle norme vigenti (es: GDPR).</li>
+<li>commenti di laureati su Facebook o dottorati su Instagram.</li>
+</ul>
+<p>Clicca <a href="./privacy.html" class="btn btn-custom" role="button">QUI</a> per saperne di più sulla privacy oppure clicca <a href="./privacy.html" class="btn btn-custom" role="button">QUI</a> per leggere l’informativa sui cookie in base al Provvedimento generale del Garante privacy dell’8 Maggio 2014. L’autore del blog non è responsabile dei siti collegati tramite link né del loro contenuto che può essere soggetto a variazioni nel tempo. Le immagini e le foto pubblicate nel sito dove non espressamente citato nelle didascalie, articoli, link o altro sono di proprietà dell’autore.</p>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<h3 class="anchored">
-Servizi 1
-</h3>
-<p>Contenuto della seconda colonna laterale (occupa circa 1/3 della pagina).</p>
+<h2 class="anchored">Link amici</h2>
+<ol>
+<li><a target="”_blank”" href="https://it-it.facebook.com/gruppoastrofilivillasanta/">GAV - Gruppo Astrofili Villasanta</a></li>
+<li><a target="”_blank”" href="https://www.uai.it/sito/">UAI - Unione Astrofili Italiani</a></li>
+</ol>
+
+<h2 style="text-align: center" class="anchored">Previsioni aurore emisfero Sud</h2>
+<p><a href="http://services.swpc.noaa.gov/images/aurora-forecast-southern-hemisphere.jpg" target="_blank"> 
+<img src="http://services.swpc.noaa.gov/images/aurora-forecast-southern-hemisphere.jpg" style="width:310px;" alt="aurore emisfero sud"></a></p>        
 </div>
 </div>
 </div>
@@ -281,28 +271,32 @@ Servizi
 <!-- Spaziatore tra le colonne -->
 </div><div class="column" style="width:32%;">
 <div style="background-color: #f0e4cc; padding: 10px; border-radius: 8px; border: 1px solid #eee;">
-<h2 class="anchored">
-Servizi
-</h2>
-<p>Questo è il contenuto del secondo paragrafo. In questa sezione centrale puoi trattare un altro aspetto, condividere aggiornamenti o mostrare notizie recenti.</p>
+<p>
+<a href="http://www.moonconnection.com/current_moon_phase.phtml" target="_blank"><img src="http://www.moonmodule.com/cs/dm/hn.gif" width="300" height="130" border="0" alt=""></a>
+</p>
 </div>
 </div><div class="column" style="width:2%;">
 <!-- Spaziatore tra le colonne -->
 </div><div class="column" style="width:32%;">
 <div style="background-color: #f0e4cc; padding: 10px; border-radius: 8px; border: 1px solid #eee;">
-<h2 class="anchored">
-Servizi
-</h2>
-<p>Questo è il contenuto del terzo paragrafo. Qui puoi inserire risorse, contatti o qualsiasi altra informazione utile per completare la pagina.</p>
+<p><a class="human-made" title="100% Human Made Content"><img src="https://i.imgur.com/HQyMIr5.png" height="250px" width="250px" alt="100% Human Made Content, No AI Used"></a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<h3 class="anchored">
-Servizi
-</h3>
-<p>Contenuto della seconda colonna laterale (occupa circa 1/3 della pagina).</p>
+<h2 class="anchored">
+Previsioni aurore emisfero Nord
+</h2>
+<p>
+<a href="http://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg" target="_blank"> <img src="http://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg" style="width:310px;" alt="aurore emisfero nord"></a>
+</p>
+<h2 class="anchored">
+Il Sole adesso
+</h2>
+<p>
+<img src="http://sohowww.nascom.nasa.gov/data/realtime/eit_304/512/latest.jpg" target="_blank" alt="Il Sole adesso" style="width:280px;">
+</p>
 </div>
 </div>
 </div>
@@ -310,30 +304,41 @@ Servizi
     <section class="container author-box-full">
         <div class="author-box">
             <div class="author-image-container">
-                <img src="images/home.png" alt="Immagine dell'Autore" class="author-photo">
+                <img src="images/logo.jpeg" alt="Immagine dell'Autore" class="author-photo">
             </div>
             <div class="author-bio">
                 <h3 class="anchored">Informazioni sull'Autore</h3>
-                <p>Ciao! Sono un appassionato di sviluppo web e design. In questo box puoi inserire la tua biografia, raccontare la tua storia e condividere i tuoi interessi. Questo layout ti permette di presentarti in modo professionale.</p>
+               
+                    Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati. 
+                
+                    Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualita’ per sistemi di produzione TAM. Possiede le certificazioni PMI – CAPM®  e PMI – CPMAI®.
+               
             </div>
         </div>
-        <div>
-        </div>
         <div align="center">
-            © 2026 Il Tuo Sito Web. Creato con <a href="[https://quarto.org](https://quarto.org)" target="_blank">Quarto</a>.
-        </div>
-        <div>
-        </div>
-        <div align="center">
-            <a href="#privacy">Privacy Policy</a> &nbsp;|&nbsp; 
-            <a href="#terms">Termini di Servizio</a> &nbsp;|&nbsp; 
-            <a href="#contatti">Contatti</a>
+            <br><br>
+                Quest’opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza Creative Commons Attribuzione – Non commerciale – Stessa Licenza. 
+            <br><br>
+                Copyright © 2011 – 2026. Creato con <a href="[https://quarto.org](https://quarto.org)" target="_blank">Quarto</a>.
         </div>
   </section>  
 
 
 
 </main> <!-- /main -->
+<h2>Inquinamento luminoso</h2><a href="https://darksitefinder.com/maps/world.html#8/45.583/9.616" target="_blank">
+
+<img src="https://articolidiastronomia.com/wp-content/uploads/2021/01/inquinamento-1.jpg" width="490&quot;" height="430">
+
+</a>
+
+
+
+<p><a href="https://articolidiastronomia.com/il-cielo-nei-prossimi-giorni/" target="_blank"><br>
+
+<img src="https://articolidiastronomia.com/wp-content/uploads/2021/01/Cielo-Brianza.png" width="420&quot;" height="400"><br>
+
+</a></p>
 
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

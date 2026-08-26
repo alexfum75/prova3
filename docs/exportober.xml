@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>alexfum75</title>
+<title>Articoli di astronomia</title>
 <link>https://alexfum75.github.io/bb/exportober.html</link>
 <atom:link href="https://alexfum75.github.io/bb/exportober.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Tue, 25 Aug 2026 13:21:40 GMT</lastBuildDate>
+<lastBuildDate>Wed, 26 Aug 2026 13:11:58 GMT</lastBuildDate>
 </channel>
 </rss>

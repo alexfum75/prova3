@@ -5,18 +5,14 @@ project:
     port: 7777
   
 website:
-    title: "alexfum75"
+    title: "Articoli di astronomia"
     site-url: https://alexfum75.github.io/bb
     navbar: 
         background: white
         pinned: false
         right:
-          - icon: youtube
-            href: https://www.youtube.com/c/NeeldharaMisra42
           - icon: linkedin
             href: https://www.linkedin.com/in/neeldhara-misra-a54b6920/
-          - icon: github
-            href: https://github.com/neeldhara
         left:
           - href: about.qmd
             text: About
@@ -57,7 +53,6 @@ website:
     sidebar:
       - id: dsanotes
         style: docked
-        search: true
         sort: order
         title: "Special Tools"
         contents:
