@@ -1,0 +1,11 @@
+::: {.column-margin}
+
+<div>
+<h2>Previsioni aurore emisfero Nord</h2>
+<p><a href="http://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg" target="_blank"> <img src="http://services.swpc.noaa.gov/images/aurora-forecast-northern-hemisphere.jpg" style="width:310px;" alt="aurore emisfero nord"></a></p>
+
+<h2>Il Sole adesso</h2>
+<p><img src="http://sohowww.nascom.nasa.gov/data/realtime/eit_304/512/latest.jpg" target="_blank" alt="Il Sole adesso" style="width:280px;"></p>
+</div>
+
+:::

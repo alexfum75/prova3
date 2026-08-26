@@ -1,0 +1,49 @@
+---
+title: ""
+css: css/about.css
+---
+
+<h2>Per Informativa cookie</h2>
+
+{{< include sidebar1.qmd >}}
+
+::: {style="background-color: #f0e4cc; padding: 5px; border-radius: 8px; border: 1px solid #eee;"}
+::: {.drop-cap}
+
+Con il presente documento, ai sensi degli artt. 13 e 122 del D. Lgs. 196/2003 (“codice privacy”), nonché in base a quanto previsto dal Provvedimento generale del Garante privacy dell’8 maggio 2014, http://articolidiastronomia.com, fornisce agli utenti del sito alcune informazioni relative ai cookie utilizzati.
+:::
+
+::: {style="text-align: center;"}
+Cosa sono i cookie
+:::
+
+Un “cookie” è un piccolo file di testo creato sul computer dell’utente al momento in cui questo accede ad un determinato sito, con lo scopo di immagazzinare e trasportare informazioni. I cookie sono inviati da un server web (che è il computer sul quale è in esecuzione il sito web visitato) al browser dell’utente (Internet Explorer, Mozilla Firefox, Google Chrome, ecc.) e memorizzati sul computer di quest’ultimo; vengono, quindi, re-inviati al sito web al momento delle visite successive.
+
+Nel corso della navigazione l’utente potrebbe ricevere sul suo terminale anche cookie di siti diversi (c.d. cookies di “terze parti”), impostati direttamente da gestori di detti siti web e utilizzati per le finalità e secondo le modalità da questi definiti.
+
+::: {style="text-align: center;"}
+Tipologie di cookie utilizzate dal presente sito
+:::
+
+Ciò detto, il blog che si sta visitando utilizza cookies, anche di terze parti, per tracciare alcune preferenze dei visitatori e per migliorare la visualizzazione.
+
+Cookie del sito: [Sito del Garante](http://articolidiastronomia.com) utilizza cookie tecnici, rispetto ai quali, ai sensi dell’art. 122 del codice privacy e del Provvedimento del Garante dell’8 maggio 2014, non è richiesto alcun consenso da parte dell’interessato.
+Cookie di terze parti: I pulsanti e widget di social network (social button) consentono agli utenti che stanno navigando di interagire con un “click” direttamente con le piattaforme social (esempio, Facebook e Twitter). I social button utilizzati dal sito sono dei link che rinviano agli account del titolare sui social network raffigurati; si riportano comunque i link ove l’utente può prendere visione dell’informativa privacy relativa alla gestione dei dati da parte dei Social cui i pulsanti rinviano.
+
+Si rammenta inoltre che questo blog si avvale di una piattaforma gratuita gestita da terzi (nella fattispecie WordPress.com ossia Automattic inc.); qualora pertanto si volessero disattivare detti cookies, l’interessato può evitare l’installazione dei cookie attraverso apposite funzioni disponibili del browser che si sta utilizzando.
+
+* Microsoft Windows Explorer: http://windows.microsoft.com/en-us/windows-vista/block-or-allow-cookies
+* Google Chrome: https://support.google.com/accounts/answer/61416?hl=it
+* Mozilla Firefox: https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences?redirectlocale=en-US&redirectslug=Enabling+and+disabling+cookies
+* Apple Safari: http://www.apple.com/legal/privacy/
+F
+atte queste premesse, proseguire nella lettura senza agire autonomamente con le preferenze del proprio browser o dispositivo, equivale ad avere acconsentito all’uso dei cookies.
+
+Per ulteriori informazioni sulla politica dei cookies utilizzata dalla piattaforma di wordpress.com fare riferimento alla pagina Informativa di Automattic. inc
+
+[Sito del Garante](https://www.garanteprivacy.it/home)
+
+
+:::
+
+{{< include sidebar2.qmd >}}
