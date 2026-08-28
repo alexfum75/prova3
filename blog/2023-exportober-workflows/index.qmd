@@ -8,24 +8,6 @@ reference-location: margin
 format:
   html:
     code-fold: false
-jupyter:
-  kernel: python3
 ---
 
 I am going to use this post to document 31 workflows for feeling good about day to day work at the computer, one for each day of October, hopefully! Most of this will be in the context of macOS, but hopefully the principles are adataptable to the platforms and tools of your choice.
-
-```{python}
-import sys
-#| label: load-py-pckgs
-!{sys.executable} -m pip install ipyleaflet
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
-m = Map(
-  basemap=basemap_to_tiles(
-    basemaps.NASAGIBS.ModisTerraTrueColorCR, "2017-04-08"
-  ),
-  center=(52.204793, 360.121558),
-  zoom=4
-)
-m.add_layer(Marker(location=(52.204793, 360.121558)))
-m
-```

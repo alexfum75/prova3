@@ -30,7 +30,7 @@ h1{
 h2{
     color: #444; 
     border-bottom: 2px solid #555; 
-    padding-bottom: 5px; 
+    /*padding-bottom: 5px; */ /* no underline */
 }
 
 h3 { 
@@ -76,8 +76,8 @@ h4 {
 /* Stile per fare occupare l'intera larghezza alla sezione autore */
 .author-box-full {
     width: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border-radius: 8px; 
 }
 
@@ -89,6 +89,7 @@ h4 {
 }
 
 /* Sidebar Title / Header */
+
 .sidebar-title {
   font-weight: 700;
   color: #2c3e50;
@@ -209,7 +210,6 @@ nav ul li a {
   align-items: center;
   height: 450px;
   width: 850px;
-  border: 3px solid rgb(241, 225, 2); 
 }
 
 .swiper-slide {

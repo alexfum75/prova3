@@ -16,19 +16,13 @@ listing:
     template: events-2024.ejs
 ---
 
-:::{.column-body-outset}
 
 # Events
 
-<p>&nbsp;</p>
-
 These are events from 2024.
-
-<!-- These events are made possible with extraordinary support from student volunteers, administrative staff, colleagues from the discipline, and funding agencies. The nature of my involvement in these events is revealed by hovering on <i class="bi bi-robot"></i> :) -->
 
 <p>&nbsp;</p>
 
 ::: {#events}
 :::
 
-:::

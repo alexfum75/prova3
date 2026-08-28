@@ -11,12 +11,9 @@ website:
         background: white
         pinned: false
         right:
-          - icon: linkedin
-            href: https://www.linkedin.com/in/neeldhara-misra-a54b6920/
-        left:
           - href: about.qmd
             text: About
-          - href: tt.qmd
+          - href: tt3.qmd
             text: ulla
           - text: Research
             menu:
@@ -60,7 +57,6 @@ website:
             contents: "materials/dsanotes/*.qmd" 
       - id: algonotes
         style: docked
-        search: true
         sort: order
         title: "Special Tools"
         contents:
@@ -68,7 +64,6 @@ website:
             contents: "materials/algorithms/*.qmd" 
       - id: cpnotes
         style: docked
-        search: true
         sort: order
         title: "Special Tools"
         contents:
@@ -76,13 +71,11 @@ website:
             contents: "materials/cpnotes/*.qmd" 
       - id: games
         style: docked
-        search: true
         sort: order
         title: "Special Tools"
         contents:
           - section: "DSA Notes"        
             contents: "materials/games/*.qmd" 
-            
 format:
   html:
     theme: 
@@ -94,8 +87,11 @@ format:
     html-math-method: katex
     smooth-scroll: true
     anchor-sections: true
-    include-in-header: analytics.html
-    include-after-body: footer.html
+    #include-in-header: analytics.html
     page-layout: full
     filters:
       - abstract-section
+
+execution:
+  engine: jupyter
+  freeze: auto  # Recommended: prevents re-running code on every site build unless modified      

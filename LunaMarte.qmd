@@ -1,0 +1,33 @@
+---
+title: "Perche' andare sulla Luna"
+format:
+  html:
+    title-block-banner: images/Artemis1.png
+    title-block-banner-color: white
+css: css/about.css    
+---
+
+> "Che fai tu, luna, in ciel?"
+> — Giacomo Leopardi, Canto notturno di un pastore errante dell’Asia
+
+La data del 29 Agosto si sta avvicinando e, se non ci sono altri problemi, la missione Artemis 1 partirà alla volta della Luna per un tour della durata prevista di 42 giorni circa. Sebbene in un contesto e scopi diversi degli anni ’60 si tratta comunque di un passo importante per il ritorno sul nostro satellite naturale: questa volta con la collaborazione di altre agenzie spaziali.
+
+Per chi ancora si chiedesse perché investire nell’esplorazione spaziale, perché andare sulla Luna o pensare di pianificare una missione umana su Marte trovate un’eccellente e straordinaria risposta [QUI](https://lettersofnote.com/2012/08/06/why-explore-space/){.btn .btn-custom role="button"} 
+La lettera venne scritta da Ernst Stuhlinger, uno scienziato tedesco (si signori, tedesco) che al termine della Seconda Guerra Mondiale venne trasferito ad Huntsville dagli alleati durante l’Operazione Paperclip (insieme ad un centinaio di altri scienziati tra cui Von Braun).
+
+Negli anni ’60 infatti una suora dello Zambia (Mary Jucunda) scrisse alla NASA chiedendo perché spendere soldi per lo spazio quando sulla Terra molte persone muoiono di fame o vivono in condizioni pessime. La risposta di Ernst è stata semplicemente eccezionale e si riassume nella prima parte della lettera (prime 20 righe circa) e con un fantastico esempio nel passo successivo quando narra la storia di un Conte Tedesco.
+
+Oggi la fame del mondo c’è ancora e, nonostante la pandemia, il problema non è così grave come 60 anni fa, ma ci sono altre sfide: crisi energetica, Riscaldamento Globale, …. e purtroppo esistono ANCORA gruppi che si pongono le stesse domande cercando di manipolare o strumentalizzare l’opinione pubblica trovando pure un seguito fra le persone che NON conoscono cosa vuol dire scienza o fare ricerca e sviluppo (R&D) (perché non hanno mai passato un giorno in un laboratorio di un centro di ricerca o in un ufficio tecnico).
+
+Questo gruppo di persone sono da me chiamate “populisti“, un termine che risale alla Guerra Fredda e riciclato oggi impropriamente (chissà perché o come mai) in un contesto diverso con un significato diverso. A queste persone è dedicata ancora la stessa risposta di Ernst. Bisogna pensare prima di parlare per non manipolare la mente delle persone.
+
+La Luna è una tappa fondamentale per il grande salto: conoscerla e studiarla ne vale sempre la pena. Ricordatevi: se abitiamo questo Pianeta lo dobbiamo anche a Lei.
+
+::: {.callout-important}
+PS: fare R&D significa trovare risposte a domande che ancora non conosciamo e che mettiamo in un recipiente. Un domani (inteso anche tra una generazione) potremmo trovare ad affrontare domande su problemi che ancora non sappiamo esistono ma noi, cercando nel cesto, abbiamo già le risposte. Tutto ciò costa un investimento iniziale (e continuo nel tempo) ma questo ci rende preparati ai problemi di domani.
+
+Nel caso delle missioni Apollo ricordateVi che ogni dollaro speso, ne ha fruttati ben 7 (circa) di ritorno e delle innovazioni che sono nate ne ha beneficiato TUTTA l’Umanità.
+:::
+
+
+{{< include footer.qmd >}}
