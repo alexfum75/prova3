@@ -8,10 +8,100 @@ format:
     page-layout: full
 ---
 
-Registrazione video
+## Tabella con Riproduttore Video
 
+<!-- Tabella in puro HTML per evitare conflitti con Quarto -->
+<table class="table">
+  <thead>
+    <tr>
+      <th style="text-align: center;">ID</th>
+      <th>Descrizione</th>
+      <th style="text-align: center;">Azione</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">1</td>
+      <td>Introduzione al progetto</td>
+      <td style="text-align: center;">
+        <button class="btn btn-primary btn-sm" onclick="showVideo('video1')">Guarda Video</button>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">2</td>
+      <td>Tutorial installazione</td>
+      <td style="text-align: center;">
+        <button class="btn btn-primary btn-sm" onclick="showVideo('video2')">Guarda Video</button>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">3</td>
+      <td>Demo finale</td>
+      <td style="text-align: center;">
+        <button class="btn btn-primary btn-sm" onclick="showVideo('video3')">Guarda Video</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Un solo riquadro dinamico per il video -->
+<div id="video-wrapper" style="display: none; margin-top: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4 id="video-title" style="margin-top: 0;"></h4>
+  <video id="main-video" width="100%" height="auto" controls>
+    <source id="video-source" src="" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
+</div>
+
+
+<script>
+// Lista dei video associati agli ID
+const videoData = {
+  'video1': {
+    title: 'Video 1: Introduzione',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+  },
+  'video2': {
+    title: 'Video 2: Tutorial',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+  },
+  'video3': {
+    title: 'Video 3: Demo',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+  }
+};
+
+let currentVideoId = null;
+
+function showVideo(videoId) {
+  const wrapper = document.getElementById('video-wrapper');
+  const video = document.getElementById('main-video');
+  const source = document.getElementById('video-source');
+  const title = document.getElementById('video-title');
+
+  // Se clicchi sullo stesso bottone, nascondi il video
+  if (currentVideoId === videoId && wrapper.style.display !== 'none') {
+    wrapper.style.display = 'none';
+    video.pause();
+    currentVideoId = null;
+    return;
+  }
+
+  // Aggiorna titolo e sorgente video
+  title.innerText = videoData[videoId].title;
+  source.src = videoData[videoId].src;
+  
+  // Ricarica il player con il nuovo video
+  video.load();
+  wrapper.style.display = 'block';
+  currentVideoId = videoId;
+}
+</script>
+
+
+<!--
  <video width="1280" height="720" controls controlslist="nodownload">
   <source src="https://www.dropbox.com/scl/fi/auty834iesbawabtvzk37/1968.mp4?rlkey=z9xci1ribvgqr5crt49tyoqgx&dl=1" type="video/mp4">
   </br>Your browser does not support the video tag.
-</video>
+</video> -->
 

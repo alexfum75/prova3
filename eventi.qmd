@@ -2,6 +2,9 @@
 title: "Conferenze"
 toc: false
 css: css/about.css
+format:
+  html:
+    page-layout: full
 ---
 
 <!-- Importazione della libreria e dello stile di Leaflet tramite CDN -->
@@ -16,19 +19,19 @@ Qui optete trovare conferenze, caffe' astronomici e corsi tenuti dall'autore su 
 
 ::: {.hello-quarto-banner}
 ::: {.grid .gap-1 .text-center .align-items-center}
-::: {.g-col-12 .align-items-center}
+::: {.g-col-12 .align-items-center}   
 <ul class="nav nav-pills d-flex flex-wrap" id="hello-quarto-tab" role="tablist" text-align="center">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true">Conferenze</button>
+    <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true" >Conferenze</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false">Caffe' astronomico</button>
+    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffe' astronomico</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Corsi-tab" data-bs-toggle="tab" data-bs-target="#Corsi" type="button" role="tab" aria-controls="Corsi" aria-selected="false">Corsi di astronomia</button>
+    <button class="nav-link" id="Corsi-tab" data-bs-toggle="tab" data-bs-target="#Corsi" type="button" role="tab" aria-controls="Corsi" aria-selected="false" >Corsi di astronomia</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Apollo-tab" data-bs-toggle="tab" data-bs-target="#Apollo" type="button" role="tab" aria-controls="Apollo" aria-selected="false">Ingegneria per l'Apollo</button>
+    <button class="nav-link" id="Apollo-tab" data-bs-toggle="tab" data-bs-target="#Apollo" type="button" role="tab" aria-controls="Apollo" aria-selected="false" >Ingegneria per l'Apollo</button>
   </li>
 </ul>
 :::

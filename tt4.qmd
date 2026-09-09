@@ -11,7 +11,7 @@ filters:
 ::: {.sezione-superiore}
 
 ::: {.grid .text-center}
-::: {.g-col-4  .p-2 .align-items-center style="background-color: #edeaea; color: #3182ce;"}
+::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
 <h2>Benvenuti</h2>
 Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non e' un blog ne'  rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
@@ -65,7 +65,7 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 ::: {.sezione-inferiore}
 
 ::: {.grid .text-center}
-::: {.g-col-4  .p-2 .align-items-center style="background-color: #edeaea; color: #3182ce;"}
+::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il cielo adesso</h2>
 <p>Stai programmando una serata osservativa? Meglio conoscere in anticipo
 il meteo per il luogo di osservazione. Scegli la localita' e vedi quali oggetti
@@ -73,13 +73,13 @@ celesti puoi vedere in cielo.</p>
 [Guarda il cielo](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
 :::
 
-::: {.g-col-4  .p-2 style="background-color: #edeaea; color: #3182ce;"}
+::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il libro</h2>
 <p>In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica"</p>
 [Guarda l'anteprima](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
 :::
 
-::: {.g-col-4  .p-2 style="background-color: #edeaea; color: #3182ce;"}
+::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <!-- .p-2 padding -->
 <h2>I progetti</h2>
 <p>I progetti personali portati a termine per il completamento del libro.</p>
