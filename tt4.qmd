@@ -13,7 +13,7 @@ filters:
 ::: {.grid .text-center}
 ::: {.g-col-4  .p-2 .align-items-center style="background-color: #edeaea; color: #3182ce;"}
 <h2>Benvenuti</h2>
-Qui potete trovare brevi post di astronomia ed astronautica: curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo blog non rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
+Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non e' un blog ne'  rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
 ::: {.grid .text-center}
 ::: {.g-col-6}
