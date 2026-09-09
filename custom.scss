@@ -136,3 +136,19 @@ $bs-body-bg: white !important;
 .green{
     color: $mygreen !important;
 }
+
+/* custom.scss */
+.nav-footer {
+  background-color: #1e293b; /* Dark background */
+  color: #f8fafc;            /* Light text */
+  border-top: none;          /* Optional: removes the default Quarto border */
+}
+
+/* Ensure links remain visible */
+.nav-footer a {
+  color: #38bdf8;
+}
+
+.nav-footer a:hover {
+  color: #7dd3fc;
+}

@@ -1,0 +1,31 @@
+/* css styles */
+
+.MuiBox-root .mui-style-1yuhvjn{
+    width: 100% !important;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+/* # bottom line menu */
+.navbar{
+    border: 0px;
+    border-bottom: 1px;
+    border-color: grey;
+    border-style: dashed;
+    padding: 0px;
+}
+
+.navbar-title{
+    font-size: 1.75em !important;
+    color: rgb(246, 159, 46) !important;
+}
+
+.nav-footer{
+    background-color: white !important;
+}
+

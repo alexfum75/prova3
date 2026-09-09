@@ -1,0 +1,51 @@
+[
+  {
+    "listing": "/news.html",
+    "items": [
+      "/news/00001.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/2023-exportober-workflows/index.html",
+      "/blog/building-interactives/index.html",
+      "/blog/13sheep/index.html",
+      "/blog/15-puzzle/index.html",
+      "/blog/building-websites-with-notion/index.html",
+      "/news/00001.html"
+    ]
+  },
+  {
+    "listing": "/exportober.html",
+    "items": []
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/blog/2023-exportober-workflows/index.html",
+      "/blog/building-interactives/index.html",
+      "/blog/13sheep/index.html",
+      "/blog/15-puzzle/index.html",
+      "/blog/building-websites-with-notion/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/2023-exportober-workflows/index.html",
+      "/blog/building-interactives/index.html",
+      "/blog/13sheep/index.html",
+      "/blog/15-puzzle/index.html",
+      "/blog/building-websites-with-notion/index.html"
+    ]
+  },
+  {
+    "listing": "/cp.html",
+    "items": []
+  },
+  {
+    "listing": "/poems.html",
+    "items": []
+  }
+]

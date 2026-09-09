@@ -1,0 +1,63 @@
+
+| Anno | Titolo conferenza | Luogo | Mappa |
+| :--- | :--- | :--- | :--- |
+| **2024** | International Conference on Machine Learning | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
+| | Annual AI & Ethics Symposium | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
+| **2025** | European Web Development Summit | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
+| | Global Data Science Forum | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Monti e Tognetti, Monza, Italia', 'Piscina')">🗺️ Mostra</button> |
+
+<br>
+
+<script>
+var mapInstance = null;
+var markerInstance = null;
+
+function mostraMappaDaIndirizzo(indirizzo, titolo) {
+  var container = document.getElementById('container-mappa-leaflet');
+  container.style.display = 'block';
+
+  // 1. Chiamata API al servizio di geocodifica di OpenStreetMap (Nominatim)
+  var url = 'https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(indirizzo);
+
+  fetch(url)
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data && data.length > 0) {
+        var lat = parseFloat(data[0].lat);
+        var lon = parseFloat(data[0].lon);
+
+        // 2. Inizializza Leaflet se è la prima volta
+        if (!mapInstance) {
+          mapInstance = L.map('map').setView([lat, lon], 13);
+          
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(mapInstance);
+
+          markerInstance = L.marker([lat, lon]).addTo(mapInstance);
+        } else {
+          // Se la mappa esiste già, sposta la vista con animazione fluida
+          mapInstance.flyTo([lat, lon], 13, { duration: 1.5 });
+          markerInstance.setLatLng([lat, lon]);
+        }
+
+        // 3. Aggiunge il popup con il titolo e l'indirizzo trovato
+        markerInstance.bindPopup('<b>' + titolo + '</b><br>' + indirizzo).openPopup();
+
+        // Scroll verso la mappa
+        container.scrollIntoView({ behavior: 'smooth' });
+
+        // Fix per il rendering di Leaflet quando il div diventa visibile
+        setTimeout(function() {
+          mapInstance.invalidateSize();
+        }, 300);
+      } else {
+        alert('Indirizzo non trovato: ' + indirizzo);
+      }
+    })
+    .catch(function(error) {
+      console.error('Errore durante la geocodifica:', error);
+    });
+}
+</script>

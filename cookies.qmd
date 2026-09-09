@@ -5,7 +5,6 @@ css: css/about.css
 
 <h2>Per Informativa cookie</h2>
 
-{{< include sidebar1.qmd >}}
 
 ::: {style="background-color: #f0e4cc; padding: 5px; border-radius: 8px; border: 1px solid #eee;"}
 ::: {.drop-cap}
@@ -46,4 +45,6 @@ Per ulteriori informazioni sulla politica dei cookies utilizzata dalla piattafor
 
 :::
 
-{{< include sidebar2.qmd >}}
+---
+
+{{< include footer.qmd >}}

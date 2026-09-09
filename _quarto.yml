@@ -6,14 +6,15 @@ project:
   
 website:
     title: "Articoli di astronomia"
+    favicon: images/logo.jpeg
     site-url: https://alexfum75.github.io/bb
     navbar: 
         background: white
         pinned: false
         right:
-          - href: about.qmd
-            text: About
-          - href: tt3.qmd
+          - href: LunaMarte.qmd
+            text: Perche' la Luna
+          - href: tt4.qmd
             text: ulla
           - text: Research
             menu:
@@ -43,10 +44,12 @@ website:
                 href: talks/
               - text: Videos
                 href: videos/
-          - href: events/
-            text: Events
+          - href: eventi.qmd
+            text: Conferenze
           - href: blog.qmd
             text: Blog
+          - icon: linkedin
+            href: https://www.linkedin.com/in/alessandrofumagalli/
     sidebar:
       - id: dsanotes
         style: docked
@@ -76,10 +79,15 @@ website:
         contents:
           - section: "DSA Notes"        
             contents: "materials/games/*.qmd" 
+
 format:
   html:
+    mainfont: "Baskerville, sans-serif"
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnfonts.com">
     theme: 
-      - simplex
+      - cosmos
       - custom.scss
     js: scripts.js
     css: css/styles.css

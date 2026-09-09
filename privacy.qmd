@@ -5,7 +5,6 @@ css: css/about.css
 
 <h2>Informativa Privacy (art.13 D.Lgs. 196/2003 e seguenti)</h2>
 
-{{< include sidebar1.qmd >}}
 
 ::: {style="background-color: #f0e4cc; padding: 5px; border-radius: 8px; border: 1px solid #eee;"}
 ::: {.drop-cap}
@@ -20,4 +19,6 @@ Per far valere tali diritti, l’Utente può rivolgersi direttamente al Titolare
 
 :::
 
-{{< include sidebar2.qmd >}}
+---
+
+{{< include footer.qmd >}}
