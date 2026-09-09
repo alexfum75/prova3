@@ -15,7 +15,7 @@ website:
           - href: LunaMarte.qmd
             text: Perche' la Luna
           - href: tt4.qmd
-            text: ulla
+            text: Home
           - text: Research
             menu:
               - text: Overview
@@ -38,12 +38,8 @@ website:
                 href: tgif/
               - text: Bookmarks
                 href: bookmarks/
-          - text: Exposition
-            menu:
-              - text: Talks
-                href: talks/
-              - text: Videos
-                href: videos/
+          - href: videos/index.qmd
+            text: Registrazioni
           - href: eventi.qmd
             text: Conferenze
           - href: blog.qmd

@@ -1,16 +1,19 @@
 ---
 title: ""
 css: css/about.css    
+format:
+  html:
+    page-layout: full
 ---
 
 <h2>Conferenze</h2>
 
 | Anno | Titolo conferenza | Luogo | Mappa |
 | :--- | :--- | :--- | :--- |
-| **2024** | International Conference on Machine Learning | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️</button> |
-| | Annual AI & Ethics Symposium | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️</button> |
-| **2025** | European Web Development Summit | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
-| | Global Data Science Forum | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Monti e Tognetti, Monza, Italia', 'Piscina')">🗺️</button> |
+| **2024** | International Conference on Machine Learning | GAV, Villasanta | <button style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">Mostra mappa</button> |
+| | Annual AI & Ethics Symposium | GAV, Villasanta | <button style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">Mostra mappa</button> |
+| **2025** | European Web Development Summit | GAV, Villasanta | <button style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">Mostra mappa</button> |
+| | Global Data Science Forum | GAV, Villasanta | <button style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="mostraMappaDaIndirizzo('Via Monti e Tognetti, Monza, Italia', 'Piscina')">Mostra mappa</button> |
 
 <br>
 
@@ -22,7 +25,6 @@ function mostraMappaDaIndirizzo(indirizzo, titolo) {
   var container = document.getElementById('container-mappa-leaflet');
   container.style.display = 'block';
 
-  // 1. Chiamata API al servizio di geocodifica di OpenStreetMap (Nominatim)
   var url = 'https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(indirizzo);
 
   fetch(url)
@@ -32,7 +34,6 @@ function mostraMappaDaIndirizzo(indirizzo, titolo) {
         var lat = parseFloat(data[0].lat);
         var lon = parseFloat(data[0].lon);
 
-        // 2. Inizializza Leaflet se è la prima volta
         if (!mapInstance) {
           mapInstance = L.map('map').setView([lat, lon], 13);
           
@@ -43,18 +44,14 @@ function mostraMappaDaIndirizzo(indirizzo, titolo) {
 
           markerInstance = L.marker([lat, lon]).addTo(mapInstance);
         } else {
-          // Se la mappa esiste già, sposta la vista con animazione fluida
           mapInstance.flyTo([lat, lon], 13, { duration: 1.5 });
           markerInstance.setLatLng([lat, lon]);
         }
 
-        // 3. Aggiunge il popup con il titolo e l'indirizzo trovato
         markerInstance.bindPopup('<b>' + titolo + '</b><br>' + indirizzo).openPopup();
 
-        // Scroll verso la mappa
         container.scrollIntoView({ behavior: 'smooth' });
 
-        // Fix per il rendering di Leaflet quando il div diventa visibile
         setTimeout(function() {
           mapInstance.invalidateSize();
         }, 300);

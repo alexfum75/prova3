@@ -2,6 +2,7 @@
 title: "Perche' la Luna"
 format:
   html:
+    page-layout: full
     title-block-banner: images/Artemis1.jpg
     title-block-banner-color: white
 css: css/about.css    
