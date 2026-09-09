@@ -225,12 +225,10 @@ nav ul li a {
   background-color: #f0e4cc;
   color: green;
   border-radius: 2px;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 8px 15px;
   text-decoration: none; 
   display: inline-block;
 }
-
 
 /* capitol letter */
 
@@ -262,6 +260,7 @@ nav ul li a {
 }
 
 .caption{
+   margin: auto;
    text-align: center;
 }
 
@@ -270,7 +269,7 @@ nav ul li a {
   font-size: 0.85rem;
   color: #555;
   background: rgba(245, 245, 245, 0.8);
-  padding: 10px 14px;
+  padding: 5px 5px;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }

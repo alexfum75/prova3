@@ -1,10 +1,16 @@
+---
+title: ""
+css: css/about.css    
+---
+
+<h2>Conferenze</h2>
 
 | Anno | Titolo conferenza | Luogo | Mappa |
 | :--- | :--- | :--- | :--- |
-| **2024** | International Conference on Machine Learning | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
-| | Annual AI & Ethics Symposium | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
+| **2024** | International Conference on Machine Learning | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️</button> |
+| | Annual AI & Ethics Symposium | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️</button> |
 | **2025** | European Web Development Summit | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Bestetti 8, Villasanta, Italia', 'GAV')">🗺️ Mostra</button> |
-| | Global Data Science Forum | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Monti e Tognetti, Monza, Italia', 'Piscina')">🗺️ Mostra</button> |
+| | Global Data Science Forum | GAV, Villasanta | <button onclick="mostraMappaDaIndirizzo('Via Monti e Tognetti, Monza, Italia', 'Piscina')">🗺️</button> |
 
 <br>
 
