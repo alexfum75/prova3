@@ -1,0 +1,48 @@
+project:
+  type: book
+  output-dir: ../docs/book
+
+book:
+  edition: 1
+  favicon: cover.png
+  title: "Il cielo per tutti"
+  subtitle: "Piccolo zibaldone di astronomia e astronautica"
+  date-format: long
+  page-navigation: true
+  image: cover.png
+  publisher: "Editore"
+  license: "CC BY-NC"
+  sidebar:
+    background: light
+    search: false
+    style: docked
+    collapse-level: 6
+    border: true
+  cover-image: cover.png
+  repo-actions: [issue]
+  repo-url: https://github.com/alexfum75/test_book
+  repo-branch: gh-pages
+  reader-mode: true
+
+  page-footer: 
+    border: true
+    center: "Copyright 2026, Alessandro Fumagalli" 
+    left: | 
+      written by Alessandro Fumagalli
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+
+
+
