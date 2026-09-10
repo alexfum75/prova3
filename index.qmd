@@ -1,119 +1,96 @@
 ---
-title: ""
-sidebar: false
+title: "Pagina a Due Colonne"
+css: css/about.css
 toc: false
-css: css/home.css
-include-after-body: footer.html
-layout: full
-listing:
-  - id: latest-blog
-    contents: blog  
-    sort: "date desc"
-    page-size: 7
-    max-items: 7
-    date-format: DD MMM, YYYY
-    template: homepage-blog.ejs
-    type: custom
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    fields: [date, title, categories]
-    feed: false
-  - id: latest-news
-    contents: news  
-    sort: "date desc"
-    max-items: 7
-    page-size: 7
-    type: custom
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    fields: [date, title, categories]
-    feed: false
-    template: news.ejs
+filters:
+  - carousel
 ---
 
-:::{.column-body-outset}
-::: {layout="[[42,8,50]]"}
+<!-- begin sup -->
 
-<div>
-[![Visualizing Baranyai's theorem for the case when n=2.](/images/home.png){.rounded-corners .baranyai}
-[Visualizing Baranyai’s theorem for the case when n=2.]{.small-text}]{.centered-text}
-</div>
+::: {.sezione-superiore}
 
-<div>
-</div>
+::: {.grid .text-center}
+::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
+<h2>Benvenuti</h2>
+Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non e' un blog ne'  rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
-<div>
-# Neeldhara Misra
+::: {.grid .text-center}
+::: {.g-col-6}
+[ Privacy ](/privacy.qmd){.btn .btn-custom role="button"}
+:::
 
-[Smt. Amba and Sri. V S Sastry Chair Associate Professor]{.small-text}<br>[Computer Science and Engineering at IIT Gandhinagar]{.small-text}<br>[(she/her)]{.small-text}
+::: {.g-col-6}
+ [ Cookie ](/cookies.qmd){.btn .btn-custom role="button"}
+:::
+:::
 
-<p>&nbsp;</p>
+:::
 
-[Blog](/blog.qmd) ⸱ [Mastodon](https://neeldhara.online) ⸱ [DBLP](https://dblp.org/pid/85/6789.html) ⸱ <a href="contact.html">Contact</a>
+::: {.g-col-8 .p-2}
 
-<p>&nbsp;</p>
-
-My broad research interests include — in no particular order: algorithm design, computational social choice, combinatorial games. You can find out more about my work [here](research/overview.qmd).
-
-<p>&nbsp;</p>
-
-Recent PCs: FSTTCS 2024 (also co-organizing), Compute 2024 (also co-organizing), IJCAI 2024, ADT 2024, CALDAM 2024, FUN 2024, IWOCA 2024, IJCAI 2024, AAMAS 2023, CALDAM 2023, FSTTCS 2023, FUN 2022, MFCS 2022, IPEC 2022, IJCAI 2022, Compute 2022, CALDAM 2023, IPEC 2023 (co-chair with [Magnus Wahlström](https://pure.royalholloway.ac.uk/en/persons/magnus-wahlström))
-
-<p>&nbsp;</p>
-
-</div>
+:::: {.carousel controls="false" indicators="false" duration=1500} 
+:::: {.carousel-item image="https://picsum.photos/800/400?random=1" style="height: 400px;"} 
+:::
+:::: {.carousel-item image="https://picsum.photos/800/400?random=2" style="height: 400px;"} 
+:::
+:::: {.carousel-item image="https://picsum.photos/800/400?random=3" style="height: 400px;"} 
+:::
+:::
 
 :::
 :::
 
-:::{.column-body-outset}
+:::
+<!-- end sup -->
 
-## Latest News
+```{=html}
+<section class="container author-box-full">
+    <div class="author-box">
+        <div class="author-image-container">
+            <img src="images/logo.jpeg" alt="Immagine dell'Autore" class="author-photo">
+        </div>
+        <div class="author-bio">
+            <h3>Informazioni sull'Autore</h3>
+            <p>Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati.</br> Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualita’.</br>E' certificato  PMI–CAPM® e PMI–CPMAI®.
+            </p>
+        </div>
+    </div>
+</section>
+```
 
-::: {#latest-news}
+---
+
+<!-- begin inf -->
+::: {.sezione-inferiore}
+
+::: {.grid .text-center}
+::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
+<h2>Il cielo adesso</h2>
+<p>Stai programmando una serata osservativa? Meglio conoscere in anticipo
+il meteo per il luogo di osservazione. Scegli la localita' e vedi quali oggetti
+celesti puoi vedere in cielo.</p>
+[Guarda il cielo](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
 :::
 
-*[All News](news.qmd)*
+::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
+<h2>Il libro</h2>
+<p>In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica"</p>
+[Guarda l'anteprima](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
+:::
+
+::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
+<!-- .p-2 padding -->
+<h2>I progetti</h2>
+<p>I progetti personali portati a termine per il completamento del libro.</p>
+[Guarda i progetti](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
+:::
 
 :::
 
-:::{.column-body-outset}
-
-## Latest Posts
-
-::: {#latest-blog}
 :::
+<!-- end inf -->
 
-*[All Posts](blog.qmd)*
+---
 
-:::
-
-
-:::{.column-body-outset}
-
-#### In case you care for (sporadic) updates by email.
-
-I mostly plan to write some notes to self: I can’t imagine that you’d be interested, but if, for some reason, you are, you are welcome.
-
-<form
-  action="https://buttondown.email/api/emails/embed-subscribe/neeldhara"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/neeldhara', 'popupwindow')"
-  class="embeddable-buttondown-form"
->
-  <div class="form-group">
-  <input type="email" class="form-control" aria-describedby="emailHelp"  name="email" id="bd-email" placeholder="Enter your email."/>
-  <small id="emailHelp" class="form-text text-muted">I would (obviously!) never share your email with anyone else.</small>
-  </div>
-  <p>&nbsp;</p>
-  <div class="form-group">
-  <input type="submit" value="Subscribe"  class="btn btn-primary" />
-  </div>
-</form>
-
-:::
-
-
+{{< include footer.qmd >}}

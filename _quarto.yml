@@ -1,9 +1,10 @@
 project:
   type: website
   output-dir: docs
+  pre-render: python/replace_strings.py  
   preview:
     port: 7777
-  
+
 website:
     title: "Articoli di astronomia"
     favicon: images/logo.jpeg
@@ -13,31 +14,11 @@ website:
         pinned: false
         right:
           - href: LunaMarte.qmd
-            text: Perche' la Luna
+            text: Perché la Luna
           - href: tt4.qmd
             text: Home
-          - text: Research
-            menu:
-              - text: Overview
-                href: research/overview.qmd
-              - text: People
-                href: research/people.qmd
-              - text: Publications
-                href: research/publications.qmd
-              - text: Surveys
-                href: research/surveys
-          - text: Teaching
-            menu:
-              - text: Courses
-                href: courses/index.qmd
-              - text: Materials
-                href: materials/index.qmd
-          - text: Lists
-            menu:
-              - text: Puzzles
-                href: tgif/
-              - text: Bookmarks
-                href: bookmarks/
+          - href: friends/friends.qmd
+            text: Link
           - href: videos/index.qmd
             text: Registrazioni
           - href: eventi.qmd
@@ -78,7 +59,8 @@ website:
 
 format:
   html:
-    mainfont: "Baskerville, sans-serif"
+    fontsize: 17px  # You can use em, px, rem, or pt (e.g., 18px, 12pt)  
+    mainfont: "Armarialbold, sans-serif;"
     include-in-header:
       text: |
         <link rel="stylesheet" href="https://cdnfonts.com">
