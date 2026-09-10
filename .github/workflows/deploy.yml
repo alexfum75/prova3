@@ -48,20 +48,16 @@ jobs:
       - name: Render Main Website
         run: quarto render
 
-      - name: Upload Site Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'docs/'
-
       - name: Render Sub-Book
         run: |
           cd book
           quarto render
+          cd ..
 
       - name: Upload Book Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/book'
+          path: 'docs/'
 
       - name: Deploy to GitHub Pages
         id: deployment

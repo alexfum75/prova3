@@ -18,10 +18,10 @@ book:
     style: docked
     collapse-level: 6
     border: true
-  cover-image: cover.png
+  cover-image: book/cover.png
   repo-actions: [issue]
-  repo-url: https://github.com/alexfum75/test_book
-  repo-branch: gh-pages
+  repo-url: https://github.com/alexfum75/prova3/libro
+  #repo-branch: gh-pages
   reader-mode: true
 
   page-footer: 
@@ -37,12 +37,45 @@ book:
     - summary.qmd
     - references.qmd
 
+  navbar:
+    logo: logo.jpeg
+    left:
+      - text: "Il libro"
+        href: index.qmd
+      #- text: "Conferenze"
+      #  href: conferenze.qmd
+        
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alessandrofumagalli/
+      - icon: avatar.png
+
+    background: light
+    border: true
+    search: false
+    tools:
+      - icon: github
+        href: https://github.com/
+
 format:
   html:
+    grid:
+      sidebar-width: 280px  # default 250px
+      body-width: 950px # default 800px
+      margin-width: 200px # default 250px
+      gutter-width: 1.5rem  
+    toc: true
+    toc-location: right
+    toc-title: "Contents"
+    #toc-depth: 5
+    #respect-user-color-scheme: true
     theme:
-      - cosmo
-      - brand
+      dark:
+        - cosmo  #slatr
+        #- solar.scss
+      light: yeti #spacelab
 
 
-
+reference-location: margin
+citation-location: margin
 
