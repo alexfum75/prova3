@@ -1,0 +1,72 @@
+---
+title: "Collegamenti esterni"
+toc: false
+listing:   
+ - id: Osservatori
+   contents: site.yml
+   type: grid
+   include:
+     category: "Osservatori" 
+ - id: Musei
+   contents: site.yml
+   type: grid
+   include:
+     category: "Musei"       
+ - id: Associazioni
+   contents: site.yml
+   type: grid
+   include:
+     category: "Associazioni" 
+---
+
+<h2>Collegamenti esterni</h2>
+
+Una raccolta curata di blog, progetti e siti web esterni
+
+```{=css}
+
+.quarto-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Ensure circular avatar images */
+.quarto-grid-item .card-img-top {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 20%;
+  margin: 1.5rem auto 0 auto;
+}
+
+.quarto-grid-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.quarto-grid-item:hover {
+  transform: translateY(-4px);
+}
+```
+
+## Associazioni
+
+::: {#Associazioni}
+:::
+
+## Osservatori
+
+::: {#Osservatori}
+:::
+
+## Musei
+
+::: {#Musei}
+:::
+
+::: {.content-hidden}
+<!-- Hidden data blocks mapping to specific targets -->
+:::
+
+---
+
+{{< include /footer.qmd >}}

@@ -1,0 +1,47 @@
+- title: "Museo navigazione astronomica di Bellagio"
+  author: ""
+  path: "https://sites.google.com/view/bellagiomuseo"
+  image: /images/Bellagio.png
+  category: "Musei"
+
+- title: "Osservatorio astronomico Saint Barthelemy"
+  author: ""
+  path: "https://www.oavda.it"
+  image: https://www.oavda.it/wp-content/uploads/2017/08/Logo_img.png
+  category: "Osservatori"
+
+- title: "Osservatorio astrofisico di Catania"
+  author: "INAF"
+  path: "https://www.oact.inaf.it"
+  image: https://www.oact.inaf.it/wp-content/uploads/2019/04/logo_oact.png
+  category: "Osservatori"
+
+- title: "GAV"
+  author: "Gruppo Astrofili Villasanta"
+  path: "https://groups.io/g/gruppoastrofilivillasanta"
+  image: https://www.promontevecchia.it/wp-content/uploads/2021/01/gav-1.png
+  category: "Associazioni"
+
+- title: "FOAM13"
+  author: "Osservatorio di Tradate"
+  path: "https://www.foam13.it"
+  image: https://www3.varesenews.it/immagini_articoli/201201/FOAM13.jpg
+  category: "Osservatori"
+
+- title: "UAI"
+  author: "Unione astrofili italiani"
+  path: "https://www.uai.it/sito"
+  image: https://www.uai.it/sito/wp-content/uploads/2021/06/UAI_logo_sitoweb.png
+  category: "Associazioni"
+
+- title: "La Torre del Sole"
+  author: "Parco astronomico "
+  path: "https://www.latorredelsole.it"
+  image: https://www.latorredelsole.it/wp-content/uploads/2020/07/logo-torre-del-sole-bianco-3colori-cerchio-bianco.png
+  category: "Osservatori"
+
+- title: "Radiotelescopio di Medicina"
+  author: "INAF"
+  path: "https://www.med.ira.inaf.it"
+  image: /images/Medicina.png
+  category: "Osservatori"
