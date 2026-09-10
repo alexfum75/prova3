@@ -5,7 +5,6 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
-# Grant GitHub Actions permissions to publish to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -29,42 +28,26 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-    # Step A: Install Python
+      # Python Setup (senza cache: 'pip')
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip' # Caches dependencies to speed up future builds
 
-      # Step B: Install Jupyter and dependencies
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install jupyter
-    
-    # Step A: Install R
+
+      # R Setup (senza setup-renv)
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: 'release'
 
-      # Step B: Option 1 - Restore via renv (Recommended)
-      - name: Restore renv package cache
-        uses: r-lib/actions/setup-renv@v2
-
-      # Step B: Option 2 - Manual package installation (Alternative to renv)
-      # - name: Install R packages
-      #   uses: r-lib/actions/setup-r-dependencies@v2
-      #   with:
-      #     packages: |
-      #       any::tidyverse
-      #       any::knitr
-  
-      # Render the main website first (_site directory created)
       - name: Render Main Website
         run: quarto render
 
-      # Render the sub-book into ../docs/book
       - name: Render Sub-Book
         run: |
           cd book
