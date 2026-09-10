@@ -1,0 +1,49 @@
+name: Render and Deploy Quarto Site & Sub-Book
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+# Grant GitHub Actions permissions to publish to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # Render the main website first (_site directory created)
+      - name: Render Main Website
+        run: quarto render
+
+      # Render the sub-book into _site/book
+      - name: Render Sub-Book
+        run: |
+          cd book
+          quarto render
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
