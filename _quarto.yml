@@ -8,14 +8,18 @@ project:
 website:
     title: "Articoli di astronomia"
     favicon: images/logo.jpeg
-    site-url: https://alexfum75.github.io/bb
+    site-url: https://alexfum75.github.io/prova3
     navbar: 
         background: white
         pinned: false
         right:
+          - href: index.qmd
+            text: Home
+          - href: book/index.html
+            text: Book
           - href: LunaMarte.qmd
             text: Perché la Luna
-          - href: tt4.qmd
+          - href: index.qmd
             text: Home
           - href: friends/friends.qmd
             text: Link
@@ -59,7 +63,7 @@ website:
 
 format:
   html:
-    fontsize: 17px  # You can use em, px, rem, or pt (e.g., 18px, 12pt)  
+    fontsize: 17px 
     mainfont: "Armarialbold, sans-serif;"
     include-in-header:
       text: |
