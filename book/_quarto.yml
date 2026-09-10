@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: ../docs/book
+  preview:
+    port: 7777
+    browser: true
 
 book:
   edition: 1
@@ -18,10 +21,10 @@ book:
     style: docked
     collapse-level: 6
     border: true
-  cover-image: book/cover.png
+  cover-image: cover.png
   repo-actions: [issue]
   repo-url: https://github.com/alexfum75/prova3/libro
-  #repo-branch: gh-pages
+  repo-branch: main
   reader-mode: true
 
   page-footer: 
