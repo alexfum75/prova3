@@ -4,6 +4,6 @@ title: ""
 
 ::: {style="background-color: #ffffff; padding: 5px; border-radius: 8px; border: 0px solid #eee;"}
 
-<p style="text-align: center;"><b>Quest’opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza &nbsp;&nbsp;
-![](/images/Licenza.png){.lightbox fig-align="center" width="110px"}</b><b>&nbsp;&nbsp;Copyright 2026.</b></p>  
+<p style="text-align: center;">Quest’opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza &nbsp;&nbsp;
+![](/images/Licenza.png){.lightbox fig-align="center" width="110px"}&nbsp;&nbsp;Copyright 2026.</p>  
 :::

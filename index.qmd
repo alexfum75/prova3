@@ -72,20 +72,20 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 <p>Stai programmando una serata osservativa? Meglio conoscere in anticipo
 il meteo per il luogo di osservazione. Scegli la localita' e vedi quali oggetti
 celesti puoi vedere in cielo.</p>
-[Guarda il cielo](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
+[Guarda il cielo](index.qmd){.btn .btn-custom role="button"}
 :::
 
 ::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il libro</h2>
 <p>In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica"</p>
-[Guarda l'anteprima](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
+[Guarda l'anteprima](index.qmd){.btn .btn-custom role="button"}
 :::
 
 ::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <!-- .p-2 padding -->
 <h2>Portfolio conferenze</h2>
 <p>Le conferenze, corsi e caffe' astronomici dell'autore per la cittadinanza.</p>
-[Guarda i progetti](/docs/get-started/index.qmd){.btn .btn-custom role="button"}
+[Guarda i progetti](index.qmd){.btn .btn-custom role="button"}
 :::
 
 :::

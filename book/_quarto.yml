@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: ../docs/book
   preview:
-    #port: 7777
+    port: 7777
     browser: true
 
 book:

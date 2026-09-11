@@ -4,6 +4,9 @@ project:
   pre-render: python/replace_strings.py  
   preview:
     port: 7777
+  render:
+    - "*.qmd"
+    - "!book/"
 
 website:
     title: "Articoli di astronomia"
@@ -16,11 +19,9 @@ website:
           - href: index.qmd
             text: Home
           - href: book/index.html
-            text: Book
+            text: Libro
           - href: LunaMarte.qmd
             text: Perché la Luna
-          - href: index.qmd
-            text: Home
           - href: friends/friends.qmd
             text: Link
           - href: videos/index.qmd
@@ -30,7 +31,7 @@ website:
           - href: blog.qmd
             text: Blog
           - icon: linkedin
-            href: https://www.linkedin.com/in/alessandrofumagalli/
+            href: https://www.linkedin.com/in/alessandrofumagalli
     sidebar:
       - id: dsanotes
         style: docked
