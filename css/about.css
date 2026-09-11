@@ -104,11 +104,11 @@ h4 {
   padding: 6px 12px;
 }
 
-/* Hover State */
+/* Hover State
 .sidebar-navigation .sidebar-item a:hover {
   background-color: #e2e8f0;
   color: #000000;
-}
+} */
 
 /* Active Link State */
 .sidebar-navigation .sidebar-item.active > a {
@@ -254,10 +254,10 @@ nav ul li a {
   transition: background-color 0.2s ease;
 }
 
-.btn-rounded:hover {
+/*.btn-rounded:hover {
   background-color: #0056b3;
   color: white;
-}
+}*/
 
 .caption{
    margin: auto;

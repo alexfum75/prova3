@@ -13,15 +13,19 @@ filters:
 ::: {.grid .text-center}
 ::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
 <h2>Benvenuti</h2>
-Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non e' un blog ne'  rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
+Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non è un blog nè rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
 ::: {.grid .text-center}
 ::: {.g-col-6}
-[ Privacy ](/privacy.qmd){.btn .btn-custom role="button"}
+<div class="mt-1 d-flex justify-content-center w-100">
+  [Privacy <i class="bi bi-shield-lock ms-2"></i>](privacy.qmd){.btn .btn-custom role="button"}
+</div>
 :::
 
 ::: {.g-col-6}
- [ Cookie ](/cookies.qmd){.btn .btn-custom role="button"}
+<div class="mt-1 d-flex justify-content-center w-100">
+  [Cookie <i class="bi bi-cookie ms-2"></i>](cookies.qmd){.btn .btn-custom role="button"}
+</div>
 :::
 :::
 
@@ -54,7 +58,7 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
         </div>
         <div class="author-bio">
             <h3>Informazioni sull'Autore</h3>
-            <p>Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati.</br> Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualita’.</br>E' certificato  PMI–CAPM® e PMI–CPMAI®.
+            <p>Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati.</br> Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualità.</br>È certificato  PMI–CAPM ® e PMI–CPMAI ®.
             </p>
         </div>
     </div>
@@ -69,23 +73,27 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 ::: {.grid .text-center}
 ::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il cielo adesso</h2>
-<p>Stai programmando una serata osservativa? Meglio conoscere in anticipo
-il meteo per il luogo di osservazione. Scegli la localita' e vedi quali oggetti
-celesti puoi vedere in cielo.</p>
-[Guarda il cielo](index.qmd){.btn .btn-custom role="button"}
+<p class="mb-0">Stai programmando una serata osservativa? Meglio conoscere in anticipo
+il meteo per il luogo di osservazione. Scegli la località e vedi quali oggetti celesti puoi vedere in cielo.</p>
+<div class="mt-1 d-flex justify-content-center w-100">
+  [Scopri <i class="bi bi-stars ms-2"></i>](index.qmd){.btn .btn-custom role="button"}
+</div>
 :::
 
 ::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il libro</h2>
-<p>In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica"</p>
-[Guarda l'anteprima](index.qmd){.btn .btn-custom role="button"}
+<p class="mb-0">In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica"</p>
+<div class="mt-1 d-flex justify-content-center w-100">
+  [Anteprima <i class="bi bi-book ms-2"></i>](book/index.html){.btn .btn-custom role="button"}
+</div>
 :::
 
-::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
-<!-- .p-2 padding -->
+::: {.g-col-4 .p-2 .d-flex .flex-column style="background-color: #ffffff; color: #3182ce; min-height: 250px;"}
 <h2>Portfolio conferenze</h2>
-<p>Le conferenze, corsi e caffe' astronomici dell'autore per la cittadinanza.</p>
-[Guarda i progetti](index.qmd){.btn .btn-custom role="button"}
+<p class="mb-0">Le conferenze, corsi e caffè astronomici dell'autore per la cittadinanza.</p>
+<div class="mt-1 d-flex justify-content-center w-100">
+  [Elenco <i class="bi bi-easel2 ms-2"></i>](eventi.qmd){.btn .btn-custom role="button"}
+</div>
 :::
 
 :::

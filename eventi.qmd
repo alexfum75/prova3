@@ -12,7 +12,7 @@ format:
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <h2>Impegno per la citadinanza</h2>
-Qui potete trovare conferenze, caffe' astronomici e corsi tenuti dall'autore su argomenti di astronomia ed astronautica.
+Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su argomenti di astronomia ed astronautica.
 
 ::: {.hello-quarto .alt-background}
 ::: {.content-block .mt-2 .pt-4 .pb-2 .text-center .align-items-center}
@@ -25,7 +25,7 @@ Qui potete trovare conferenze, caffe' astronomici e corsi tenuti dall'autore su 
     <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true" >Conferenze</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffe' astronomico</button>
+    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffè astronomico</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="Corsi-tab" data-bs-toggle="tab" data-bs-target="#Corsi" type="button" role="tab" aria-controls="Corsi" aria-selected="false" >Corsi di astronomia</button>
@@ -86,6 +86,123 @@ Qui potete trovare conferenze, caffe' astronomici e corsi tenuti dall'autore su 
 <div id="container-mappa-leaflet" style="display:none; margin-top: 20px;">
   <div id="map" style="width: 100%; height: 400px; border-radius: 8px; border: 1px solid #ccc;"></div>
 </div>
+
+<style>
+    #container-testo-leaflet {
+        display: none;
+        border: none;         /* Rimuove il contorno */
+        outline: none;        /* Rimuove il contorno blu quando ci clicchi sopra */
+        font-size: 16px;
+        margin-top: 15px;
+        padding: 5px;
+        background: transparent; /* Rende lo sfondo trasparente */
+    }
+</style>
+
+<!-- Un solo riquadro dinamico per il video -->
+<div id="video-wrapper" style="display: none; margin-top: 20px; padding: 15px;">
+  <h4 id="video-title" style="margin-top: 0;"></h4>
+  <div id="video-summary" style="margin-top: 0; text-align: justify;" ></div>
+  <p></p>
+  <video id="main-video" width="960" height="540" controls controlslist="nodownload">  
+    <source id="video-source" src="" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
+</div>
+
+<script>
+var mapInstance = null;
+var markerInstance = null;
+
+function mostraMappaDaIndirizzo(indirizzo, titolo, intro) {
+  var container = document.getElementById('container-mappa-leaflet');
+  container.style.display = 'block';
+
+  var url = 'https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(indirizzo);
+
+  fetch(url)
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data && data.length > 0) {
+        var lat = parseFloat(data[0].lat);
+        var lon = parseFloat(data[0].lon);
+
+        if (!mapInstance) {
+          mapInstance = L.map('map').setView([lat, lon], 13);
+          
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(mapInstance);
+
+          markerInstance = L.marker([lat, lon]).addTo(mapInstance);
+        } else {
+          mapInstance.flyTo([lat, lon], 13, { duration: 1.5 });
+          markerInstance.setLatLng([lat, lon]);
+        }
+
+        markerInstance.bindPopup('<b>' + titolo + '</b><br>' + indirizzo).openPopup();
+
+        container.scrollIntoView({ behavior: 'smooth' });
+
+        setTimeout(function() {
+          mapInstance.invalidateSize();
+        }, 300);
+      } else {
+        alert('Indirizzo non trovato: ' + indirizzo);
+      }
+    })
+    .catch(function(error) {
+      console.error('Errore durante la geocodifica:', error);
+    });
+}
+
+const videoData = {
+  'video1': {
+    title: 'Apollo 8: la politica gli uomini e la missionè,
+    summary: 'La missione Apollo 8, la più rischiosa del programma Apollo, è avvenuta al termine di un anno molto turbolento negli USA: la guerra nel Vietnam, la lotta per il riconoscimento dei diritti ed il calo di consenso al programma spaziale. </br>Come relatore ho effettuato una accurata ricerca storica e cronologica dei principali eventi del 1968 allo scopo di comprendere il contesto politico e culturale quando il programma spaziale era ripreso dopo l’arresto momentaneo in seguito all’incidente del test AS 204.  La principale bibliografia è costituita da interviste ai protagonisti, libri scritti da chi ha lavorato al programma Apollo, Flight Journal e report tecnici delle aziende sub-appaltatrici di missione. Vengono riportati parte dei discorsi e sentimenti dell’epoca.</br>La conferenza è divisa in tre parti che si interallacciano tra di loro: analisi dei principali eventi culturali e politci del 1968 in ordine cronologico da Gennaio a Dicembre. Si narra di fatti spiacevoli, violenze, discriminazioni e mancati riconoscimenti. Biografia dei protagonisti ed eroi della missione: le loro famiglie, il lavoro e il loro rapporto con la struttura organizzativa della NASA. I manager, i tecnici e le persone che vi hanno lavorato. Analisi cronologica nel dettaglio del piano di volo della missione e degli eventi (anche curiosi) dalla partenza all’ammaraggio nel Pacifico.',
+    src: 'https://www.dropbox.com/scl/fi/auty834iesbawabtvzk37/1968.mp4?rlkey=z9xci1ribvgqr5crt49tyoqgx&dl=1'
+  },
+  'video2': {
+    title: 'Video 2: Tutorial',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+    summary: 'La missione Apollo 8, la più rischiosa del program'
+  },
+  'video3': {
+    title: 'Video 3: Demo',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+    summary: 'La missione Apollo 8, la più rischiosa del program'
+  }
+};
+
+let currentVideoId = null;
+
+function showVideo(videoId) {
+  const wrapper = document.getElementById('video-wrapper');
+  const video = document.getElementById('main-video');
+  const source = document.getElementById('video-sourcè);
+  const title = document.getElementById('video-titlè);
+  const summary = document.getElementById('video-summary');
+
+  // Se clicchi sullo stesso bottone, nascondi il video
+  if (currentVideoId === videoId && wrapper.style.display !== 'nonè) {
+    wrapper.style.display = 'nonè;
+    video.pause();
+    currentVideoId = null;
+    return;
+  }
+
+  // Aggiorna titolo e sorgente video
+  title.innerText = videoData[videoId].title;
+  source.src = videoData[videoId].src;
+  summary.innerHTML = videoData[videoId].summary;
+  
+  // Ricarica il player con il nuovo video
+  video.load();
+  wrapper.style.display = 'block';
+  currentVideoId = videoId;
+}
+</script>
 
 ---
 

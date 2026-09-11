@@ -22,9 +22,6 @@ book:
     collapse-level: 6
     border: true
   cover-image: cover.png
-  repo-actions: [issue]
-  repo-url: https://github.com/alexfum75/prova3/libro
-  repo-branch: main
   reader-mode: true
   page-footer: 
     left: |
@@ -40,10 +37,10 @@ book:
     - references.qmd
 
   navbar:
-    logo: logo.jpeg
+    logo: images/logo.jpeg
     left:
       - text: "Articoli di astronomia"
-        href: ../index.qmd
+        href: ../index.html
         
     right:
       - icon: linkedin
@@ -53,12 +50,14 @@ book:
     background: light
     border: true
     search: false
-    tools:
-      - icon: github
-        href: https://github.com/
 
 format:
   html:
+    fontsize: 17px 
+    mainfont: "Armarialbold, sans-serif;"
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnfonts.com">
     grid:
       sidebar-width: 280px  # default 250px
       body-width: 950px # default 800px
