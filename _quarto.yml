@@ -18,49 +18,14 @@ website:
         right:
           - href: index.qmd
             text: Home
-          - href: book/index.html
-            text: Libro
           - href: LunaMarte.qmd
             text: Perché la Luna
           - href: friends/friends.qmd
             text: Link
-          - href: videos/index.qmd
-            text: Registrazioni
-          - href: eventi.qmd
-            text: Conferenze
           - href: blog.qmd
             text: Blog
           - icon: linkedin
             href: https://www.linkedin.com/in/alessandrofumagalli
-    sidebar:
-      - id: dsanotes
-        style: docked
-        sort: order
-        title: "Special Tools"
-        contents:
-          - section: "Titolo sezione"        
-            contents: "materials/dsanotes/*.qmd" 
-      - id: algonotes
-        style: docked
-        sort: order
-        title: "Special Tools"
-        contents:
-          - section: "DSA Notes"        
-            contents: "materials/algorithms/*.qmd" 
-      - id: cpnotes
-        style: docked
-        sort: order
-        title: "Special Tools"
-        contents:
-          - section: "DSA Notes"        
-            contents: "materials/cpnotes/*.qmd" 
-      - id: games
-        style: docked
-        sort: order
-        title: "Special Tools"
-        contents:
-          - section: "DSA Notes"        
-            contents: "materials/games/*.qmd" 
 
 format:
   html:

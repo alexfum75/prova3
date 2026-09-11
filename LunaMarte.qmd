@@ -8,14 +8,12 @@ format:
 css: css/about.css    
 ---
 
-::: {.top-right-cite}
-> **Che fai tu, luna, in ciel?**  
-> *Giacomo Leopardi, "Canto notturno di un pastore errante dell’Asia"*
-:::
+{{< epigraph "Che fai tu, luna, in ciel?"
+ source="Giacomo Leopardi (1798-1837) Canto notturno di un pastore errante dell’Asia" >}}
 
 <h1>Perché la Luna</h1>
 
-Il programma Artemis e' in pieno svolgimento: le missioni Artemis 1 e Artemis 2 sono state completate con successo: sebbene in un contesto e scopi diversi degli anni ’60 si tratta comunque di un passo importante per il ritorno sul nostro satellite naturale: questa volta con la collaborazione di altre agenzie spaziali e di privati.
+Il programma Artemis è in pieno svolgimento: le missioni Artemis 1 e Artemis 2 sono state completate con successo: sebbene in un contesto e scopi diversi degli anni ’60 si tratta comunque di un passo importante per il ritorno sul nostro satellite naturale: questa volta con la collaborazione di altre agenzie spaziali e di privati.
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <figure style="text-align: center;">
