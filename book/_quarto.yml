@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: ../docs/book
   preview:
-    port: 7777
+    #port: 7777
     browser: true
 
 book:
@@ -26,14 +26,13 @@ book:
   repo-url: https://github.com/alexfum75/prova3/libro
   repo-branch: main
   reader-mode: true
-
   page-footer: 
+    left: |
+      ![Logo](images/Licenza.png){width=110px}
     border: true
-    center: "Copyright 2026, Alessandro Fumagalli" 
-    left: | 
-      written by Alessandro Fumagalli
+    center: "Quest’opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza" 
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      Copyright 2026
   chapters:
     - index.qmd
     - intro.qmd
@@ -43,14 +42,12 @@ book:
   navbar:
     logo: logo.jpeg
     left:
-      - text: "Il libro"
-        href: index.qmd
-      #- text: "Conferenze"
-      #  href: conferenze.qmd
+      - text: "Articoli di astronomia"
+        href: ../index.qmd
         
     right:
       - icon: linkedin
-        href: https://www.linkedin.com/in/alessandrofumagalli/
+        href: https://www.linkedin.com/in/alessandrofumagalli
       - icon: avatar.png
 
     background: light
@@ -73,11 +70,9 @@ format:
     #toc-depth: 5
     #respect-user-color-scheme: true
     theme:
-      dark:
-        - cosmo  #slatr
-        #- solar.scss
-      light: yeti #spacelab
-
+      - cosmos
+      #- ../custom.scss
+      #- solar.scss
 
 reference-location: margin
 citation-location: margin
