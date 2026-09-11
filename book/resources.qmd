@@ -1,0 +1,17 @@
+---
+title: "Alessandro Fumagalli"
+about:
+  template: jolla
+  image: avatar.png
+  links:
+    - icon: LinkedIn
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alessandrofumagalli/
+css: main.css
+---
+
+# Introduction {.unnumbered} {#sec-introduction}
+
+This is a book created from markdown and executable code.
+
+See @knuth84 for additional discussion of literate programming.

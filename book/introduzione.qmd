@@ -1,0 +1,39 @@
+---
+css: main.css
+---
+## Introduzione 
+
+{{< epigraph "Dacché la Terra ebbe degli uomini, il cielo ebbe degli ammiratori."
+ source="Giacomo Leopardi (1798-1837)" >}}
+
+L'astronomia è una scienza che ha origini molto antiche: già nel 3000 a.C le civiltà mesopotamiche indagavano il cielo per carpirne le regolarità. Il loro primo approccio all'astronomia era stato di origine religioso ed era un'attivit\'{a} riservata ai sacerdoti che agivano come intermediari fra la Terra e le divinità locali che rappresentavano: un utile strumento per comprendere il mondo all'interno della loro cosmogonia. A volte era il loro sovrano che li investiva di questo ruolo sacro ai quali si rivolgevano prima di ogni decisione importante per ingraziarsi il volere degli dèi. 
+Inizialmente la cultura astronomica veniva tramandata oralmente ma dato che i fenomeni celesti possono manifestarsi nell'arco di decenni o secoli, lo studio del cielo richiede continuità nel tempo. Sebbene inizialmente la cultura astronomica venisse tramandata oralmente, solo con l'avvento della scrittura è stato possibile iniziare una prima classificazione sistematica dei fenomeni astronomici.
+Il secondo approccio era più pratico e legato alla creazione di un calendario: probabilmente questa necessità si è diffusa quando la popolazione è passata da una vita nomade ad una stanziale basata sull'agricoltura. Per sapere quando seminare o raccogliere le messi era necessario conoscere il ritmo delle stagioni altrimenti non si potevano soddisfare i bisogni primari della popolazione. Per ogni raccolto il sovrano pretendeva le tasse, quindi l'esigenza di un calendario era motivata anche da motivi economici. La ricerca di previsioni più affidabili ha spinto i primi astronomi a progettare nuovi strumenti ed a creare modelli astratti adatti allo scopo con l'introduzione dei primi concetti di trigonometria.
+La volta celeste varia non solo al variare delle stagioni, ma anche rispetto al luogo di osservazione: le conoscenze delle tecniche di navigazione astronomica erano fondamentali per orientarsi in un panorama uniforme ed indistinto come quello in mare aperto. La padronanza delle nuove competenze di navigazione ha permesso alle civiltà di allargare la propria sfera di influenza politica ad economica.
+
+![Cielo stellato. Fonte: [www.pexels.com](www.pexels.com)](sky.jpg){width=300, fig-align="center"}
+
+L'astronomia quindi, grazie alla sua natura interdisciplinare, ha ricoperto un ruolo fondamentale nello sviluppo delle conoscenze di base dell'essere umano andando oltre alle necessità di asservire ai suoi bisogni primari: l'importanza di tale disciplina porta a definire l'astronomo come il secondo mestiere più antico del mondo. In quest'ottica il presente zibaldone raccoglie una serie di articoli di ampio respiro interdisciplinare che gravitano intorno all'astronomia e racchiude anche argomenti di storia, fisica, astronautica e letteratura maturati in più di vent'anni di esperienza come socio e conferenziere per il \texttt{GAV} (Gruppo Astrofili di Villasanta) nei vari incontri di astronomia. Il presente materiale era originariamente pubblicato periodicamente sul sito \url{https://articolidiastronomia.com} e sul giornalino del \texttt{GAV} Appunti astronomici: per evitare che il materiale andasse perduto ho deciso di organizzare gli scritti in un unico corpus in modo da unificare e centralizzare il tutto in un'unica sorgente.  
+
+## Struttura del libro 
+
+Ogni capitolo include un'ampia bibliografia che è stata verificata alla stesura del presente materiale, tuttavia l'autore non è responsabile dei siti esterni \nee del loro contenuto in quanto pu\`{o} essere soggetto a variazioni nel tempo: le immagini, foto e disegni pubblicati nel testo dove non espressamente citato nelle didascalie, articoli, link o altro sono di proprietà  dell’autore secondo la licenza \texttt{Creative Commons Attribution-NonCommercial 4.0}.
+
+L'autore dichiara che nessun \textit{chatbot} che utilizza l'intelligenza artificiale è stato usato per scrivere questo libro: la presente opera è il risultato di anni di ricerca, studio ed analisi, anche personale, dell'autore dedicata alla divulgazione dell'astronomia ed astronautica per il gruppo e la cittadinanza attraverso la partecipazione attiva a conferenze, mostre e corsi base ed avanzati di astronomia.
+L'autore inoltre proibisce ogni forma di estrazione e acquisizione dei contenuti del presente testo per le finalità di alimentazione di qualsiasi sistema di Intelligenza Artificiale.
+
+L'autore ha impiegato molti sforzi nella stesura e nella revisione del presente materiale: nonostante ci\`{o} alcuni errori
+possono comunque essere rimasti: egli sarà grato a tutti colori che lo faranno presente.
+
+\null
+
+\null
+Buona lettura a tutti, 
+
+
+\begin{flushright}
+Alessandro Fumagalli 
+
+\null
+Monza, \today  
+\end{flushright}

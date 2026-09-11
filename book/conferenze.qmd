@@ -1,0 +1,22 @@
+---
+css: main.css   
+#format:
+#  html:
+#    include-after-body: 
+#      text: |
+#        <script type="text/javascript">
+#        window['quarto-download-releasè] = true;
+#        window['quarto-download-prereleasè] = true;
+#        window['quarto-download-nonews'] = true;
+#        window["quarto-prerelease-mode"] = '{{< meta prerelease-mode >}}';
+#        </script>      
+#page-layout: full
+#toc: false
+#anchor-sections: false
+#editor: source
+---
+# Conferenze 
+
+eccomi qui
+<!--# Benvenuti {.unnumbered}-->
+

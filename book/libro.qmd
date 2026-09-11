@@ -1,0 +1,10 @@
+---
+css: main.css
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+---
+## Indice
