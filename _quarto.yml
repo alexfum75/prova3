@@ -21,7 +21,7 @@ website:
           - href: LunaMarte.qmd
             text: Perché la Luna
           - href: friends/friends.qmd
-            text: Link
+            text: "Risorse esterne"
           - href: blog.qmd
             text: Blog
           - icon: linkedin

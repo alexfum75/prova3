@@ -5,6 +5,10 @@ project:
     port: 7777
     browser: true
 
+execute:
+  freeze: auto
+  cache: true # for python
+
 book:
   edition: 1
   favicon: cover.png
@@ -22,24 +26,62 @@ book:
     collapse-level: 6
     border: true
   cover-image: cover.png
-  reader-mode: true
+  reader-mode: false
   page-footer: 
     left: |
       ![Logo](images/Licenza.png){width=110px}
     border: true
-    center: "Quest’opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza" 
+    center: "Quest'opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza" 
     right: |
       Copyright 2026
   chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - index.qmd  
+
+    - introduzione.qmd
+    
+    - carosello.qmd
+    
+    - part: "Vicino a noi"
+      chapters:
+        - TerraDintorni.qmd
+        - SistemaTerraLuna.qmd
+        - FratelliTerra.qmd
+        - AltriMondi.qmd
+
+    - part: "Il planetario"
+      chapters:
+        - MisuraTempo.qmd      
+        - PilloleFisica.qmd
+        - MeccanicaCeleste.qmd
+
+    - part: "Oltre noi"
+      chapters:
+        - Stelle.qmd
+        - Universo.qmd
+        - Costellazioni.qmd
+
+    - part: "Biografie" 
+      chapters:
+        - Dante.qmd
+        - Biografie.qmd
+
+    - part: "Astronautica"  
+      chapters:
+      - Sovietici.qmd
+      - ProgrammaApollo.qmd
+      - ProgrammaArtemis.qmd      
+      - AndiamoMarte.qmd      
+    
+    - glossario.qmd
+
+    #- indice.qmd
+    
+    - appendici.qmd
 
   navbar:
     logo: images/logo.jpeg
     left:
-      - text: "Articoli di astronomia"
+      - text: "Home"
         href: ../index.html
         
     right:
@@ -59,8 +101,8 @@ format:
       text: |
         <link rel="stylesheet" href="https://cdnfonts.com">
     grid:
-      sidebar-width: 280px  # default 250px
-      body-width: 950px # default 800px
+      sidebar-width: 270px  # default 250px
+      body-width: 960px # default 800px
       margin-width: 200px # default 250px
       gutter-width: 1.5rem  
     toc: true
@@ -70,9 +112,8 @@ format:
     #respect-user-color-scheme: true
     theme:
       - cosmos
-      #- ../custom.scss
+      - ../custom.scss
       #- solar.scss
 
 reference-location: margin
 citation-location: margin
-

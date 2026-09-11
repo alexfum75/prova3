@@ -1,5 +1,22 @@
-# Introduction
+---
+css: main.css
+---
+# Introduction 
 
 This is a book created from markdown and executable code.
+
+::: {layout="[33, 33, 33]"}
+::: {#first-column}
+Content for column 1.
+:::
+
+::: {#second-column}
+Content for column 2.
+:::
+
+::: {#third-column}
+Content for column 3.
+:::
+:::
 
 See @knuth84 for additional discussion of literate programming.

@@ -1,7 +1,8 @@
+---
+css: main.css   
+---
 
+# Benvenuti 
+<!--# Benvenuti {.unnumbered}-->
 
-# Preface {.unnumbered}
-
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+Questo è il sito web della prima edizione di **"Astronomia per tutti"**. Questo sito web è gratuito, con licenza [CC BY-NC-ND 3.0](https://creativecommons.org/licenses/by-nc-nd/3.0/us/). Se desideri una copia fisica del libro, puoi ordinarla [qui](https://). Se apprezzi la lettura gratuita del libro e desideri restituire qualcosa, fai una donazione [qui](https://)
