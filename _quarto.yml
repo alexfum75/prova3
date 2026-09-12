@@ -30,7 +30,9 @@ website:
 format:
   html:
     fontsize: 17px 
-    mainfont: "Armarialbold, sans-serif;"
+    #mainfont: "Armarialbold, sans-serif;"
+    mainfont: "Palatino, sans-serif;"
+
     include-in-header:
       text: |
         <link rel="stylesheet" href="https://cdnfonts.com">
