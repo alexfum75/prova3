@@ -76,7 +76,7 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 <p class="mb-0">Stai programmando una serata osservativa? Meglio conoscere in anticipo
 il meteo per il luogo di osservazione. Scegli la località e vedi quali oggetti celesti puoi vedere in cielo.</p>
 <div class="mt-1 d-flex justify-content-center w-100">
-  [Scopri <i class="bi bi-stars ms-2"></i>](index.qmd){.btn .btn-custom role="button"}
+  [Scopri <i class="bi bi-stars ms-2"></i>](cielo.qmd){.btn .btn-custom role="button"}
 </div>
 :::
 

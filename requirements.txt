@@ -1,1 +1,4 @@
 pandas
+ephem
+matplotlib 
+numpy

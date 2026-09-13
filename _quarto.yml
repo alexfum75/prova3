@@ -21,7 +21,13 @@ website:
           - href: LunaMarte.qmd
             text: Perché la Luna
           - href: friends/friends.qmd
-            text: "Risorse esterne"
+            text: "Link esterni"
+          - text: "Astronomia e arte"
+            menu:
+              - text: "De Sphaera"
+                href: DeSphaera.qmd
+              - text: "La Divina Commedia"
+                href: Dante.qmd
           - href: blog.qmd
             text: Blog
           - icon: linkedin
