@@ -58,7 +58,7 @@ for nome, (corpo, colore, dimensione) in oggetti.items():
         az_rad = math.radians(az_deg)
         raggio = 90 - alt_deg
         ax.scatter(az_rad, raggio, color=colore, s=dimensione, edgecolors='white', linewidth=0.5, zorder=3)
-        ax.annotate(f" {nome}", (az_rad, raggio), color='whitè, fontsize=10, weight='bold', zorder=4)
+        ax.annotate(f" {nome}", (az_rad, raggio), color='white', fontsize=10, weight='bold', zorder=4)
 
 plt.title(f"Mappa del Cielo UTC: {osservatore.date}", color='white', pad=20, fontsize=12)
 plt.tight_layout()
