@@ -44,7 +44,7 @@ ax.set_theta_direction(-1)
 ax.set_ylim(0, 90)
 ax.set_yticks([30, 60, 90])
 ax.set_yticklabels(['60°', '30°', '0°'], color='gray', fontsize=9)
-ax.tick_params(colors='whitè)
+ax.tick_params(colors='white')
 ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
 
 visibili = 0
