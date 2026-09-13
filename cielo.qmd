@@ -81,7 +81,7 @@ def ottieni_posizione():
         req = urllib.request.Request("https://ipapi.co/json/", headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode())
-            return float(data['latitudè]), float(data['longitudè]), f"{data['city']}, {data['country_namè]}"
+            return float(data['latitude']), float(data['longitude']), f"{data['city']}, {data['country_namè]}"
     except Exception:
         return 45.5841, 9.2744, "Posizione predefinita (Italia)"
 
