@@ -81,7 +81,7 @@ def ottieni_posizione():
         req = urllib.request.Request("https://ipapi.co/json/", headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode())
-            return float(data['latitude']), float(data['longitude']), f"{data['city']}, {data['country_namè]}"
+            return float(data['latitude']), float(data['longitude']), f"{data['city']}, {data['country_name']}"
     except Exception:
         return 45.5841, 9.2744, "Posizione predefinita (Italia)"
 
@@ -124,7 +124,7 @@ def genera_mappa_cielo():
     ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
 
     # Punti cardinali
-    ax.set_xticklabels(['N', 'NÈ, 'È, 'SÈ, 'S', 'SO', 'O', 'NO'], color='whitè, weight='bold')
+    ax.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'], color='whitè, weight='bold')
 
     visibili = 0
     for nome, (corpo, colore, dimensione) in oggetti.items():
