@@ -33,7 +33,7 @@ oggetti = {
     "Sirio": (ephem.star("Sirius"), "cyan", 40),
     "Betelgeuse": (ephem.star("Betelgeuse"), "orangered", 40),
     "Vega": (ephem.star("Vega"), "deepskyblue", 40),
-    "Stella Polare": (ephem.star("Polaris"), "white", 30)
+    "Stella Polare": (ephem.star("Polaris"), "green", 30)
 }
 
 fig = plt.figure(figsize=(8, 8), facecolor='#0b0d1b')
@@ -44,7 +44,7 @@ ax.set_theta_direction(-1)
 ax.set_ylim(0, 90)
 ax.set_yticks([30, 60, 90])
 ax.set_yticklabels(['60°', '30°', '0°'], color='gray', fontsize=9)
-ax.tick_params(colors='white')
+ax.tick_params(colors='green')
 ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
 
 visibili = 0
@@ -57,10 +57,10 @@ for nome, (corpo, colore, dimensione) in oggetti.items():
         visibili += 1
         az_rad = math.radians(az_deg)
         raggio = 90 - alt_deg
-        ax.scatter(az_rad, raggio, color=colore, s=dimensione, edgecolors='white', linewidth=0.5, zorder=3)
-        ax.annotate(f" {nome}", (az_rad, raggio), color='white', fontsize=10, weight='bold', zorder=4) 
+        ax.scatter(az_rad, raggio, color=colore, s=dimensione, edgecolors='green', linewidth=0.5, zorder=3)
+        ax.annotate(f" {nome}", (az_rad, raggio), color='green', fontsize=10, weight='bold', zorder=4) 
 
-plt.title(f"Mappa del Cielo UTC: {osservatore.date}", color='white', pad=20, fontsize=12)
+plt.title(f"Mappa del Cielo UTC: {osservatore.date}", color='green', pad=20, fontsize=12)
 plt.tight_layout()
 plt.savefig("sky_map.png")
 print(f"Visibili: {visibili}")
@@ -120,11 +120,11 @@ def genera_mappa_cielo():
     ax.set_ylim(0, 90)
     ax.set_yticks([30, 60, 90])
     ax.set_yticklabels(['60°', '30°', '0° (Orizzonte)'], color='#8a8dA0', fontsize=9)
-    ax.tick_params(colors='white')
+    ax.tick_params(colors='green')
     ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
 
     # Punti cardinali
-    ax.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'], color='white', weight='bold')
+    ax.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'], color='green', weight='bold')
 
     visibili = 0
     for nome, (corpo, colore, dimensione) in oggetti.items():
@@ -138,11 +138,11 @@ def genera_mappa_cielo():
             az_rad = math.radians(az_deg)
             raggio = 90 - alt_deg  # Inversione: 0 al centro, 90 al bordo
             
-            ax.scatter(az_rad, raggio, color=colore, s=dimensione, edgecolors='white', linewidth=0.6, zorder=3)
-            ax.annotate(f" {nome}", (az_rad, raggio), color='white', fontsize=10, weight='bold', zorder=4)
+            ax.scatter(az_rad, raggio, color=colore, s=dimensione, edgecolors='green', linewidth=0.6, zorder=3)
+            ax.annotate(f" {nome}", (az_rad, raggio), color='green', fontsize=10, weight='bold', zorder=4)
 
     plt.title(f"Mappa del Cielo - {citta}\n{osservatore.date} UTC (Oggetti visibili: {visibili})", 
-              color='white', pad=25, fontsize=13, weight='bold')
+              color='green', pad=25, fontsize=13, weight='bold')
     
     plt.tight_layout()
     plt.show()
