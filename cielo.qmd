@@ -148,5 +148,5 @@ def genera_mappa_cielo():
     plt.show()
 
 if __name__ == "__main__":
-    genera_mappa_cielo()
+    genera_mappa_cielo() 
 ```
