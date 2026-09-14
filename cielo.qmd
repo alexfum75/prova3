@@ -207,3 +207,181 @@ def check_planets():
 if __name__ == "__main__":
     check_planets()
 ```
+
+```{python}
+#| echo: false
+#| 
+import requests
+from datetime import datetime
+from skyfield.api import load, wgs84, Topos
+import requests
+from datetime import datetime
+from skyfield.api import load, wgs84
+
+import requests
+
+# Definisci un User-Agent valido per evitare il blocco "Access Blocked"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+
+def get_iss_location():
+    url = "http://api.open-notify.org/iss-now.json"
+    try:
+        # Passa gli headers nella richiesta HTTP
+        response = requests.get(url, headers=HEADERS, timeout=5)
+
+        # Controlla se il server ha risposto con successo (200 OK)
+        response.raise_for_status()
+
+        data = response.json()
+        lat = float(data["iss_position"]["latitude"])
+        lon = float(data["iss_position"]["longitude"])
+
+        print(f"Posizione ISS: Lat {lat}, Lon {lon}")
+        return lat, lon
+
+    except requests.exceptions.HTTPError as err:
+        print(f"Errore di accesso HTTP: {err}")
+    except Exception as e:
+        print(f"Errore: {e}")
+
+
+def get_astronauts():
+    """Recupera la lista degli astronauti a bordo della ISS."""
+    url = "http://api.open-notify.org/astros.json"
+    try:
+        response = requests.get(url, timeout=5)
+        data = response.json()
+        iss_crew = [p for p in data.get("people", []) if p.get("craft") == "ISS"]
+
+        print("\n" + "=" * 60)
+        print(f" ASTRONAUTI A BORDO DELLA ISS ({len(iss_crew)} presenti)")
+        print("=" * 60)
+        for person in iss_crew:
+            print(f" • {person['name']}")
+    except Exception as e:
+        print(f"Errore nel recupero degli astronauti: {e}")
+
+def get_next_iss_passes(user_lat: float, user_lon: float, days: int = 3, min_altitude_deg: float = 10.0):
+    """
+    Calcola i prossimi passaggi della ISS sopra le coordinate indicate
+    usando i dati orbitali TLE aggiornati dal NORAD / CelesTrak.
+    """
+    print("\n" + "=" * 60)
+    print(f" PROSSIMI PASSAGGI ISS (Lat: {user_lat:.4f}°, Lon: {user_lon:.4f}°)")
+    print("=" * 60)
+
+    try:
+        # Scarica i dati TLE aggiornati della ISS da Celestrak
+        stations_url = 'https://celestrak.org/NORAD/elements/gp.php?NAME=ISS%20(ZARYA)&FORMAT=tle'
+        satellites = load.tle_file(stations_url)
+        iss = satellites[0]
+
+        ts = load.timescale()
+        t0 = ts.now()
+        t1 = ts.utc(t0.utc_datetime().year, t0.utc_datetime().month, t0.utc_datetime().day + days)
+
+        # Definisci la posizione dell'osservatore
+        observer = wgs84.latlon(user_lat, user_lon)
+
+        # Trova gli eventi di passaggio (0: sorge, 1: culmine/altezza max, 2: tramonta)
+        times, events = iss.find_events(observer, t0, t1, altitude_degrees=min_altitude_deg)
+
+        current_pass = {}
+        pass_count = 0
+
+        for time_obj, event_type in zip(times, events):
+            dt_local = time_obj.astimezone()  # Converte nell'ora locale della macchina
+
+            if event_type == 0:  # Sorge sopra l'orizzonte
+                current_pass = {'start': dt_local}
+            elif event_type == 1:  # Punto di massima altezza (Culmine)
+                # Calcola l'altezza massima in gradi sopra l'orizzonte
+                difference = iss - observer
+                topocentric = difference.at(time_obj)
+                alt, az, _ = topocentric.altaz()
+                current_pass['max_alt'] = alt.degrees
+                current_pass['max_time'] = dt_local
+            elif event_type == 2:  # Tramonta sotto l'orizzonte
+                current_pass['end'] = dt_local
+                pass_count += 1
+                
+                print(f"\nPassaggio #{pass_count}:")
+                print(f"  • Inizio     : {current_pass['start'].strftime('%Y-%m-%d %H:%M:%S %Z')}")
+                print(f"  • Culmine    : {current_pass['max_time'].strftime('%H:%M:%S')} (Altezza max: {current_pass['max_alt']:.1f}°)")
+                print(f"  • Fine       : {current_pass['end'].strftime('%H:%M:%S')}")
+
+        if pass_count == 0:
+            print("Nessun passaggio visibile trovato nei prossimi giorni.")
+
+    except Exception as e:
+        print(f"Errore durante il calcolo dei passaggi: {e}")
+
+if __name__ == "__main__":
+    get_iss_location_and_telemetry()
+    get_astronauts()
+
+    # Coordinate di riferimento (Esempio: Milano / Monza ~ 45.58° N, 9.27° E)
+    # Sostituisci con la tua latitudine e longitudine precise
+    MY_LATITUDE = 45.5833
+    MY_LONGITUDE = 9.2736
+
+    get_next_iss_passes(user_lat=MY_LATITUDE, user_lon=MY_LONGITUDE, days=3)
+```    
+
+
+```{python}
+#| echo: false
+#| 
+import webbrowser
+from datetime import datetime
+import folium
+import requests
+
+
+import webbrowser
+from datetime import datetime
+import folium
+import requests
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+}
+
+
+def generate_iss_map():
+    url = "http://api.open-notify.org/iss-now.json"
+    try:
+        # Aggiunto headers=HEADERS
+        response = requests.get(url, headers=HEADERS, timeout=5)
+        response.raise_for_status()
+
+        data = response.json()
+        lat = float(data["iss_position"]["latitude"])
+        lon = float(data["iss_position"]["longitude"])
+        timestamp = datetime.fromtimestamp(data["timestamp"]).strftime(
+            "%Y-%m-%d %H:%M:%S"
+        )
+
+        iss_map = folium.Map(location=[lat, lon], zoom_start=4)
+
+        popup_text = f"<b>ISS</b><br>Lat: {lat}<br>Lon: {lon}<br>Data: {timestamp} UTC"
+        folium.Marker(
+            location=[lat, lon],
+            popup=popup_text,
+            icon=folium.Icon(color="red", icon="info-sign"),
+        ).add_to(iss_map)
+
+        filename = "mappa_iss.html"
+        iss_map.save(filename)
+        print("Mappa generata con successo!")
+        webbrowser.open(filename)
+
+    except Exception as e:
+        print(f"Errore: {e}")
+        
+if __name__ == "__main__":
+    generate_iss_map()
+```

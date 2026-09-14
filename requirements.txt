@@ -3,3 +3,6 @@ ephem
 matplotlib 
 numpy
 starplot
+requests
+skyfield
+folium
