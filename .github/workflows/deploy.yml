@@ -25,9 +25,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
       # Python Setup (senza cache: 'pip')
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,6 +36,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install jupyter
 
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
       - name: Install dependencies
         run: pip install -r requirements.txt
 
@@ -49,6 +49,8 @@ jobs:
           r-version: 'release'
 
       - name: Render Main Website
+        env:
+          QUARTO_PYTHON: .venv/bin/python
         run: quarto render
 
       - name: Render Sub-Book

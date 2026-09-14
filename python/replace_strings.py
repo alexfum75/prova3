@@ -10,7 +10,7 @@ SOSTITUZIONI = {
     "e'": "è",
     "ne'": "né",
     "se'": "sé"
-}
+} 
 
 print("Working on qmd files")
 for path in Path(".").rglob("*.qmd"):
