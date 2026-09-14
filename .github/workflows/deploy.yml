@@ -39,6 +39,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install jupyter
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       # R Setup (senza setup-renv)
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
