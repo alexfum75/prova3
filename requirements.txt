@@ -6,3 +6,4 @@ starplot
 requests
 skyfield
 folium
+geocoder

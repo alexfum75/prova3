@@ -225,7 +225,25 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
+def get_iss_location_and_telemetry():
+    """Recupera la posizione della ISS in tempo reale."""
+    url = "http://api.open-notify.org/iss-now.json"
+    try:
+        response = requests.get(url, timeout=5)
+        data = response.json()
+        dt = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
+        lat = float(data["iss_position"]["latitude"])
+        lon = float(data["iss_position"]["longitude"])
 
+        print("=" * 60)
+        print(" TELEMETRIA E POSIZIONE IN TEMPO REALE")
+        print("=" * 60)
+        print(f"Timestamp    : {dt} (UTC)")
+        print(f"Latitudine   : {lat:.4f}°")
+        print(f"Longitudine  : {lon:.4f}°")
+    except Exception as e:
+        print(f"Errore nel recupero della posizione: {e}")
+        
 def get_iss_location():
     url = "http://api.open-notify.org/iss-now.json"
     try:
@@ -381,7 +399,7 @@ def generate_iss_map():
 
     except Exception as e:
         print(f"Errore: {e}")
-        
+
 if __name__ == "__main__":
     generate_iss_map()
 ```
