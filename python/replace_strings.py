@@ -13,7 +13,10 @@ SOSTITUZIONI = {
 } 
 
 print("Working on qmd files")
-for path in Path(".").rglob("*.qmd"):
+for path in Path(".").rglob("*.qmd"):   
+    if path == 'cielo2.qmd':
+        print(f"Skip: {path}")
+        continue
     content = path.read_text(encoding="utf-8")
     modificato = False
     
