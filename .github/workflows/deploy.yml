@@ -49,8 +49,6 @@ jobs:
           r-version: 'release'
 
       - name: Render Main Website
-        env:
-          QUARTO_PYTHON: .venv/bin/python
         run: quarto render
 
       - name: Render Sub-Book
