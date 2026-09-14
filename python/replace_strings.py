@@ -12,9 +12,11 @@ SOSTITUZIONI = {
     "se'": "sé"
 } 
 
+PYTHON_SCRIPT = ["cielo"]
+
 print("Working on qmd files")
 for path in Path(".").rglob("*.qmd"):   
-    if path == 'cielo2.qmd':
+    if any(keyword in path.name for keyword in PYTHON_SCRIPT):
         print(f"Skip: {path}")
         continue
     content = path.read_text(encoding="utf-8")

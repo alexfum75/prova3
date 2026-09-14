@@ -49,6 +49,8 @@ jobs:
           r-version: 'release'
 
       - name: Render Main Website
+        env:
+          PYTHONWARNINGS: "ignore::DeprecationWarning"
         run: quarto render
 
       - name: Render Sub-Book
