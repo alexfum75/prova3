@@ -124,7 +124,7 @@ def genera_mappa_cielo():
     ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
 
     # Punti cardinali
-    ax.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'], color='whitè, weight='bold')
+    ax.set_xticklabels(['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'], color='white', weight='bold')
 
     visibili = 0
     for nome, (corpo, colore, dimensione) in oggetti.items():
