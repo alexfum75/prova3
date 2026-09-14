@@ -118,7 +118,7 @@ def genera_mappa_cielo():
     
     # Limite raggio: 0 (Zenit = 90°) -> 90 (Orizzonte = 0°)
     ax.set_ylim(0, 90)
-    ax.set_yticks([30, 60, 90])
+    ax.set_yticks([30, 60, 90])  
     ax.set_yticklabels(['60°', '30°', '0° (Orizzonte)'], color='#8a8dA0', fontsize=9)
     ax.tick_params(colors='green')
     ax.grid(color='#2a2d45', linestyle='--', linewidth=0.8)
