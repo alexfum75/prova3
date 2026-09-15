@@ -34,14 +34,79 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 ::: {.g-col-8 .p-2}
 
 :::: {.carousel controls="false" indicators="false" duration=1500} 
-:::: {.carousel-item image="https://picsum.photos/800/400?random=1" style="height: 400px;"} 
+:::: {.carousel-item image="images/Conferenze/Andiamo-su-marte.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="https://picsum.photos/800/400?random=2" style="height: 400px;"} 
+:::: {.carousel-item image="images/conferenze/Apollo-8.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="https://picsum.photos/800/400?random=3" style="height: 400px;"} 
+:::: {.carousel-item image="images/conferenze/Apollo-13.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Artemis-2.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Blue-Marble.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Finestre-Lunari.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Free-Return-Trajectory.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Kalman.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/LOR.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Pillole-di-Apollo.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Sistemi-Navigazione-1.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Sistemi-Navigazione-2.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Uomo-Macchina.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Astronomia-e-la-divina-commedia.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Astronomia-islamica.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Nostro-calendario.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Rivoluzione-copernicana.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Famiglia-herschel.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Gagarin.jpg" style="height: 400px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Giordano-Bruno.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Keplero.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Noether.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Leone.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Auriga.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Sagittario.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Vergine.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Via-Lattea.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Introduzione-Meccanica-Celeste.png" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Meccanica-celeste.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Modello-standard.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Molti-universi.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/NEO_IA.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Neo.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Ottica-e-strumenti.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/Satelliti-artificiali.jpg" style="height: 460px;"} 
+:::
+:::: {.carousel-item image="images/conferenze/GPS.jpg" style="height: 460px;"} 
 :::
 :::
-
 :::
 :::
 
@@ -73,7 +138,7 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 ::: {.grid .text-center}
 ::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il cielo adesso</h2>
-<p class="mb-0">Stai programmando una serata osservativa? Meglio conoscere in anticipo il meteo per il luogo di osservazione. </br>  Scegli la località e vedi quali oggetti celesti puoi vedere in cielo.</p>
+<p class="mb-0">Stai programmando una serata osservativa? Scegli la località e vedi quali oggetti celesti puoi vedere in cielo.</p>
 <div class="mt-1 d-flex justify-content-center w-100">
   [Scopri <i class="bi bi-stars ms-2"></i>](cielo.qmd){.btn .btn-custom role="button"}
 </div>
