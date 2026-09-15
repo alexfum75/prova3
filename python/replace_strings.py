@@ -7,7 +7,6 @@ SOSTITUZIONI = {
     "caffe'": "caffè",
     "universita'": "università",
     "a'": "à",
-    "e'": "è",
     "ne'": "né",
     "se'": "sé"
 } 

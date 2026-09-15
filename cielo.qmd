@@ -392,11 +392,6 @@ def generate_iss_map():
             icon=folium.Icon(color="red", icon="info-sign"),
         ).add_to(iss_map)
 
-        filename = "mappa_iss.html"
-        iss_map.save(filename)
-        print("Mappa generata con successo!")
-        webbrowser.open(filename)
-
     except Exception as e:
         print(f"Errore: {e}")
 
