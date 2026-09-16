@@ -19,7 +19,6 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ::: {}
 
 
-
 ::: {.hello-quarto .alt-background}
 ::: {.content-block .mt-2 .pt-4 .pb-2 .text-center .align-items-center}
 
@@ -28,7 +27,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ::: {.g-col-12 .align-items-center}   
 <ul class="nav nav-pills d-flex flex-wrap" id="hello-quarto-tab" role="tablist" text-align="center">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true" >Conferenze</button>
+    <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true">Conferenze</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffè</br>astronomico</button>
@@ -96,21 +95,22 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 <div id="video-wrapper" style="display: none; margin-top: 20px; padding: 15px;">
   <h4 id="video-title" style="margin-top: 0;"></h4>
   <div id="video-summary" style="margin-top: 0; text-align: justify;" ></div>
-  <p></p>
-  <video id="main-video" width="960" height="540" controls controlslist="nodownload">  
-    <source id="video-source" src="" type="video/mp4">
-    Il tuo browser non supporta il tag video.
-  </video>
 </div>
-
 :::
 ::::
 
+<p></p>
+<div id="video-wrapper-2" style="display: none; margin-top: 20px; padding: 15px;">
+<video id="main-video" width="960" height="540" controls controlslist="nodownload">  
+  <source id="video-source" src="" type="video/mp4">
+  Il tuo browser non supporta il tag video.
+</video>
+</div>
 
 <script>
 const videoData = {
   'video1': {
-    title: 'Apollo 8: la politica gli uomini e la mission',
+    title: 'Apollo 8: la politica gli uomini e la missione',
     summary: 'La missione Apollo 8, la più rischiosa del programma Apollo, è avvenuta al termine di un anno molto turbolento negli USA: la guerra nel Vietnam, la lotta per il riconoscimento dei diritti ed il calo di consenso al programma spaziale. </br>Come relatore ho effettuato una accurata ricerca storica e cronologica dei principali eventi del 1968 allo scopo di comprendere il contesto politico e culturale quando il programma spaziale era ripreso dopo l’arresto momentaneo in seguito all’incidente del test AS 204.  La principale bibliografia è costituita da interviste ai protagonisti, libri scritti da chi ha lavorato al programma Apollo, Flight Journal e report tecnici delle aziende sub-appaltatrici di missione. Vengono riportati parte dei discorsi e sentimenti dell’epoca.</br>La conferenza è divisa in tre parti che si interallacciano tra di loro: analisi dei principali eventi culturali e politci del 1968 in ordine cronologico da Gennaio a Dicembre. Si narra di fatti spiacevoli, violenze, discriminazioni e mancati riconoscimenti. Biografia dei protagonisti ed eroi della missione: le loro famiglie, il lavoro e il loro rapporto con la struttura organizzativa della NASA. I manager, i tecnici e le persone che vi hanno lavorato. Analisi cronologica nel dettaglio del piano di volo della missione e degli eventi dalla partenza all’ammaraggio nel Pacifico.',
     src: 'https://www.dropbox.com/scl/fi/auty834iesbawabtvzk37/1968.mp4?rlkey=z9xci1ribvgqr5crt49tyoqgx&dl=1'
   },
@@ -129,22 +129,29 @@ const videoData = {
 let currentVideoId = null;
 
 function showVideo(videoId) {
-    window.alert('title');
   const wrapper = document.getElementById('video-wrapper');
   const video = document.getElementById('main-video');
+  const wrapper_2 = document.getElementById('video-wrapper-2');
   const source = document.getElementById('video-source');
   const title = document.getElementById('video-title');
   const summary = document.getElementById('video-summary');
 
   // Se clicchi sullo stesso bottone, nascondi il video
-  if (currentVideoId === videoId && wrapper.style.display !== 'noné) {
-    wrapper.style.display = 'noné;
+  if (currentVideoId === videoId && wrapper.style.display !== 'none') {
+    wrapper.style.display = 'none';
+    wrapper_2.style.display = 'none';
     video.pause();
     currentVideoId = null;
     return;
   }
-
-  // Aggiorna titolo e sorgente video
+  if (currentVideoId === videoId && wrapper_2.style.display !== 'none') {
+    wrapper.style.display = 'none';
+    wrapper_2.style.display = 'none';
+    video.pause();
+    currentVideoId = null;
+    return;
+  }
+    // Aggiorna titolo e sorgente video
   title.innerText = videoData[videoId].title;
   source.src = videoData[videoId].src;
   summary.innerHTML = videoData[videoId].summary;
@@ -152,6 +159,7 @@ function showVideo(videoId) {
   // Ricarica il player con il nuovo video
   video.load();
   wrapper.style.display = 'block';
+  wrapper_2.style.display = 'block';
   currentVideoId = videoId;
 }
 

@@ -23,10 +23,9 @@ format:
 
 | Anno | Titolo conferenza  | Registrazione | 
 | :--: | :--- | :---: | 
-| **2024** | International Conference on Machine Learning | <button  style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('video1')">Guarda</button> |
-| |Annual AI & Ethics Symposium | <button  style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('video1')">Guarda</button> |
-| **2025** | European Web Development Summit | <button  style="padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('video1')">Guarda</button> |
-| | Global Data Science Forum | <button  style="padding: 5px 12px; border-radius: 20px; text-decoration: none;" onclick="showVideo('video1')">Guarda</button> |
+| **2024** | International Conference on Machine Learning | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('video1')">Sommario</button> |
+| **2025** | European Web Development Summit | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('video3')">Sommario</button> |
+| | Global Data Science Forum | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px; text-decoration: none;" onclick="showVideo('video1')">Sommario</button> |
 
 :::
 

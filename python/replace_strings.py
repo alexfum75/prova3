@@ -1,14 +1,14 @@
 from pathlib import Path
 
 SOSTITUZIONI = {
-    "Perche'": "Perché",
-    "perche'": "perché",
-    "E'": "È",
-    "caffe'": "caffè",
+    "Perche' ": "Perché ",
+    "perche' ": "perché ",
+    "E' ": "È ",
+    "caffe' ": "caffè ",
     "universita'": "università",
-    "a'": "à",
-    "ne'": "né",
-    "se'": "sé"
+    "e' ": "è ",
+    "a' ": "à ",
+    "se' ": "sé "
 } 
 
 PYTHON_SCRIPT = ["cielo"]

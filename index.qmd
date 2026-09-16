@@ -33,7 +33,7 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 
 ::: {.g-col-8 .p-2}
 
-:::: {.carousel controls="false" indicators="false" duration=1500} 
+:::: {.carousel controls="false" indicators="false" duration=2000} 
 :::: {.carousel-item image="/images/Conferenze/Andiamo-su-marte.jpg" style="height: 460px;"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/Apollo-8.jpg" style="height: 460px;"} 
