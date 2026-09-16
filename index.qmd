@@ -36,75 +36,75 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 :::: {.carousel controls="false" indicators="false" duration=1500} 
 :::: {.carousel-item image="/images/Conferenze/Andiamo-su-marte.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Apollo-8.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Apollo-8.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Apollo-13.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Apollo-13.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="images/conferenze/Artemis-2.png" style="height: 460px;"} 
+:::: {.carousel-item image="images/Conferenze/Artemis-2.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Blue-Marble.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Blue-Marble.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Finestre-Lunari.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Finestre-Lunari.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Free-Return-Trajectory.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Free-Return-Trajectory.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Kalman.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Kalman.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/LOR.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/LOR.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Pillole-di-Apollo.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Pillole-di-Apollo.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Sistemi-Navigazione-1.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Sistemi-Navigazione-1.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Sistemi-Navigazione-2.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Sistemi-Navigazione-2.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Uomo-Macchina.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Uomo-Macchina.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Astronomia-e-la-divina-commedia.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Astronomia-islamica.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-islamica.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Nostro-calendario.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Nostro-calendario.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Rivoluzione-copernicana.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Rivoluzione-copernicana.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Famiglia-herschel.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Famiglia-herschel.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Gagarin.jpg" style="height: 400px;"} 
+:::: {.carousel-item image="/images/Conferenze/Gagarin.jpg" style="height: 400px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Giordano-Bruno.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Giordano-Bruno.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Keplero.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Keplero.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Noether.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Noether.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Leone.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Leone.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Auriga.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Auriga.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Sagittario.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Sagittario.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Vergine.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Vergine.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Via-Lattea.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Via-Lattea.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Introduzione-Meccanica-Celeste.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Introduzione-Meccanica-Celeste.png" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Meccanica-celeste.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Meccanica-celeste.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Modello-standard.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Modello-standard.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Molti-universi.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Molti-universi.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/NEO_IA.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/NEO_IA.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Neo.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Neo.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Ottica-e-strumenti.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Ottica-e-strumenti.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/Satelliti-artificiali.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Satelliti-artificiali.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/conferenze/GPS.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/GPS.jpg" style="height: 460px;"} 
 :::
 :::
 :::
@@ -153,8 +153,8 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 :::
 
 ::: {.g-col-4 .p-2 .d-flex .flex-column style="background-color: #ffffff; color: #3182ce; min-height: 250px;"}
-<h2>Portfolio conferenze</h2>
-<p class="mb-0">Le conferenze, corsi e caffè astronomici dell'autore per la cittadinanza.</p>
+<h2>Portfolio Conferenze</h2>
+<p class="mb-0">Le Conferenze, corsi e caffè astronomici dell'autore per la cittadinanza.</p>
 <div class="mt-1 d-flex justify-content-center w-100">
   [Elenco <i class="bi bi-easel2 ms-2"></i>](eventi.qmd){.btn .btn-custom role="button"}
 </div>
