@@ -63,7 +63,7 @@ elementi: sodio (), potassio () e nichel (). Dobbiamo ora definire un
 inizio, un istante $\mathrm{t_{0}}$ a partire dal quale principiare la
 nostra storia.
 
-![La nostra casa fotografata a bordo dell’Apollo 17 in viaggio
+![La nostra casa fotografata a bordo dell'Apollo 17 in viaggio
 verso la Luna nel dicembre 1972. La foto appartiene ad una serie di
 scatti effettuati da circa miglia e fa parte della serie <em>The Blue
 Marble</em>. La Terra è quasi illuminata pienamente dal Sole sospesa nel
@@ -701,7 +701,7 @@ un anno.
 
 </div>
 <figcaption>Orbite di alcuni NEA suddivisi per classe (circa 200
-oggetti) visto dall’alto rispetto al piano orbitale
+oggetti) visto dall'alto rispetto al piano orbitale
 terrestre.</figcaption>
 </figure>
 
@@ -904,7 +904,7 @@ PHA.</figcaption>
 
 <figure id="fig:Model_KNN_optimum_PHA" data-latex-placement="htb">
 <img src="KNN_Optimum_K_PHA.png" />
-<figcaption>Relazione fra efficienza dell’algoritmo K-Neighbors al
+<figcaption>Relazione fra efficienza dell'algoritmo K-Neighbors al
 variare del parametro <span class="math inline"><em>K</em></span>. Il
 valore ottimo di accuratezza si ottiene per K=5.</figcaption>
 </figure>
@@ -1055,7 +1055,7 @@ id="fig:KNN_CF_TYPE" data-label="fig:KNN_CF_TYPE"></span></p>
 
 <figure id="fig:Model_KNN_optimum" data-latex-placement="htb">
 <img src="KNN_Optimum_K_NEA.png" />
-<figcaption>Relazione fra efficienza dell’algoritmo K-Neighbors al
+<figcaption>Relazione fra efficienza dell'algoritmo K-Neighbors al
 variare del parametro <span class="math inline"><em>K</em></span>. Il
 valore ottimo di accuratezza si ottiene per K=9.</figcaption>
 </figure>

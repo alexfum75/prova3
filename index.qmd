@@ -126,7 +126,8 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
         </div>
         <div class="author-bio">
             <h3>Informazioni sull'Autore</h3>
-            <p>Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati.</br> Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualità.</br>È certificato  PMI–CAPM ® e PMI–CPMAI ®.
+            <p>
+              Laureato in ingegneria ed appassionato di astronomia e astronautica dai tempi del Grand Tour delle sonde Voyager. Socio e conferenziere del GAV (Gruppo Astrofili di Villasanta). Progettista software/firmware con esperienza pluridecennale di progettazione e sviluppo algoritmi statistici e di analisi dei dati. </br> Possiede una consolidata esperienza in metodologie Agile (Scrum) ed abbraccia la cultura DevOps per lo sviluppo e rilascio di prodotti IT di alta qualità.</br>È certificato  PMI–CAPM ® e PMI–CPMAI ®.
             </p>
         </div>
     </div>

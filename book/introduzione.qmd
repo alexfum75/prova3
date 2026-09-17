@@ -17,7 +17,7 @@ L'astronomia quindi, grazie alla sua natura interdisciplinare, ha ricoperto un r
 
 ## Struttura del libro 
 
-Ogni capitolo include un'ampia bibliografia che è stata verificata alla stesura del presente materiale, tuttavia l'autore non è responsabile dei siti esterni \nee del loro contenuto in quanto pu\`{o} essere soggetto a variazioni nel tempo: le immagini, foto e disegni pubblicati nel testo dove non espressamente citato nelle didascalie, articoli, link o altro sono di proprietà  dell’autore secondo la licenza \texttt{Creative Commons Attribution-NonCommercial 4.0}.
+Ogni capitolo include un'ampia bibliografia che è stata verificata alla stesura del presente materiale, tuttavia l'autore non è responsabile dei siti esterni \nee del loro contenuto in quanto pu\`{o} essere soggetto a variazioni nel tempo: le immagini, foto e disegni pubblicati nel testo dove non espressamente citato nelle didascalie, articoli, link o altro sono di proprietà  dell'autore secondo la licenza \texttt{Creative Commons Attribution-NonCommercial 4.0}.
 
 L'autore dichiara che nessun \textit{chatbot} che utilizza l'intelligenza artificiale è stato usato per scrivere questo libro: la presente opera è il risultato di anni di ricerca, studio ed analisi, anche personale, dell'autore dedicata alla divulgazione dell'astronomia ed astronautica per il gruppo e la cittadinanza attraverso la partecipazione attiva a conferenze, mostre e corsi base ed avanzati di astronomia.
 L'autore inoltre proibisce ogni forma di estrazione e acquisizione dei contenuti del presente testo per le finalità di alimentazione di qualsiasi sistema di Intelligenza Artificiale.

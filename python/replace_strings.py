@@ -8,7 +8,8 @@ SOSTITUZIONI = {
     "universita'": "università",
     "e' ": "è ",
     "a' ": "à ",
-    "se' ": "sé "
+    "se' ": "sé ",
+    "’": "'"
 } 
 
 PYTHON_SCRIPT = ["cielo"]

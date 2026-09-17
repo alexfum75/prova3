@@ -12,8 +12,9 @@ format:
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <h2>Impegno per la citadinanza</h2>
+::: {.drop-cap}
 Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su argomenti di astronomia ed astronautica.
-
+:::
 
 :::: {layout="[60, 40]"}
 ::: {}
@@ -111,7 +112,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 const videoData = {
   'video1': {
     title: 'Apollo 8: la politica gli uomini e la missione',
-    summary: 'La missione Apollo 8, la più rischiosa del programma Apollo, è avvenuta al termine di un anno molto turbolento negli USA: la guerra nel Vietnam, la lotta per il riconoscimento dei diritti ed il calo di consenso al programma spaziale. </br>Come relatore ho effettuato una accurata ricerca storica e cronologica dei principali eventi del 1968 allo scopo di comprendere il contesto politico e culturale quando il programma spaziale era ripreso dopo l’arresto momentaneo in seguito all’incidente del test AS 204.  La principale bibliografia è costituita da interviste ai protagonisti, libri scritti da chi ha lavorato al programma Apollo, Flight Journal e report tecnici delle aziende sub-appaltatrici di missione. Vengono riportati parte dei discorsi e sentimenti dell’epoca.</br>La conferenza è divisa in tre parti che si interallacciano tra di loro: analisi dei principali eventi culturali e politci del 1968 in ordine cronologico da Gennaio a Dicembre. Si narra di fatti spiacevoli, violenze, discriminazioni e mancati riconoscimenti. Biografia dei protagonisti ed eroi della missione: le loro famiglie, il lavoro e il loro rapporto con la struttura organizzativa della NASA. I manager, i tecnici e le persone che vi hanno lavorato. Analisi cronologica nel dettaglio del piano di volo della missione e degli eventi dalla partenza all’ammaraggio nel Pacifico.',
+    summary: 'La missione Apollo 8, la più rischiosa del programma Apollo, è avvenuta al termine di un anno molto turbolento negli USA: la guerra nel Vietnam, la lotta per il riconoscimento dei diritti ed il calo di consenso al programma spaziale. </br>Come relatore ho effettuato una accurata ricerca storica e cronologica dei principali eventi del 1968 allo scopo di comprendere il contesto politico e culturale quando il programma spaziale era ripreso dopo l'arresto momentaneo in seguito all'incidente del test AS 204.  La principale bibliografia è costituita da interviste ai protagonisti, libri scritti da chi ha lavorato al programma Apollo, Flight Journal e report tecnici delle aziende sub-appaltatrici di missione. Vengono riportati parte dei discorsi e sentimenti dell'epoca.</br>La conferenza è divisa in tre parti che si interallacciano tra di loro: analisi dei principali eventi culturali e politci del 1968 in ordine cronologico da Gennaio a Dicembre. Si narra di fatti spiacevoli, violenze, discriminazioni e mancati riconoscimenti. Biografia dei protagonisti ed eroi della missione: le loro famiglie, il lavoro e il loro rapporto con la struttura organizzativa della NASA. I manager, i tecnici e le persone che vi hanno lavorato. Analisi cronologica nel dettaglio del piano di volo della missione e degli eventi dalla partenza all'ammaraggio nel Pacifico.',
     src: 'https://www.dropbox.com/scl/fi/auty834iesbawabtvzk37/1968.mp4?rlkey=z9xci1ribvgqr5crt49tyoqgx&dl=1'
   },
   'video2': {

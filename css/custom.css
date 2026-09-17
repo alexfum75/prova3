@@ -51,7 +51,7 @@ h4 {
     flex-direction: column; /* Su mobile: layout verticale */
     align-items: center;
     gap: 1.5rem;
-    background-color: #ffffff;
+    background-color: #f0e4cc;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -81,6 +81,7 @@ h4 {
     margin: 2rem auto;
     padding: 0 1rem;
     box-sizing: border-box;
+    background-color: #f0e4cc;
 }
 
 /* Sidebar Background and Border */
@@ -199,7 +200,7 @@ nav ul li a {
         flex-direction: row; /* Layout orizzontale */
         align-items: flex-start;
         padding: 2rem;
-        color:  #e5d5b7;
+        background-color: #f0e4cc;
         gap: 2rem;
     }
 

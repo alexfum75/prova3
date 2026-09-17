@@ -21,7 +21,9 @@ listing:
 
 <h2>Collegamenti esterni</h2>
 
-Una raccolta curata di blog, progetti e siti web esterni
+::: {.drop-cap}
+Una raccolta curata di blog, progetti e siti web esterni.
+:::
 
 ```{=css}
 
