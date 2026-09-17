@@ -1,6 +1,6 @@
 ---
 title: ""
-css: css/about.css    
+css: css/custom.css    
 format:
   html:
     page-layout: full
@@ -19,7 +19,8 @@ format:
 }
 </style>
 
-::: {.table-scroll-container style="max-width: 100%; max-height: 550px;overflow-y: auto; display: block;"}
+<!--::: {.table-scroll-container style="max-width: 100%; max-height: 550px;overflow-y: auto; display: block;"}-->
+::: {.table-responsive style="max-height: 550px; overflow-y: auto;"}
 
 | Anno | Titolo conferenza  | Registrazione | 
 | :--: | :--- | :---: | 

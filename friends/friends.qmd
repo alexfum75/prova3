@@ -50,17 +50,23 @@ Una raccolta curata di blog, progetti e siti web esterni
 
 ## Associazioni
 
+::: {.grid .row-cols-1 .row-cols-sm-2 .row-cols-md-3 .g-3}
 ::: {#Associazioni}
+:::
 :::
 
 ## Osservatori
 
+::: {.grid .row-cols-1 .row-cols-sm-2 .row-cols-md-3 .g-3}
 ::: {#Osservatori}
+:::
 :::
 
 ## Musei
 
+::: {.grid .row-cols-1 .row-cols-sm-2 .row-cols-md-3 .g-3}
 ::: {#Musei}
+:::
 :::
 
 ::: {.content-hidden}

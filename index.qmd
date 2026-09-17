@@ -1,6 +1,6 @@
 ---
 title: "Pagina a Due Colonne"
-css: css/about.css
+css: css/custom.css
 toc: false
 filters:
   - carousel
@@ -14,7 +14,7 @@ filters:
 <!--::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}-->
 ::: {.g-col-12 .g-col-md-4 .p-3 .d-flex .flex-column .justify-content-between style="background-color: #ffffff; color: #3182ce;"}
 <h2>Benvenuti</h2>
-Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non è un blog nè rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
+Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non è un blog né rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
 <!--::: {.grid .text-center}-->
 ::: {.grid .mt-3 .text-center}
@@ -63,9 +63,9 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 :::
 :::: {.carousel-item image="/images/Conferenze/Uomo-Macchina.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.png" style="height: 470px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Astronomia-islamica.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-islamica.jpg" style="height: 470px;"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/Nostro-calendario.jpg" style="height: 460px;"} 
 :::
@@ -91,13 +91,13 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 :::
 :::: {.carousel-item image="/images/Conferenze/Via-Lattea.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Introduzione-Meccanica-Celeste.png" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Introduzione-Meccanica-Celeste.png" style="height: 470px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Meccanica-celeste.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Meccanica-celeste.jpg" style="height: 470px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Modello-standard.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Modello-standard.jpg" style="height: 470px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Molti-universi.jpg" style="height: 460px;"} 
+:::: {.carousel-item image="/images/Conferenze/Molti-universi.jpg" style="height: 470px;"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/NEO_IA.jpg" style="height: 460px;"} 
 :::

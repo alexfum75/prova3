@@ -10,7 +10,7 @@ format:
 #  contents:
 #    - images/*.png
 #  sort-ui: false
-css: css/about.css    
+css: css/custom.css    
 ---
 
 {{< epigraph "La Terra è situata al centro del mondo, immobile, e attorno a essa ruotano le sfere celesti con ordine immutabile." 

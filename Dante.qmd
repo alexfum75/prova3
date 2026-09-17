@@ -10,7 +10,7 @@ format:
 #  contents:
 #    - images/*.png
 #  sort-ui: false
-css: css/about.css    
+css: css/custom.css    
 ---
 
 {{< epigraph "Fatti non foste a viver come bruti, ma per seguir virtute e canoscenza?"

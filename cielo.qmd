@@ -4,7 +4,7 @@ format:
   html:
     page-layout: full
     font: Baskerville
-css: css/about.css    
+css: css/custom.css    
 execute: 
     warning: false
 ---
