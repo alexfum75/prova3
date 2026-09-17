@@ -1,0 +1,383 @@
+.quarto-title, #hyvor-talk-view{
+    display: none;
+}
+
+body{
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* MAIN CONTENT */
+main {
+    margin-top: 20px; /* Spazio per il menù fisso */
+    padding-bottom: 5px;
+}
+
+/* padding al termine del paragrafo */
+p{
+    padding-bottom:1px;
+    text-align: justify;
+    text-justify: inter-word;    
+}
+
+h1{
+    color: #444; 
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px; 
+}
+
+h2{
+    color: #444; 
+    border-bottom: 2px solid #555; 
+    /*padding-bottom: 5px; */ /* no underline */
+}
+
+h3 { 
+    color: #444; 
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px; 
+}
+
+h4 { 
+    color: #444; 
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px; 
+}
+
+/* 3. BOX AUTORE */
+.author-box {
+    display: flex;
+    flex-direction: column; /* Su mobile: layout verticale */
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.author-image-container {
+    flex: 0 0 150px; /* Dimensioni fisse per l'immagine */
+}
+
+.author-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.logo { 
+    margin: 0; 
+    font-size: 1.5rem; 
+}
+
+/* Stile per fare occupare l'intera larghezza alla sezione autore */
+.author-box-full {
+    width: 100%;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+/* Sidebar Background and Border */
+.quarto-sidebar {
+  background-color: #f8f9fa;
+  border-right: 2px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+/* Sidebar Title / Header */
+
+.sidebar-title {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+/* Sidebar Navigation Links */
+.sidebar-navigation .sidebar-item a {
+  color: #495057;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+/* Hover State
+.sidebar-navigation .sidebar-item a:hover {
+  background-color: #e2e8f0;
+  color: #000000;
+} */
+
+/* Active Link State */
+.sidebar-navigation .sidebar-item.active > a {
+  background-color: #3182ce;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.sidebar-widget {
+    margin-bottom: 25px;
+}
+
+.sidebar-widget h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* GALLERIA SWIPER */
+.gallery-section {
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.column h2 { 
+    color: #444; 
+    border-bottom: 2px solid #555; 
+    padding-bottom: 5px; 
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li { margin-left: 20px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.author-bio {
+    text-align: center; /* Centrato su mobile */
+}
+
+.author-bio h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.author-bio p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.author-bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Desktop e Tablet (da 768px in su) */
+@media (min-width: 768px) {
+    .author-box {
+        flex-direction: row; /* Layout orizzontale */
+        align-items: flex-start;
+        padding: 2rem;
+        color:  #e5d5b7;
+        gap: 2rem;
+    }
+
+    .author-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .author-bio {
+        text-align: left; /* Allineamento a sinistra su grandi schermi */
+    } 
+}
+
+.license-container {
+  border: 0 solid #eee;
+}
+
+/* Su schermi piccoli riduce leggermente la dimensione del testo per evitare troppe righe */
+@media (max-width: 576px) {
+  .license-container span {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+/* swiper  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Imposta la dimensione desiderata per le frecce (di default è 44px) */
+    --swiper-navigation-size: 10px; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 850px;
+}
+
+.center {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 850px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.2rem, 3vw, 2.5rem); /* Testo responsivo */
+  background: transparent;
+}
+
+/* button */
+.btn-custom {
+  background-color: #f0e4cc;
+  color: green;
+  border-radius: 2px;
+  padding: 8px 15px;
+  text-decoration: none; 
+  display: inline-block;
+}
+
+/* capitol letter */
+
+.drop-cap p::first-letter {
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-weight: bold;
+  float: left;
+  line-height: 0.85;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.btn-rounded {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+/*.btn-rounded:hover {
+  background-color: #0056b3;
+  color: white;
+}*/
+
+.caption{
+   margin: auto;
+   text-align: center;
+}
+
+.top-right-cite {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #555;
+  background: rgba(245, 245, 245, 0.8);
+  padding: 5px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Gestione fluidità del Carousel e delle immagini */
+.carousel-item {
+  max-height: 460px;
+  min-height: 250px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene le proporzioni dell'immagine ritagliando gli eccessi */
+}
+
+/* Styling del pulsante responsive */
+.btn-summary {
+  background-color: #f0e4cc;
+  color: green;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  white-space: nowrap; /* Impedisce al testo di andare a capo nei pulsanti stretti */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-summary:hover {
+  background-color: #e5d5b7;
+  transform: scale(1.03);
+}
+
+/* Allineamento verticale del contenuto della tabella */
+.table-responsive table th,
+.table-responsive table td {
+  vertical-align: middle;
+}
+
+/* Garantisce che gli elementi interni alle griglie siano fluidi */
+#Associazioni, #Osservatori, #Musei {
+  width: 100%;
+}
+
+/* Gestione responsiva per immagini e schede dentro i container */
+#Associazioni .card, 
+#Osservatori .card, 
+#Musei .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#Associazioni img, 
+#Osservatori img, 
+#Musei img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
