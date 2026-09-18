@@ -13,10 +13,13 @@ format:
 css: css/custom.css    
 ---
 
-{{< epigraph "Fatti non foste a viver come bruti, ma per seguir virtute e canoscenza"
- source="Dante Alighieri (1265-1321) Inferno, Canto XXVI" >}}
+::: {.epigraph}
+"Fatti non foste a viver come bruti, ma per seguir virtute e canoscenza"
+<span class="epigraph-source">Dante Alighieri (1265-1321) Inferno, Canto XXVI</span>
+:::
 
 <h1>Dante e l'astronomia</h1>
+
 ::: {.drop-cap}
 Perché parlare di Dante in un corso di astronomia?
 :::
@@ -29,16 +32,16 @@ La conferenza si pone come obiettivo di illustrare una selezione di essi, catalo
 
 ---
 
-::: {style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"}
+::: {.grid}
 
-::: {}
+::: {.g-col-12 .g-col-md-6}
 
 ![](images/Arte/Cenacolo.png){fig-align="center" width=65% .lightbox}
 
 Locandina della conferenza patricinata dal Comune di Monza.
 :::
 
-::: {}
+::: {.g-col-12 .g-col-md-6}
 
 ![](images/Arte/Trezzo.png){fig-align="center" width=65% .lightbox}
 

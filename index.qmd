@@ -11,12 +11,11 @@ filters:
 ::: {.sezione-superiore}
 
 ::: {.grid .text-center}
-<!--::: {.g-col-4  .p-2 .align-items-center style="background-color: #ffffff; color: #3182ce;"}-->
+
 ::: {.g-col-12 .g-col-md-4 .p-3 .d-flex .flex-column .justify-content-between style="background-color: #ffffff; color: #3182ce;"}
 <h2>Benvenuti</h2>
 Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui potete trovare curiosità, storia e personaggi che hanno contribuito a questa antica scienza. </br> Questo non è un blog né rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità: non può pertanto considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
 
-<!--::: {.grid .text-center}-->
 ::: {.grid .mt-3 .text-center}
 ::: {.g-col-6}
 <div class="mt-1 d-flex justify-content-center w-100">
@@ -33,7 +32,6 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 
 :::
 
-<!--::: {.g-col-8 .p-2}-->
 ::: {.g-col-12 .g-col-md-8 .p-0}
 
 :::: {.carousel controls="false" indicators="false" duration=2000} 
@@ -63,9 +61,9 @@ Se siete appassionati di astonomia ed astronautica siete sul sito giusto: qui po
 :::
 :::: {.carousel-item image="/images/Conferenze/Uomo-Macchina.jpg" style="height: 460px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.png" style="height: 470px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.png" style="height: 480px;"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Astronomia-islamica.jpg" style="height: 470px;"} 
+:::: {.carousel-item image="/images/Conferenze/Astronomia-islamica.jpg" style="height: 480px;"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/Nostro-calendario.jpg" style="height: 460px;"} 
 :::

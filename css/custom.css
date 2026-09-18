@@ -81,7 +81,6 @@ h4 {
     margin: 2rem auto;
     padding: 0 1rem;
     box-sizing: border-box;
-    background-color: #f0e4cc;
 }
 
 /* Sidebar Background and Border */
@@ -381,4 +380,57 @@ nav ul li a {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+/* ==========================================
+   Epigraph - Box Grigio Allineato a Destra
+   ========================================== */
+
+.epigraph {
+  /* Forziamo l'allineamento a destra e una larghezza contenuta anche su mobile */
+  max-width: 85%;            /* Su mobile non occupa tutto lo schermo, lasciando spazio a sinistra */
+  margin-left: auto;         /* Spinge il box a destra */
+  margin-right: 0;
+  margin-bottom: 2.5em;
+  
+  /* Sfondo grigio e struttura */
+  background-color: #f8f9fa; 
+  padding: 1.25em 1.5em;            
+  border-right: 4px solid #e2e8f0;   /* Linea di accento a destra sempre presente */
+  border-radius: 4px 0 0 4px;        /* Arrotonda solo gli angoli a sinistra */
+  
+  /* Tipografia raffinata e allineamento testo */
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #2b2b2b;
+  text-align: right;                 /* Allinea il testo interno a destra */
+}
+
+.epigraph-source {
+  display: block;
+  margin-top: 0.8em;
+  
+  /* Stile fonte */
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-style: normal;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555555;
+}
+
+/* Aggiunge il trattino prima della fonte */
+.epigraph-source::before {
+  content: "— ";
+  opacity: 0.6;
+}
+
+/* Ottimizzazione per schermi grandi (Desktop) */
+@media (min-width: 768px) {
+  .epigraph {
+    max-width: 40%;                  /* Su desktop diventa più stretto ed elegante */
+    padding: 1.5em 2em 1.5em 1.5em;  /* Più respiro sui grandi schermi */
+  }
 }
