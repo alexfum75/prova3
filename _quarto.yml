@@ -35,9 +35,8 @@ website:
 
 format:
   html:
-    fontsize: 17px 
-    #mainfont: "Armarialbold, sans-serif;"
-    mainfont: "Palatino, sans-serif;"
+    fontsize: 16pt 
+    mainfont: "Baskerville BT, sans-serif;"
 
     include-in-header:
       text: |

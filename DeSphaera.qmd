@@ -3,7 +3,7 @@ title: "De Spaerae"
 format:
   html:
     page-layout: full
-    font: Baskerville
+    #mainfont: Baskerville #Palatino #Computer Modern
 #listing:
 #  id: listing-gallery
 #  template: gallery.ejs
@@ -18,10 +18,10 @@ css: css/custom.css
 <span class="epigraph-source">Giovanni di Sacrobosco (1195-1256) </br>Trattato della Sfera</span>
 :::
 
-<h1><i>De Sphaera </i> e il mondo medioevale</h1>
+<h1><i>De Sphaera</i> e il mondo medioevale</h1>
 
 ::: {.drop-cap}
-Il _Sphaerae coelestis et planetarum descriptio_, chiamato anche semplicemente _De Sphaera estense_, è un trattato di astrologia-astronomia, decorato su pergamena datato attorno al 1470 presumibilmente da Cristoforo de Predis, un miniaturista milanese. Dal punto di vista filologico l'opera è un codice membranaceo [^membranaceo] (formato di fogli di pergamena), anepigrafo [^anepigrafo] (senza titolo) e adespoto [^adespoto] (senza nome dell'autore) che consta di un unico fascicolo di otto fogli, sedici carte numerate con riquadri ortogonali in rosso e rigatura all'inchiostro; la scrittura è semigotica libraria in rosso seppia e azzurro nei disegni astrologici e in rosso e azzurro nei distici al piede delle tavole.
+Il _Sphaerae coelestis et planetarum descriptio_, chiamato anche semplicemente _De Sphaera estense_, è un trattato di astrologia-astronomia, decorato su pergamena datato attorno al 1470 presumibilmente da Cristoforo de Predis, un miniaturista milanese. Dal punto di vista filologico l'opera è un codice membranaceo (formato di fogli di pergamena), anepigrafo (senza titolo.) e adespoto (senza nome dell'autore) che consta di un unico fascicolo di otto fogli, sedici carte numerate con riquadri ortogonali in rosso e rigatura all'inchiostro; la scrittura è semigotica libraria in rosso seppia e azzurro nei disegni astrologici e in rosso e azzurro nei distici al piede delle tavole.
 :::
 La presenza in quarta pagina di stemmi sforzeschi fa pensare che l'opera fosse stata commissionata per la corte sforzesca di Milano, quindi vent'anni dopo il manoscritto giunse alla corte degli Estensi a Ferrara come dono di nozze da parte di Galeazzo Sforza alla figlia Anna Maria in occasione del suo matrimonio con Alfonso I d'Este.\
 Il trattato è composto da una serie di illustrazioni miniate e disegni astronomici accompagnati da brevi descrizioni in latino medievale; le pagini centrali sono dedicate alla parte astrologica dell'opera e dipingono una rappresentazione allegorica dei pianeti con la loro – possibile – influenza sulla vita degli uomini arricchite con versi poetici a tema. \
@@ -171,10 +171,6 @@ I quattro elementi e loro proprietà.
 
 Il _De Sphaerae Coelestis et Planetarium_ è considerato il più bel libro illustrato risalente al Rinascimento e uno degli ultimi documenti astronomici-astrologici scritti prima della grande rivoluzione galileiana che separò definitivamente la scienza dalla credenza.
 L'opera è conservata presso la Biblioteca Estense di Modena; in alternativa è possibile sfogliarlo online [QUI](http://bibliotecaestense.beniculturali.it/info/img/mss/i-mo-beu-alfa.x.2.14.pdf){target="_blank" rel="noopener noreferrer"}
-
-[^membranaceo]: formato di fogli di pergamena.
-[^anepigrafo]: senza titolo.
-[^adespoto]: senza nome dell'autore.
 
 <h3>Bibliografia</h3>
 

@@ -416,14 +416,15 @@ nav ul li a {
   font-family: var(--font-sans, system-ui, sans-serif);
   font-style: normal;
   font-size: 0.8rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 0.08em;
   color: #555555;
 }
 
 /* Aggiunge il trattino prima della fonte */
+/* per ora tolto */
 .epigraph-source::before {
-  content: "— ";
+  content: ""; 
   opacity: 0.6;
 }
 
