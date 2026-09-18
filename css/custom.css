@@ -388,7 +388,7 @@ nav ul li a {
 
 .epigraph {
   /* Forziamo l'allineamento a destra e una larghezza contenuta anche su mobile */
-  max-width: 85%;            /* Su mobile non occupa tutto lo schermo, lasciando spazio a sinistra */
+  max-width: 80%;            /* Su mobile non occupa tutto lo schermo, lasciando spazio a sinistra */
   margin-left: auto;         /* Spinge il box a destra */
   margin-right: 0;
   margin-bottom: 2.5em;
@@ -416,7 +416,6 @@ nav ul li a {
   font-family: var(--font-sans, system-ui, sans-serif);
   font-style: normal;
   font-size: 0.8rem;
-  /*text-transform: uppercase;*/
   letter-spacing: 0.08em;
   color: #555555;
 }
