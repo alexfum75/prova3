@@ -24,7 +24,6 @@ listing:
 ::: {.drop-cap}
 Una raccolta curata di blog, progetti e siti web esterni.
 :::
-
 ```{=css}
 
 .quarto-grid-item:hover {

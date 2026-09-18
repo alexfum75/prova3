@@ -388,7 +388,7 @@ nav ul li a {
 
 .epigraph {
   /* Forziamo l'allineamento a destra e una larghezza contenuta anche su mobile */
-  max-width: 80%;            /* Su mobile non occupa tutto lo schermo, lasciando spazio a sinistra */
+  max-width: 75%;            /* Su mobile non occupa tutto lo schermo, lasciando spazio a sinistra */
   margin-left: auto;         /* Spinge il box a destra */
   margin-right: 0;
   margin-bottom: 2.5em;
@@ -427,7 +427,7 @@ nav ul li a {
   opacity: 0.6;
 }
 
-/* Ottimizzazione per schermi grandi (Desktop) */
+/* Ottimizzazione per schermi grandi (Deskto./vp) */
 @media (min-width: 768px) {
   .epigraph {
     max-width: 40%;                  /* Su desktop diventa più stretto ed elegante */

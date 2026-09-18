@@ -38,9 +38,9 @@ format:
     fontsize: 15pt 
     mainfont: "Baskerville BT, sans-serif;"
 
-    include-in-header:
-      text: |
-        <link rel="stylesheet" href="https://cdnfonts.com">
+    #include-in-header:
+    #  text: |
+    #    <link rel="stylesheet" href="https://cdnfonts.com">
     theme: 
       - cosmos
       - custom.scss
