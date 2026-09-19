@@ -35,7 +35,7 @@ website:
 
 format:
   html:
-    fontsize: 15pt 
+    fontsize: 14pt 
     mainfont: "Baskerville BT, sans-serif;"
 
     #include-in-header:
