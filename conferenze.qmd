@@ -19,7 +19,6 @@ format:
 }
 </style>
 
-<!--::: {.table-scroll-container style="max-width: 100%; max-height: 550px;overflow-y: auto; display: block;"}-->
 ::: {.table-responsive style="max-height: 550px; overflow-y: auto;"}
 
 | Anno | Titolo conferenza  | Registrazione | 
