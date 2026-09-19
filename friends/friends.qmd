@@ -23,23 +23,36 @@ listing:
         image: https://www.latorredelsole.it/wp-content/uploads/2020/07/logo-torre-del-sole-bianco-3colori-cerchio-bianco.png
       - title: "Radiotelescopio di Medicina"
         path: "https://www.med.ira.inaf.it"
-        image: /images/Medicina.png
+        image: /images/LinkEsterni/Medicina.png
   - id: associazioni
     type: grid
     grid-columns: 4
     grid-item-border: true
     grid-item-align: center
     contents:
-      - title: "Museo navigazione astronomica di Bellagio"
-        image: "/images/Bellagio.png"
-        path: "https://sites.google.com/view/bellagiomuseo"
       - title: "Gruppo Astrofili Villasanta"
         image: "https://www.promontevecchia.it/wp-content/uploads/2021/01/gav-1.png"
         path: "https://groups.io/g/gruppoastrofilivillasanta"
       - title: "UAI"
         path: "https://www.uai.it/sito"
         image: https://www.uai.it/sito/wp-content/uploads/2021/06/UAI_logo_sitoweb.png
-      - title: "Radiotelescopio di Medicina"
+  - id: mostre
+    type: grid
+    grid-columns: 4
+    grid-item-border: true
+    grid-item-align: center
+    contents:
+      - title: "Figli delle Stelle"
+        image: "/images/LinkEsterni/FigliStelle.png"
+  - id: musei
+    type: grid
+    grid-columns: 4
+    grid-item-border: true
+    grid-item-align: center
+    contents:
+      - title: "Museo navigazione astronomica di Bellagio"
+        image: "/images/LinkEsterni/Bellagio.png"
+        path: "https://sites.google.com/view/bellagiomuseo"
 ---
 
 ::: {.drop-cap}
@@ -54,7 +67,19 @@ Una raccolta curata di osservatori e siti web esterni di carattere astronomico. 
 
 <h3>Associazioni</h3>
 
+_GAV_: circolo di astrofili di cui sono socio: in passato anche membro del direttivo.
+
 ::: {#associazioni}
 :::
 
 <h3>Mostre</h3>
+
+_Figli delle Stelle_: mostra di astronomia ed astronautica organizzata del GAV a Villa Sottocasa – Vimercate (MB).
+
+::: {#mostre}
+:::
+
+<h3>Musei</h3>
+
+::: {#musei}
+:::
