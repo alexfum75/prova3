@@ -29,7 +29,7 @@ book:
   reader-mode: false
   page-footer: 
     left: |
-      ![Logo](images/Licenza.png){width=110px}
+      ![](/images/Licenza.png){width=110px}
     border: true
     center: "Quest'opera di Alessandro Fumagalli è concessa in licenza sotto la Licenza" 
     right: |
@@ -79,7 +79,7 @@ book:
     - appendici.qmd
 
   navbar:
-    logo: images/logo.jpeg
+    logo: /images/logo.jpeg
     left:
       - text: "Home"
         href: ../index.html
@@ -95,11 +95,8 @@ book:
 
 format:
   html:
-    fontsize: 17px 
-    mainfont: "Armarialbold, sans-serif;"
-    include-in-header:
-      text: |
-        <link rel="stylesheet" href="https://cdnfonts.com">
+    fontsize: 14pt 
+    mainfont: "Baskerville BT, sans-serif;"
     grid:
       sidebar-width: 270px  # default 250px
       body-width: 960px # default 800px
@@ -107,13 +104,13 @@ format:
       gutter-width: 1.5rem  
     toc: true
     toc-location: right
-    toc-title: "Contents"
-    #toc-depth: 5
+    toc-title: "Contenuto"
+    toc-depth: 5
     #respect-user-color-scheme: true
-    theme:
-      - cosmos
-      - ../custom.scss
-      #- solar.scss
+    theme: 
+        light: cosmos
+        dark: solar    
+    css: /css/styles.css
 
 reference-location: margin
 citation-location: margin

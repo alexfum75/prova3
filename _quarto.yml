@@ -10,25 +10,26 @@ project:
 
 website:
     title: "Articoli di astronomia"
-    favicon: images/logo.jpeg
+    favicon: book/images/logo.jpeg
     site-url: https://alexfum75.github.io/prova3
     navbar: 
-        background: white
+        #background: white
+        background: light
         pinned: false
         right:
           - href: index.qmd
             text: Home
-          - href: LunaMarte.qmd
+          - href: Menu/LunaMarte.qmd
             text: Perché la Luna
-          - href: friends/friends.qmd
+          - href: Menu/friends.qmd
             text: "Link esterni"
           - text: "Astronomia e arte"
             menu:
               - text: "De Sphaera"
-                href: DeSphaera.qmd
+                href: Menu/DeSphaera.qmd
               - text: "La Divina Commedia"
-                href: Dante.qmd
-          - href: blog.qmd
+                href: Menu/Dante.qmd
+          - href: Menu/blog.qmd
             text: Blog
           - icon: linkedin
             href: https://www.linkedin.com/in/alessandrofumagalli
@@ -37,15 +38,12 @@ format:
   html:
     fontsize: 14pt 
     mainfont: "Baskerville BT, sans-serif;"
-
-    #include-in-header:
-    #  text: |
-    #    <link rel="stylesheet" href="https://cdnfonts.com">
     theme: 
-      - cosmos
-      - custom.scss
+        light: cosmos
+        dark: solar
+    
     js: scripts.js
-    css: css/styles.css
+    css: book/css/styles.css
     toc: true
     html-math-method: katex
     smooth-scroll: true
