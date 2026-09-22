@@ -50,7 +50,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ::: {.grid .gap-3}
 ::: {.g-col-md-11 .g-col-12}
 
-{{< include conferenze.qmd >}}
+{{< include /Portfolio/conferenze.qmd >}}
 :::
 :::
 </div>
@@ -59,7 +59,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ::: {.grid}
 ::: {.g-col-md-11 .g-col-12}
 
-{{< include conferenze.qmd >}}
+{{< include /Portfolio/caffe.qmd >}}
 :::
 :::
 </div>
@@ -68,16 +68,26 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ::: {.grid}
 ::: {.g-col-md-11 .g-col-12}
 
-{{< include conferenze.qmd >}}
+{{< include /Portfolio/corsi.qmd >}}
 :::
 :::
 </div>
+
+<div class="tab-pane fade" id="Corsi" role="tabpanel" aria-labelledby="Corsi-tab">
+::: {.grid}
+::: {.g-col-md-11 .g-col-12}
+
+{{< include /Portfolio/online.qmd >}}
+:::
+:::
+</div>
+
 
 <div class="tab-pane fade" id="Apollo" role="tabpanel" aria-labelledby="Apollo-tab">
 ::: {.grid}
 ::: {.g-col-md-11 .g-col-12}
 
-{{< include conferenze.qmd >}}
+{{< include /Portfolio/corsoApollo.qmd >}}
 :::
 :::
 </div>
