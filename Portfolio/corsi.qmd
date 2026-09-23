@@ -24,8 +24,8 @@ format:
 | Anno | Titolo conferenza  | Registrazione | 
 | :--: | :--- | :---: | 
 | **2024** | Introduzione alla meccanica celeste | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('IntroduzioneCeleste')">Sommario</button> |
-| **2017** | Andiamo su Marte | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Marte')">Sommario</button> |
-| **2016** | L'astronomia ne 'La Divina Commedia ' | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Dante')">Sommario</button> |
+| **2017** | Andiamo su Marte? | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Marte')">Sommario</button> |
+| **2016** | L'astronomia ne _La Divina Commedia_ | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Dante')">Sommario</button> |
 | **2011** | La rivoluzione copernicana: da Aristotele a Copernico | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Copernico')">Sommario</button> |
 | | Yuri Gagarin e l'astronautica sovietica | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Gagarin')">Sommario</button> |
 

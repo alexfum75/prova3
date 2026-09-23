@@ -23,21 +23,18 @@ format:
 
 | Anno | Titolo conferenza  | Registrazione | 
 | :--: | :--- | :---: | 
-| **2025** | Apollo 13: il problema, le soluzioni e la missione (1/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_1')">Registrazione</button> |
-| | Apollo 13: il problema, le soluzioni e la missione (2/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_2')">Registrazione</button> |
-| | Apollo 13: il problema, le soluzioni e la missione (3/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_3')">Registrazione</button> |
-| **2024** | Apollo 8: politica uomini e missione (1/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8_1')">Registrazione</button> |
-| | Apollo 8: politica uomini e missione (2/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8_2')">Registrazione</button> |
-| | Apollo 8: politica uomini e missione (3/3) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8_3)">Registrazione</button> |
-| **2023** | Un filtro per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('FiltroLune')">Sommario</button> |
-| | La Biglia Blu | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('BibliaBlu')">Sommario</button> |
+| **2025** | Apollo 13: il problema, le soluzioni e la missione (Parte I)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_1')">Registrazione</button> |
+| | Apollo 13: il problema, le soluzioni e la missione (Parte II)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_2')">Registrazione</button> |
+| | Apollo 13: il problema, le soluzioni e la missione (Parte III)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_3')">Registrazione</button> |
+| **2024** | Apollo 8: politica uomini e missione (Parte I)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8')">Registrazione</button> |
+| **2023** | Un filtro per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('FiltroLuna')">Sommario</button> |
+| | La Biglia Blu | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('BigliaBlu')">Sommario</button> |
 | | Una finestra per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('FinestraLuna')">Sommario</button> |
 | | Traiettorie di ritorno libero | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('FRT')">Sommario</button> |
 | | Pillole di Apollo | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('PilloleApollo')">Sommario</button> |
 | **2022** | Interazione Uomo-macchina per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('UomoMacchina')">Sommario</button> |
 | | Quale approccio per andare sulla Luna? | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('LOR')">Sommario</button> |
-| | Sistemi di navigazione (1/2) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px; text-decoration: none;" onclick="showVideo('Navigazione_1')">Sommario</button> |
-| | Sistemi di navigazione (2/2) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px; text-decoration: none;" onclick="showVideo('Navigazione_2')">Sommario</button> |
+| | Sistemi di navigazione (Parte I e II)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px; text-decoration: none;" onclick="showVideo('Navigazione')">Sommario</button> |
 
 :::
 

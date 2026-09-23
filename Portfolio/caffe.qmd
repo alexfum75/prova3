@@ -23,7 +23,6 @@ format:
 
 | Anno | Titolo conferenza  | Sommario | 
 | :--: | :--- | :---: | 
-
 | **2018** | L'Auriga | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Auriga')">Sommario</button> |
 | **2015** | Il Modello Standard | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('ModelloStandard')">Sommario</button> |
 | | Ottica e strumenti | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Ottica')">Sommario</button> |

@@ -49,7 +49,10 @@ format:
     smooth-scroll: true
     anchor-sections: true
     #include-in-header: analytics.html
-    page-layout: full
+    #page-layout: full
+    grid:
+      body-width: 1200px  # Imposta la larghezza desiderata in pixel o percentuale
+      margin-width: 300px    
     filters:
       - abstract-section
 

@@ -23,9 +23,9 @@ format:
 
 | Anno | Titolo conferenza  | Sommario | 
 | :--: | :--- | :---: | 
-| **2020** | Come atterra lo Shuttle | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Shuttle')">Sommario</button> |
-| | Space X: Crew Demo 2 (1/2) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('SpaceX_1')">Sommario</button> |
-| | Space X: Crew Demo 2 (2/2) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('SpaceX_2')">Sommario</button> |
+| **2020** | Come atterra lo Shuttle? | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Shuttle')">Sommario</button> |
+| | Space X: Crew Demo 2 (Parte I e II) | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('SpaceX')">Sommario</button> |
+| | Spazio e geometria | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Geometria')">Sommario</button> |
 
 :::
 
