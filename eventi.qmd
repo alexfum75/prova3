@@ -114,7 +114,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 ---
 
 <div id="video-wrapper-3" style="display: none; margin-top: 20px; padding: 15px;">
-  <img id="myImage" src="" class="hidden"></img>
+  <img id="myImage" src="images/Conferenze/Neo.jpg">
 </div>
 
 <div id="video-wrapper-2" style="display: none; margin-top: 20px; padding: 15px;">
@@ -294,7 +294,7 @@ const videoData = {
   'NEA': {
     title: "Analisi dei NEA con l'apprendimento automatico",
     src: "",
-    summary: "Quando venne scoperto 433 Eros (1898) gli astronomi rimasero sorpresi del fatto che la sua traiettoria avesse un perielio (1,12 UA) molto vicino alla distanza della Terra dal Sole: si trattava del primo di una nuova classe di oggetti chiamati NEO a cui appartengono sia asteroidi che nuclei cometari, che rappresentano le briciole della formazione del Sistema Solare. Le orbite di alcuni di questi corpi possono avvicinarsi di tanto in tanto all'orbita terrestre ed intersecarla: nel caso particolare di asteroidi si parla di NEA. </br> Il CNEOS li classifica in base al tipo di orbita ed alla pericolosità (PHA) a seconda di alcuni parametri orbitali. Utilizzando i dati forniti da quest'ultimo ente di ricerca, la conferenza si pone l'obiettivo di mostrare un semplice modello di Machine Learning (ML) per la classificazione in base alla pericolosità e tipo di NEA."
+    summary: "Quando venne scoperto 433 Eros (1898) gli astronomi rimasero sorpresi del fatto che la sua traiettoria avesse un perielio (1,12 UA) molto vicino alla distanza della Terra dal Sole: si trattava del primo di una nuova classe di oggetti chiamati NEO a cui appartengono sia asteroidi che nuclei cometari, che rappresentano le briciole della formazione del Sistema Solare. Le orbite di alcuni di questi corpi possono avvicinarsi di tanto in tanto all'orbita terrestre ed intersecarla: nel caso particolare di asteroidi si parla di NEA. </br> Il CNEOS li classifica in base al tipo di orbita ed alla pericolosità (PHA) a seconda di alcuni parametri orbitali. </br> Utilizzando i dati forniti da quest'ultimo ente di ricerca, la conferenza si pone l'obiettivo di mostrare un semplice modello di Machine Learning (ML) per la classificazione in base alla pericolosità e tipo di NEA."
   },
   'Islam': {
     title: "Astronomia islamica",
@@ -356,6 +356,8 @@ function showVideo(videoId) {
   const summary = document.getElementById('video-summary');
   const image = document.getElementById('video-image');
  const img = document.getElementById('myImage');       
+ img.src = "/images/Conferenze/Keplero.jpg";
+      img.classList.remove('hidden');
 
   // Se clicchi sullo stesso bottone, nascondi il video
   if (currentVideoId === videoId && wrapper.style.display !== 'none') {
@@ -380,8 +382,8 @@ function showVideo(videoId) {
       wrapper_2.style.display = 'none';
       video.pause();
       currentVideoId = null;    
-      img.src = "/images/Conferenze/Keplero.jpg"
-            window.alert(img.src)
+      img.src = "/images/Conferenze/Keplero.jpg";
+            window.alert(img.src);
       img.classList.remove('hidden');
       return;
   }
