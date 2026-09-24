@@ -106,6 +106,10 @@ filters:
 :::
 :::: {.carousel-item image="/images/Conferenze/GPS.jpg" style="height: 85%; width: 85%"} 
 :::
+:::: {.carousel-item image="/images/Conferenze/GiordanoBruno.jpg" style="height: 85%; width: 85%"} 
+:::
+:::: {.carousel-item image="/images/Conferenze/SatellitiArtificiali.jpg" style="height: 85%; width: 85%"} 
+:::
 :::
 :::
 :::
@@ -119,7 +123,7 @@ filters:
 <section class="container author-box-full">
     <div class="author-box">
         <div class="author-image-container">
-            <img src="images/logo.jpeg" alt="Immagine dell'Autore" class="author-photo">
+            <img src="/images/logo.png" alt="Immagine dell'Autore" class="author-photo">
         </div>
         <div class="author-bio">
             <h3>Informazioni sull'Autore</h3>
@@ -147,7 +151,7 @@ filters:
 
 ::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
 <h2>Il libro</h2>
-<p class="mb-0">In anteprima la bozza del libro "Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica" con molte curiosità, storie e personaggi che hanno contribuito a queste scienze.</p>
+<p class="mb-0">In anteprima la bozza del libro _Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica_ con molte curiosità, storie e personaggi che hanno contribuito a queste scienze.</p>
 <div class="mt-1 d-flex justify-content-center w-100">
   [Anteprima <i class="bi bi-book ms-2"></i>](book/index.html){.btn .btn-custom role="button"}
 </div>

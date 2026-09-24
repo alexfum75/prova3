@@ -21,13 +21,13 @@ Il programma Artemis è in pieno svolgimento: le missioni Artemis 1 e Artemis 2 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <figure style="text-align: center;">
-    <img src="images/Patch.png" style="max-width: 55%; height: auto;">
+    <img src="/images/Patch.png" style="max-width: 55%; height: auto;">
     <figcaption>
       <a href="https://apollo11space.com/all-apollo-mission-patches" target="_blank" rel="noopener noreferrer">Patch Apollo</a>
     </figcaption>
   </figure>
   <figure style="text-align: center;">
-    <img src="images/PatchArtemis.png" style="max-width: 50%; height: auto;">
+    <img src="/images/PatchArtemis.png" style="max-width: 50%; height: auto;">
     <figcaption>
       <a href="https://www.nasa.gov/feature/artemis-i-identifier" target="_blank" rel="noopener noreferrer">Patch Artemis 1</a>
     </figcaption>
@@ -40,7 +40,7 @@ La lettera venne scritta da Ernst Stuhlinger, uno scienziato tedesco (si signori
 Negli anni '60 infatti una suora dello Zambia (Mary Jucunda) scrisse alla NASA chiedendo perché spendere soldi per lo spazio quando sulla Terra molte persone muoiono di fame o vivono in condizioni pessime. La risposta di Ernst è stata semplicemente eccezionale e si riassume nella prima parte della lettera (prime 20 righe circa) e con un fantastico esempio nel passo successivo quando narra la storia di un Conte Tedesco.
 
 <figure style="text-align: center;">
-  <img src="images/VonBraun_Stuhlinger.png" width="50%">
+  <img src="/images/VonBraun_Stuhlinger.png" width="50%">
     <figcaption>
       <a href="http://www.collectspace.com/ubb/Forum38/HTML/000849.html" target="_blank" rel="noopener noreferrer">Ernst Stuhlinger e Wernher von Braun</a>
     </figcaption>  

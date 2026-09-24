@@ -395,6 +395,7 @@ nav ul li a {
   
   /* Sfondo grigio e struttura */
   background-color: #f8f9fa; 
+  color: #555555;
   padding: 1.25em 1.5em;            
   border-right: 4px solid #e2e8f0;   /* Linea di accento a destra sempre presente */
   border-radius: 4px 0 0 4px;        /* Arrotonda solo gli angoli a sinistra */

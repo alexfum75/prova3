@@ -111,7 +111,12 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 :::
 ::::
 
-<p></p>
+---
+
+<div id="video-wrapper-3" style="display: none; margin-top: 20px; padding: 15px;">
+  <img id="myImage" src="" class="hidden"></img>
+</div>
+
 <div id="video-wrapper-2" style="display: none; margin-top: 20px; padding: 15px;">
 <video id="main-video" width="960" height="540" controls controlslist="nodownload">  
   <source id="video-source" src="" type="video/mp4">
@@ -349,6 +354,8 @@ function showVideo(videoId) {
   const source = document.getElementById('video-source');
   const title = document.getElementById('video-title');
   const summary = document.getElementById('video-summary');
+  const image = document.getElementById('video-image');
+ const img = document.getElementById('myImage');       
 
   // Se clicchi sullo stesso bottone, nascondi il video
   if (currentVideoId === videoId && wrapper.style.display !== 'none') {
@@ -367,7 +374,20 @@ function showVideo(videoId) {
   }
     // Aggiorna titolo e sorgente video
   title.innerText = videoData[videoId].title;
-  source.src = videoData[videoId].src;
+  if (videoData[videoId].src == "") {
+      summary.innerHTML = videoData[videoId].summary;
+      wrapper.style.display = 'block';
+      wrapper_2.style.display = 'none';
+      video.pause();
+      currentVideoId = null;    
+      img.src = "/images/Conferenze/Keplero.jpg"
+            window.alert(img.src)
+      img.classList.remove('hidden');
+      return;
+  }
+  else {
+      source.src = videoData[videoId].src;
+  }
   summary.innerHTML = videoData[videoId].summary;
   
   // Ricarica il player con il nuovo video
