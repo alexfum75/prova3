@@ -149,7 +149,7 @@ const videoData = {
   'FiltroLuna': {
     title: "Un filtro per la Luna",
     src: '',
-    img: "/images/Conferenze/Kalman.png", 
+    img: "Images/Conferenze/Kalman.png", 
     summary: "La conoscenza sia del _vettore di stato_ che delle equazioni della traiettoria gestite dal FDO non era sufficiente a garantire il successo della missione: l'inevitabile presenza di errori nella misura ed approssimazioni nelle equazioni del moto portavano ad errori significativi su lunghe distanze e quindi a mancare l'obiettivo. Era necessario implementare un metodo affidabile che, in un ambiente rumoroso, potesse valutare in senso statistico le migliori azioni da intraprendere: il problema venne affrontato e risolto tramite l'implementazione di un sistema di intelligenza artificiale per identificare lo stimatore ottimo. </br> La terza parte della conferenza si sofferma sull'analisi del filtro inventato dall'Ing. Rudolf Kalman, oggi usato in tanti settori dell'industria (nell'automotive, nell'aviazione, nell'elettronica ...). Per il suo impegno, egli ha ricevuto in seguito numerosi riconoscimenti."
   },
   'BigliaBlu': {
