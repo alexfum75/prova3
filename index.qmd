@@ -150,8 +150,8 @@ filters:
 :::
 
 ::: {.g-col-4  .p-2 style="background-color: #ffffff; color: #3182ce;"}
-<h2>Il libro</h2>
-<p class="mb-0">In anteprima la bozza del libro _Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica_ con molte curiosità, storie e personaggi che hanno contribuito a queste scienze.</p>
+<h2>Lo zibaldone</h2>
+<p class="mb-0">In anteprima la bozza de _Il cielo per tutti: piccolo zibaldone  di astronomia ed astronautica_ con molte curiosità, storie e personaggi che hanno contribuito a queste scienze.</p>
 <div class="mt-1 d-flex justify-content-center w-100">
   [Anteprima <i class="bi bi-book ms-2"></i>](book/index.html){.btn .btn-custom role="button"}
 </div>
