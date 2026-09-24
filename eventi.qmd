@@ -113,9 +113,7 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 
 ---
 
-<div id="video-wrapper-3" style="display: none; margin-top: 20px; padding: 15px;">
-  <img id="myImage" src="images/Conferenze/Neo.jpg">
-</div>
+  <img id="myImage" src="">
 
 <div id="video-wrapper-2" style="display: none; margin-top: 20px; padding: 15px;">
 <video id="main-video" width="960" height="540" controls controlslist="nodownload">  
@@ -130,6 +128,7 @@ const videoData = {
   'Apollo8': {
     title: "Apollo 8: la politica gli uomini e la missione",
     src: "https://videos.files.wordpress.com/YKfsakT9/1968.mp4",
+    img: "",
     summary: "La missione Apollo 8, la più rischiosa del programma Apollo, è avvenuta al termine di un anno molto turbolento negli USA: la guerra nel Vietnam, la lotta per il riconoscimento dei diritti ed il calo di consenso al programma spaziale. </br>Come relatore ho effettuato una accurata ricerca storica e cronologica dei principali eventi del 1968 allo scopo di comprendere il contesto politico e culturale quando il programma spaziale era ripreso dopo l'arresto momentaneo in seguito all'incidente del test AS 204.  La principale bibliografia è costituita da interviste ai protagonisti, libri scritti da chi ha lavorato al programma Apollo, Flight Journal e report tecnici delle aziende sub-appaltatrici di missione. Vengono riportati parte dei discorsi e sentimenti dell'epoca.</br>La conferenza è divisa in tre parti che si interallacciano tra di loro: analisi dei principali eventi culturali e politci del 1968 in ordine cronologico da Gennaio a Dicembre. Si narra di fatti spiacevoli, violenze, discriminazioni e mancati riconoscimenti. Biografia dei protagonisti ed eroi della missione: le loro famiglie, il lavoro e il loro rapporto con la struttura organizzativa della NASA. I manager, i tecnici e le persone che vi hanno lavorato. Analisi cronologica nel dettaglio del piano di volo della missione e degli eventi dalla partenza all'ammaraggio nel Pacifico."
   },
   'Apollo13_1': {
@@ -150,124 +149,148 @@ const videoData = {
   'FiltroLuna': {
     title: "Un filtro per la Luna",
     src: '',
+    img: "/image/Conferenze/Kalman.png", 
     summary: "La conoscenza sia del _vettore di stato_ che delle equazioni della traiettoria gestite dal FDO non era sufficiente a garantire il successo della missione: l'inevitabile presenza di errori nella misura ed approssimazioni nelle equazioni del moto portavano ad errori significativi su lunghe distanze e quindi a mancare l'obiettivo. Era necessario implementare un metodo affidabile che, in un ambiente rumoroso, potesse valutare in senso statistico le migliori azioni da intraprendere: il problema venne affrontato e risolto tramite l'implementazione di un sistema di intelligenza artificiale per identificare lo stimatore ottimo. </br> La terza parte della conferenza si sofferma sull'analisi del filtro inventato dall'Ing. Rudolf Kalman, oggi usato in tanti settori dell'industria (nell'automotive, nell'aviazione, nell'elettronica ...). Per il suo impegno, egli ha ricevuto in seguito numerosi riconoscimenti."
   },
   'BigliaBlu': {
     title: "La Biglia Blu",
     src: '',
+    img: "/image/Conferenze/Blue-Marble.jpg", 
     summary: "Durante l'ultima missione Apollo gli astronauti scattarono una serie di fotografie alla Terra che divennero famose con il nome “Blue Marble“: la Biglia Blu. Per la prima volta la Terra veniva fotografata dallo spazio nella sua interezza, senza la presenza del terminatore. Una di quelle foto, una volta elaborata, filtrata e ritagliata, rappresenta ancora oggi una delle fotografie più riprodotte della storia. </br> Analizzando meglio questa serie di scatti, oltre a meravigliarci della loro bellezza puramente estetica, possiamo estrarre una notevole quantità di informazioni astronomiche, scientifiche e geometriche che molti non notano. Riferendomi ad alcune domande poste mesi fa nella newsletter del GAV, la conferenza intende rispondere ad alcune configurazioni sul sistema Terra-Sole-Luna-Apollo al momento dello scatto e riprodurre la situazione geometrica nello spazio 3D con semplici modellini. Inoltre si cercherà di tracciare con un buon grado di approssimazione, l'orbita dell'Apollo 17 poco dopo l'ingresso dell'autostrada gravitazionale verso la Luna."
   },
   'FinestraLuna': {
     title: "Una finestra per la Luna",
     src: '',
+    img: "/image/Conferenze/Finestre-Lunari.jpg", 
     summary: "Supponiamo che Giorgia decida di affacciarsi alla finestra per osservare la Luna in cielo: può pensare di vederla in qualsiasi orario della giornata? La risposta è ovviamente negativa perché ci sono vincoli da rispettare: deve conoscere e giorni e gli orari del passaggio del nostro satellite ed aspettare che la Luna faccia capolino all'interno della sua finestra. Analogamente per le missioni Apollo non era possibile andare sulla Luna in qualsiasi momento: bisognava tener conto di vincoli relativi alla geometria Terra-Luna, di progettazione del CSM, del sito allunaggio e tanti altri.</br>  Era necessario pianificare in anticipo e con precisione l'intervallo di tempo in cui era possibile lasciare la Terra ed immettersi nell'autostrada gravitazionale verso il nostro Satellite: questi intervalli di tempo si chiamano finestre lunari. La conferenza intende approfondire l'argomento grazie ai concetti di (molta) meccanica celeste resi semplici con modelli 3D, diagrammi e lavagna."
   },
   'FRT': {
     title: "Traiettorie di ritorno libero",
     src: '',
+    img: "/image/Conferenze/Free-Return-Trajectory.jpg", 
     summary: "Sapere quando è possibile andare verso la Luna è solo una prima parte del problema: per andarci occorre progettare anche una traiettoria che sia compatibile con i requisiti di missione, conceda un alto grado di affidabilità e minimizzi il rischio. Tra le famiglie di traiettorie che rispondevano ai requisiti minimi di missione espressi sopra, la NASA scelse quelle chiamate Traiettorie di Ritorno Libero (Free Return Trajectory).</br> Queste traiettorie vennero sfruttate dalle prime missioni Apollo: per ultime missioni invece, quando maggiore era la confidenza con il viaggio, vennero utilizzate traiettorie differenti. Interessante notare che queste traiettorie erano note già alla fine del XIX secolo grazie al lavoro di alcuni scienziati russi e vennero in seguito riadattate al progetto Apollo. La conferenza intende approfondire questo argomento facendo uso di modelli 3D, molta lavagna e meccanica celeste."
   },
   'PilloleApollo': {
     title: "Pillole di Apollo",
     src: '',
+    img: "/image/Conferenze/Pillole-di-Apollo.jpg", 
     summary: "Al termine delle precedenti conferenze sul progetto Apollo il pubblico ha avanzato alcune domande riguardo diversi aspetti ingegneristici ed è stata quindi proposta una serata di approfondimento ad essi dedicata. Ecco l'elenco dei temi che hanno suscitato maggior interesse e curiosità di cui si parlerà durante la serata speciale: Le fasce di Van Allen: cosa sono e come la NASA ha affrontato il problema. </br> L'IMU del Saturn V e come veniva gestiva la prima fase della salita: fasi di clean, roll e pitch. I colori e le patch del Saturn V. Inserimento in orbita lunare (LOI): analisi completa di un PAD (Pre Advisory Data) con le informazioni per gestire la fase di volo."
   } ,
   'UomoMacchina': {
     title: "Interazione Uomo-macchina per la Luna",
     src: '',
+    img: "/image/Conferenze/Uomo-Macchina.jpg", 
     summary: "Gli astronauti selezionati dalla NASA erano tutti piloti esperti di jet militari altamente qualificati e abituati a gestire le situazioni critiche. Affidare una missione composta da 3 uomini in un viaggio di andata e ritorno sulla Luna esclusivamente alle capacità dei piloti poteva essere molto rischioso. In molte situazioni di volo in cui si verificano centinaia di eventi in sequenza in un ristretto intervallo di tempo: se qualcosa fosse andato per il verso sbagliato nessun astronauta benchè molto preparato sarebbe stato in grado di gestire una situazione di emergenza simile. </br> L'utilizzo di un computer era fondamentale: pertanto si decise che i progetti Mercury, Gemini ed Apollo venissero subito influenzati dal controllo elettronico con complessità crescente. La conferenza affronta la tematica uomo-macchina all'interno del progetto Apollo fornendo le risposte alle domande: come integrare il computer con le abilità degli astronauti? Quale peso avrebbero avuto gli astronauti nella missioni Apollo e quali ruoli avrebbe avuto il calcolatore?"
   }  ,
   'LOR': {
     title: "Quale approccio per andare sulla Luna?",
     src: '',
+    img: "/image/Conferenze/LOR.jpg", 
     summary: "Agli inizi degli anni '60 gli Stati Uniti si trovavano in una posizione di inferiorità nella corsa allo spazio nei confronti dell'Unione Sovietica: quando il 25 Maggio 1961 J.F. Kennedy pronunciò il discorso al Congresso in cui ispirava il popolo americano a unire gli sforzi per mandare un uomo sulla Luna, Robert Gilruth, direttore del Manned Spacecraft Center, rimaste inorridito. </br> Si era appena concluso con successo il volo suborbitale di A. Shepard e pensare ad andare sulla Luna entro un decennio sembrava un obiettivo fuori portata. Con che approccio affrontare un progetto dalla portata così grande? I vari comitati di studio avevano identificato due approcci diversi, quando l'ingegnere John Houbolt si rese conto che entrambe le scelte avrebbero fallito l'obiettivo entro il decennio, e propose una terza via. La conferenza fornisce una digressione storica e tecnica del LOR, la tecnica proposta da Houbolt ed infine adottata dalla NASA per raggiungere l'obiettivo entro il decennio"
   } ,
   'Navigazione': {
     title: "Sistemi di navigazione",
     src: '',
+    img: "/image/Conferenze/Sistemi-Navigazione-1.jpg", 
     summary: "Raggiungere la Luna richiedeva ideare ed implementare nuovi sistemi di navigazione per conoscere i parametri di volo del CSM/LM all'interno dello spazio cislunare: era necessario conoscere posizione e velocità dell'Apollo in ogni istante. La conoscenza del Vettore di Stato V_{t} consentiva di fare predizioni riguardo l'orbita e prendere decisioni adeguate. Esso era un requisito di progetto fondamentale e la sua identificazione avveniva sia da terra che a bordo con tecniche e metodologie diverse a seconda dei vincoli tecnologici. </br> La prima parte della conferenza si sofferma sulle tecniche implementate da terra per l'identificazione dei parametri di volo dell'Apollo, in particolare sull'Apollo Digital Ranging System basato sulla trasmissione Spread Spectrum. </br> La seconda parte della conferenza si sofferma sulle tecniche implementate a bordo per l'identificazione dei parametri di volo, in particolare il sistema di guida inerziale (IMU) basato su giroscopi e accelerometri, il sistema telescopio-sestante spaziale ed il loro uso durante la navigazione e sulla superficie lunare. Si prosegue con gli algoritmi di stima di V_{t} quindi si conclude con un cenno ai sistemi di riferimento."
   },
 /*  CORSI SEDE */
   'IntroduzioneCeleste': {
     title: "Introduzione alla meccanica celeste",
     src: "https://videos.files.wordpress.com/VemzBMkn/solar-system-tour.mp4",
+    img: "", 
     summary: "Questo appuntamento con il corso di astronomia organizzato dal GAV è dedicato alla meccanica celeste: la disciplina che si occupa di studiare le orbite dei corpi celesti naturali ed artificiali. La conferenza presenta una panoramica introduttiva ai principali risultati raggiunti negli ultimi due secoli riguardo le orbite, le risonanze, l'obliquità … ottenuti grazie allo sforzo di molti astronomi: da Galileo, a Laskar passando per Newton, Keplero, Laplace, Lagrange ed altri ancora. </br> A bordo di una sonda interplanetaria visiteremo i Giganti Gassosi ed i Giganti Ghiacciati soffermandoci sulle particolarità che li caratterizzano. Verrà affrontato il problema della stabilità del Sistema Solare nel suo complesso alla luce dei risultati delle ultime simulazioni, unitamente ad una breve digressione storica della materia."
   },
   'Marte': {
     title: "Andiamo su Marte?",
     src: "",
+    img: "", 
     summary: "Si fa un gran parlare di Marte (soprattutto in questi ultimi mesi) e di quando l'uomo poserà il primo piede sul suolo marziano: dati, ipotesi, scenari, previsioni più o meno vere che si confondono in una miriade di commenti contrastanti. Quanto c'è di vero in quello che servizi in televisione, articoli di giornale dicono? Quanto di tutto ciò è frutto di fantasia e quanto è verosimile? Collocata all'interno del corso di astronomia di base del GAV, la conferenza si propone di illustrare lo stato tecnologico attuale e futuro in ottica di una possibile realizzazione di un progetto di questa portata. </br> Perché Marte è non è solo tecnologia, ma vuol dire anche astronomia, fisiologia, medicina, ecologia, agricoltura e molto altro. Si va su Marte per studiare meglio il passato e futuro del nostro pianeta."
   },
   'Dante': {
     title: "L'astronomia ne La Divina Commedia",
     src: "",
+    img: "/image/Conferenze/Asatronomia-e-la-divina-commedia.png",
     summary: "Dante era un uomo molto colto per l'epoca in cui visse: aveva studiato le arti liberali del trivio e del quadrivio (e quindi anche l'astronomia) e questo ci consente di ricostruire la visione cosmologica dell'uomo medioevale che, seppur con i propri limiti, metteva in luce alcuni aspetti e problemi ben noti all'epoca (come il problema del calendario giuliano) ed ha consentito agli studiosi contemporanei di far luce su falsi preconcetti che molti di noi hanno sui Secoli Bui (la sfericità' della Terra è un concetto ben noto per l'uomo del Medioevo). </br> Sebbene Dante rimanga un uomo dalla visione geocentrica dell'Universo, “La Divina Commedia” considerata come un'opera che parla della salvezza dell'Uomo, ci sono moltissimi riferimenti al cielo (per alcuni storici ci sono più di centinaia riferimenti astronomici). La conferenza si pone come obiettivo di illustrare una selezione di essi, catalogati per tipologia tramite il commento di alcuni passi selezionati dalle tre Cantiche: in particolare: la geografia terrestre, la precessione degli equinozi, la longitudine, l'eclittica, il cielo australe, la misura del tempo, il calendario giuliano ed il modello tolemaico."
   },
   'Copernico': {
     title: "La rivoluzione copernicana",
     src: "",
+    img: "/image/Conferenze/Rivoluzione-copernicana.jpg",
     summary: "Chiunque abbia osservato il cielo notturno (condizioni atmosferiche ed inquinamento luminoso permettendo) almeno una volta sicuramente avrà notato la periodica rotazione della volta celesteintorno alla polare. In modo analogo durante il dì il percorso apparente da est verso ovest che descrive il Sole in cielo ha portato le prime civiltà a costruire un modello cosmologico basato su una ipotesi geocentrica. Oggi noi sappiamo che non è così, è la Terra a muoversi (con un movimento di rotazione ed uno di rivoluzione) ma ci son voluti più di quindici secoli ed una rivoluzione affinché la teoria eliocentrica trovasse radici nel pensiero umano. </br> Il principale attore di questa innovazione fu Niccolò Copernico, astronomo polacco, che costruì una teoria matematica (ed una cosmologia) alternativa che giustificasse i moti del Sole e dei pianeti sulla volta celeste. Nel corso dei secoli molti astronomi proposero soluzioni alternative che spiegassero le irregolarità nel moto dei pianeti; la conferenza ripercorre le idee di questi ultimi immersi nel contesto storico in cui hanno vissuto, fino allo sviluppo delle idee copernicane. Maggiore enfasi viene riservata al contenuto del De Revolutionibus Orbium Coelestium, Libri VI i cui concetti vengono spiegati tramite immagini, filmati ed animazioni."
   },
   'Gagarin': {
     title: "Yuri Gagarin e l'astronautica sovietica",
     src: "",
+    img: "/image/Conferenze/Gagarin.jpg",
     summary: "La ISS orbita intorno alla Terra a circa 400 km sopra le nostre teste: le notizie di avvicendamento degli equipaggi non hanno molto eco sui media, forse perché siamo ormai abituati e non ci facciamo più caso, ma eventi come questi sono possibili perché in passato alcune persone hanno investito molte energie in termini di ricerca affinché ciò che oggi assistiamo rientri nella normalità delle cose. Non è passato molto tempo dal primo volo orbitale, sono trascorsi appena sessanta anni dall'impresa di Yuri Gagarin che ha reso possibile questi risultati. </br> In occasione di questa ricorrenza, la presentazione ripercorre le fasi principali del volo di Gagarin, assieme ad una breve biografia del cosmonauta e gli sforzi compiuti dalla ricerca sovietica per entrare nella storia."
   },
   /*  CORSI ONLINE */
   'Shuttle': {
     title: "Come atterra lo Shuttle?",
     src: "https://videos.files.wordpress.com/bmfDDhH2/shuttle-enterprise.mp4",
+    img: "",
     summary: "Il 12 Aprile 1981, esattamente 20 anni dopo il primo volo di Yuri Gagarin, partiva dalla rampa 39A del Kennedy Space Center (KSC) la prima missione spaziale dello Space Shuttle: un veicolo spaziale riutilizzabile con equipaggio. Il progetto Shuttle era iniziato nei primi anni '70 quando ormai il progetto Apollo era nelle fasi finali, e aveva come scopo la realizzare di nuovi obiettivi: ISS, HST, la collaborazione internazionale con le altre agenzie spaziali ... Le partenze dello Shuttle trasmesse in televisione, o nei filmati reperibili online, hanno sempre fornito immagini spettacolari di notevole impatto visivo per il pubblico, mentre i media meno frequentemente hanno dedicato attenzione alla fase  di rientro dell'Orbiter. </br> L'obiettivo della conferenza è quello di analizzare la fase di rientro dell'Orbiter, dalle procedure iniziali all'atterraggio sulla pista del KSC con l'uso di immagini di repertorio, video, fotografie scattate all'Intrepid Museum (NY), schemi della documentazione NASA ed un modellino adatto allo scopo."
   },
   'SpaceX': {
     title: "Space X: Crew Demo 2",
     src: "",
+    img: "",
     summary: "Luglio 2011 è stato l'ultima volta che un gruppo di astronauti americani sono (andati) e rientrati dallo spazio con un vettore di produzione propria (lo Shuttle) senza chiedere un passaggio ai russi (Soyuz). Mercoledì 27 Maggio 2020, condizioni meteo permettendo, una nuova capsula spaziale di società aerospaziale privata americana (SpaceX), partirà dalla piattaforma 39A in Florida con un razzo Falcon 9 per la ISS con a bordo un equipaggio di due astronauti. </br> La SpaceX è un'azienda privata americana che ha iniziato circa 10 anni fa la collaborazione con la NASA per portare sulla ISS rifornimenti e strumentazione con la capsula la Dragon 1 cargo. La breve tele-conferenza affronta cosa vuol dire aprire lo spazio ai privati, analizza le caratteristiche della Dragon 2 (versione Crew) e come, secondo il progetti di Elon Musk, la capsula (e il vettore Falcon) porterà gli astronauti a destinazione."
   },
   /*  CAFFÈ */
   'Auriga': {
     title: "L'Auriga",
     src: "",
+    img: "/image/Conferenze/Auriga.jpg",
     summary: "La conferenza analizzerà la costellazione dell'Auriga visibile al meridiano in questo periodo dell'anno dalle nostre latitudini. Le stelle e gli oggetti dell'Auriga saranno lo spunto per parlare di esopianeti, variabili, supernovae, e molte altre curiosità; il dibattito sarà moderato da Alessandro Fumagalli e da Mauro Maggioni con semplicità di linguaggio."
   },
   'ModelloStandard': {
     title: "Il Modello Standard",
     src: "",
+    img: "/image/Conferenze/Modello-standard.jpg",
     summary: "In questa occasione il dibattito ruoterà intorno alla seguente domanda: di cosa è fatta la materia ? Da atomi che riempiono uno spazio vuoto !! Così avrebbe risposto Democrito nel III a.C. Ed effettivamente questa era la conoscenza massima che si poteva avere dell'argomento, nonostante i progressi della chimica, fino alla meta del XIX secolo finche Rontgen scoprì per caso la radioattività. </br> Il secolo successivo ha visto crescere il numero di particelle scoperte (protoni, quark ...) tanto da giustificare i fisici a creare nuova branca della fisica: la meccanica quantistica. Questa disciplina si pone come obiettivo lo studio, la verifica sperimentale (grazie agli acceleratori di tutto il mondo) e le classificazione delle particelle che compongono la materia in un modello: il Modello Standard. La serata racconta questa avventura: un lavoro tuttora incompleto volto alla classificazione di ciò che rappresenta solo il 4% circa della materia presente nell'Universo."
   },
   'Ottica': {
     title: "Ottica e strumenti",
     src: "",
+    img: "/image/Conferenze/Ottica-e-strumenti.jpg",
     summary: "In quest'occasione parleremo di ottica geometrica, ovverso valida quando la luce interagisce con oggetti di dimensioni molto maggiori della lunghezza d'onda incidente. Grazie a questa approssimazione possiamo parlare di raggi ed approssimare cosa succede alla luce quando incontra una lente o uno specchio; seguirà una spiegazione dei problemi e difficoltà nella costruzione edi telescopi."
   },
   'Sagittario': {
     title: "Il Sagittario",
     src: "",
+    img: "/image/Conferenze/Sagittario.jpg",
     summary: "La conferenza analizzerà la costellazione del Sagittario: mitologia, stelle della costellazione, oggetti Messier, centro galattico, Sagittarius A*, e sistemi planetari."
   },
   'Luna': {
     title: "La Luna",
     src: "",
+    img: "",
     summary: "In occasione dell'annuale giornata mondiale della Luna, le rendiamo omaggio nuovamente rendendola protagonista del prossimo caffè astronomico. Ovviamente l'argomento è troppo vasto per essere trattato in una sola serata, quindi discuteremo alcuni argomenti. </br> Si parlerà del moto, le fasi lunari, le maree e le eclissi. La Luna rappresenta anche un buon soggetto per imparare a conoscere e calcolare le distanze fra i corpi nel Sistema Solare e scopriremo come; quindi si discuterà dei crateri lunari, della loro origine ed ubicazione basandosi su una  cartina lunare muta. Un accenno alle missioni Apollo ed alle sonde (in particolare la LRO) concluderà la serata."
   },
   'Vergine': {
     title: "La Vergine",
     src: "",
+    img: "/image/Conferenze/Vergine.jpg",
     summary: "La conferenza analizzerà la costellazione della Vergine: mitologia, stelle della costellazione, oggetti Messier, centro galattico, Sagittarius A*, e sistemi planetari."
   },
   'NEO': {
     title: "NEO e dintorni",
     src: "",
+    img: "images/Conferenze/Neo.jpg",
     summary: "Questa volta si parlerà di NEO (Near Earth Object), NEA (Near Earth Asteroids) ed i corpi celesti che incontrano la Terra lungo la sua orbita: da dove arrivano, come son classificati e come difendersi. Prendendo spunto dai recenti accadimenti in Russia, affronteremo un dibattito con i presenti spiegando gli eventuali pericoli a cui la Terra può andare incontro."
   },
   'Leone': {
     title: "Il Leone",
     src: "",
+    img: "/image/Conferenze/Leone.jpg",
     summary: "La conferenza analizzerà la costellazione del Leone: mitologia, stelle della costellazione, oggetti Messier, centro galattico, Sagittarius A*, e sistemi planetari."
   },
   'Orientarsi': {
     title: "Orientarsi in cielo",
     src: "",
+    img: "",
     summary: "Si terrà un dibattito dove come tema principale della serata saranno le costellazioni, le stelle e l'astrofisica. Sarò il moderatore della serata e parleremo di costellazioni astrali/boreali, della loro storia e cosa rappresentavano per i popoli antichi tramite leggende, racconti tramandati e mitologia. </br> Parleremo poi dei  viaggi intorno al mondo del XVII e XVIII secolo e di come hanno contribuito alla definizione e catalogazione delle costellazioni australi. Il dibattito continua la catalogazione stellare, della nascita dell'astrofisica e di evoluzione stellare. Il caffè scientifico si terrà il 9 Novembre presso la sede del GAV – Gruppo Astrofili Villasanta"
   },
   /*  CONFERENZE */
@@ -279,21 +302,25 @@ const videoData = {
   'Simmetrie': {
     title: "Simmetrie e leggi di conservazione",
     src: "",
+    img: "/image/Conferenze/Noether.jpg",
     summary: "Le leggi di conservazione sono un pilastro fondamentale della fisica: esse affermano che alcune grandezze in un sistema isolato sono costanti. Durante il XVIII Laplace ed altri matematici formalizzarono matematicamente questo concetto usando le leggi del moto di Newton, ma quando nel 1915 Einstein pubblicò la Teoria della Relatività egli non fu in grado di contestualizzare ed estendere i principi conservativi nella nuova visione della fisica. La soluzione venne proposta da Emmy Noether, matematica tedesca, che con l'omonimo teorema associò le leggi di conservazione al concetto di simmetria. </br> Il suo pionieristico lavoro continuò anche dopo la sua morte e ha contribuito alla descrizione del Modello Standard."
   },
   'Abitabile_1': {
     title: "Abitabilita",
     src: "",
+    img: "",
     summary: "Sono passati piu' di trent'anni dalla scoperta del primo esopianeta orbitante intorno ad una stella di sequenza principale, e sebbene i telescopi spaziali/terrestri abbiano scrutato una frazione molto piccola di cielo, la loro numerosità e tipologia è in continuo aumento. Gli astronomi quindi si chiedono se la vita sulla Terra sia un unicum oppure esista la possibilità che possa svilupparsi su uno di questi nuovi mondi. Affinchè sia possibile formulare ipotesi in tal senso, è necessario analizzarne le loro caratteristiche, conoscere le condizioni che si pensa siano favorevoli allo sviluppo della vita (basata sul carbonio) e identificare quali parametri rendono un esopianeta abitabile. </br> Allo stato attuale questi parametri poggiano su due ipotesi fondamentali: la presenza continua nel tempo di H2O allo stato liquido in superficie e un ciclo biogeochimico basato su   H2O, CO2 e N2. L'ulteriore ricerca di biomarcatori, assieme ad un approccio statistico  al problema, consente di approfondire l'analisi per indirizzare le future osservazioni verso le classi di pianeti più idonei. Considerata la complessità dell'argomento, la conferenza affronta il tema non solo dal punto di vista astronomico, ma necessariamente coinvolge discipline strettamente collegate ad essa quali biologia, chimica, ecologia, strettroscopia e geologia."
   },
   'Multiversi': {
     title: "Molti universi",
     src: "",
+    img: "/image/Conferenze/Molti-universi.jpg",
     summary: "Universo in cui viviamo è unico? A metà degli anni '50 Hugh Everett, un fisico americano, che ebbe modo di lavorare anche per il Dipartimento della Difesa del governo statunitense, propose una teoria elegante e coerente che spiegasse contemporaneamente i fenomeni fisici del mondo sub-atomico (meccanica quantistica) con il mondo reale (fisica classica). </br>Le fondamenta della sua teoria prevedevano l'esistenza di zone dello spazio-tempo isolate fra loro (Universi – bolla) come proiezione dello spazio degli eventi per ogni fenomeno misurabile. Oggi, grazie anche alle osservazioni e allo studio della cosmologia, si è cercato di fornire una stima della dimensione di ogni universo – isola, inoltre la teoria di Everett del Multiverso (o molti universi) rappresenta una spiegazione possibile (ad oggi unica?) a ciò che emerge nel mondo reale quando si passa dal mondo atomico al mondo macroscopico. Nonostante sia difficile valutare l'esistenza effettiva di molti universi nella realtà senza entrare in speculazioni, la conferenza intende fornire uno spunto di riflessione sull'argomento."
   },
   'NEA': {
     title: "Analisi dei NEA con l'apprendimento automatico",
     src: "",
+    img: "/image/Conferenze/NEO_IA.jpg",
     summary: "Quando venne scoperto 433 Eros (1898) gli astronomi rimasero sorpresi del fatto che la sua traiettoria avesse un perielio (1,12 UA) molto vicino alla distanza della Terra dal Sole: si trattava del primo di una nuova classe di oggetti chiamati NEO a cui appartengono sia asteroidi che nuclei cometari, che rappresentano le briciole della formazione del Sistema Solare. Le orbite di alcuni di questi corpi possono avvicinarsi di tanto in tanto all'orbita terrestre ed intersecarla: nel caso particolare di asteroidi si parla di NEA. </br> Il CNEOS li classifica in base al tipo di orbita ed alla pericolosità (PHA) a seconda di alcuni parametri orbitali. </br> Utilizzando i dati forniti da quest'ultimo ente di ricerca, la conferenza si pone l'obiettivo di mostrare un semplice modello di Machine Learning (ML) per la classificazione in base alla pericolosità e tipo di NEA."
   },
   'Islam': {
@@ -309,36 +336,43 @@ const videoData = {
   'Calendario': {
     title: "Il nostro calendario",
     src: "",
+    img: "/image/Conferenze/Nostro-calendario.jpg",
     summary: "Il calendario è un sistema per organizzare il tempo in unità minime adatte a soddisfare le esigenze della società e di illudere l'uomo di avere un senso di controllo sul tempo“; questa è una delle definizioni più comuni di calendario. Nei secoli ogni civiltà ha inventato un proprio calendario in funzione della propria cultura, ed oggi esistono tantissimi calendari nel mondo che si differenziano per i metodi usati per la loro creazione. </br> Uno dei calendari più diffusi nel panorama internazionale è sicuramente il calendario gregoriano, cioè quello che ognuno di noi è abituato ad usare tutti i giorni; non tutti però ne conoscono la storia ed i principi astronomici sul quale si fonda. La conferenza intende approfondire lo studio del nostro calendario dal punto di vista astronomico e matematico, in particolare la riforma gregoriana, i periodi di intercalazione e le relazioni con i moti della Terra."
   }, 
   'Keplero': {
     title: "Giovanni Kelero",
     src: "",
+    img: "/image/Conferenze/Keplero.jpg",
     summary: "Non disponibile"
   } ,
   'Herschel': {
     title: "La famiglia Herschel",
     src: "",
+    img: "/image/Conferenze/Famiglia-herschel.jpg",
     summary: "Non disponibile"
   },
   'GPS': {
     title: "Sistemi di posizionamento satellitari",
     src: "",
+    img: "/image/Conferenze/GPS.jpg",
     summary: "Non disponibile"
   },
   'Giordano': {
     title: "Giordano Bruno: il filosofo dell'infinito",
     src: "",
+    img: "/image/Conferenze/Giordano-Bruno.jpg",
     summary: "Non disponibile"
   },
   'Artificiali': {
     title: "Satelliti artificiali",
     src: "",
+    img: "/image/Conferenze/SatellitiArtificiali.jpg",
     summary: "Non disponibile"
   },
   'Geometria': {
     title: "Spazio e geometria",
     src: "",
+    img: "",
     summary: "Non disponibile"
   }
 };
@@ -355,9 +389,7 @@ function showVideo(videoId) {
   const title = document.getElementById('video-title');
   const summary = document.getElementById('video-summary');
   const image = document.getElementById('video-image');
- const img = document.getElementById('myImage');       
- img.src = "/images/Conferenze/Keplero.jpg";
-      img.classList.remove('hidden');
+  const img = document.getElementById('myImage');       
 
   // Se clicchi sullo stesso bottone, nascondi il video
   if (currentVideoId === videoId && wrapper.style.display !== 'none') {
@@ -374,7 +406,11 @@ function showVideo(videoId) {
     currentVideoId = null;
     return;
   }
-    // Aggiorna titolo e sorgente video
+
+  img.src = videoData[videoId].img;
+  img.classList.remove('hidden');
+
+  // Aggiorna titolo e sorgente video
   title.innerText = videoData[videoId].title;
   if (videoData[videoId].src == "") {
       summary.innerHTML = videoData[videoId].summary;
@@ -383,8 +419,8 @@ function showVideo(videoId) {
       video.pause();
       currentVideoId = null;    
       img.src = "/images/Conferenze/Keplero.jpg";
-            window.alert(img.src);
       img.classList.remove('hidden');
+      //img.classList.toggle('hidden');
       return;
   }
   else {
