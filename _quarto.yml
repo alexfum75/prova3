@@ -37,7 +37,6 @@ website:
 format:
   html:
     fontsize: 14pt 
-    #mainfont: "Baskerville BT, sans-serif;"
     mainfont: "Robota, sans-serif;"
     theme:         
         light: cosmos        
