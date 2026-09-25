@@ -6,19 +6,6 @@ format:
     page-layout: full
 ---
 
-<h2>Conferenze</h2>
-
-<style>
-/* Rende l'intestazione fissa in alto durante lo scorrimento verticale */
-.table-scroll-container th {
-    position: sticky;
-    top: 0;
-    background-color: #ffffff; /* Sfondo coprente per non far sovrapporre il testo sotto */
-    z-index: 10;               /* Mantiene l'intestazione sopra le altre righe */
-    box-shadow: inset 0 -2px 0 #ccc; /* Opzionale: aggiunge una linea di separazione sotto i titoli */
-}
-</style>
-
 ::: {.table-responsive style="max-height: 550px; overflow-y: auto;"}
 
 | Anno | Titolo conferenza  | Registrazione | 
@@ -33,10 +20,10 @@ format:
 | **2012** | Il nostro calendario | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Calendario')">Sommario</button> |
 | **2010** | Giovanni Kelero | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Keplero')">Sommario</button> |
 | | La famiglia Herschel | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Herschel')">Sommario</button> |
-| **2006** | Sistemi di posizionamento satellitari | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('GPS')">Sommario</button> |
+| **2008** | Sistemi di posizionamento satellitari | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('GPS')">Sommario</button> |
 | | Satelliti artificiali | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Artificiali')">Sommario</button> |
 | **2006** | Giordano Bruno: il filosofo dell'infinito | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Giordano')">Sommario</button> |
 
 :::
 
-<br>
+<br/>
