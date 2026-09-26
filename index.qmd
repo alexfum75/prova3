@@ -72,7 +72,7 @@ filters:
 :::
 :::: {.carousel-item image="/images/Conferenze/Gagarin.jpg" style="height: 400px; width: 100%"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/Giordano-Bruno.jpg" style="height: 85%; width: 85%"} 
+:::: {.carousel-item image="/images/Conferenze/GiordanoBruno.jpg" style="height: 85%; width: 85%"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/Keplero.jpg" style="height: 85%; width: 85%"} 
 :::
