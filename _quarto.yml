@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs
-  pre-render: python/replace_strings.py  
+  #pre-render: python/replace_strings.py  
   preview:
     port: 7777
   render:

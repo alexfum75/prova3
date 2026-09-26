@@ -248,7 +248,7 @@ const videoData = {
   'Luna': {
     title: "La Luna",
     src: "",
-    img: "",
+    img: "./images/Conferenze/Luna.jpg",
     summary: "In occasione dell'annuale giornata mondiale della Luna, le rendiamo omaggio nuovamente rendendola protagonista del prossimo caffè astronomico. Ovviamente l'argomento è troppo vasto per essere trattato in una sola serata, quindi discuteremo alcuni argomenti. </br> Si parlerà del moto, le fasi lunari, le maree e le eclissi. La Luna rappresenta anche un buon soggetto per imparare a conoscere e calcolare le distanze fra i corpi nel Sistema Solare e scopriremo come; quindi si discuterà dei crateri lunari, della loro origine ed ubicazione basandosi su una  cartina lunare muta. Un accenno alle missioni Apollo ed alle sonde (in particolare la LRO) concluderà la serata."
   },
   'Vergine': {

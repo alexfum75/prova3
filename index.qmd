@@ -110,6 +110,8 @@ filters:
 :::
 :::: {.carousel-item image="/images/Conferenze/Crew-demo-2.png" style="height: 85%; width: 85%"} 
 :::
+:::: {.carousel-item image="/images/Conferenze/Luna.jpg" style="height: 85%; width: 85%"} 
+:::
 :::
 :::
 :::
