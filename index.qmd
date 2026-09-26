@@ -56,6 +56,8 @@ filters:
 :::
 :::: {.carousel-item image="/images/Conferenze/Sistemi-Navigazione-1.jpg" style="height: 85%; width: 85%"} 
 :::
+:::: {.carousel-item image="/images/Conferenze/Sistemi-Navigazione-2.jpg" style="height: 85%; width: 85%"} 
+:::
 :::: {.carousel-item image="/images/Conferenze/Uomo-Macchina.jpg" style="height: 85%; width: 85%"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/Astronomia-e-la-divina-commedia.jpg" style="height: 85%; width: 85%"} 
