@@ -35,8 +35,8 @@ website:
 
 format:
   html:
-    fontsize: 14pt 
-    mainfont: "Robota, sans-serif;"
+    fontsize: 14ptmainfont: " 
+    mainfont: "Roboto, sans-serif;"
     theme:         
         light: cosmos        
         dark: solar
