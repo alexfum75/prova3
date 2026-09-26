@@ -100,7 +100,7 @@ filters:
 :::
 :::: {.carousel-item image="/images/Conferenze/Ottica-e-strumenti.jpg" style="height: 85%; width: 85%"} 
 :::
-:::: {.carousel-item image="/images/Conferenze/GPS.png" style="height: 85%; width: 85%"} 
+:::: {.carousel-item image="/images/Conferenze/GPS.jpg" style="height: 85%; width: 85%"} 
 :::
 :::: {.carousel-item image="/images/Conferenze/GiordanoBruno.jpg" style="height: 85%; width: 85%"} 
 :::
