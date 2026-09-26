@@ -7,122 +7,105 @@ format:
     page-layout: full
 ---
 
-<!-- Importazione della libreria e dello stile di Leaflet tramite CDN -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<h2>Impegno per la citadinanza</h2>
+<style>
+/* Rende l'intestazione fissa in alto durante lo scorrimento verticale */
+.table-scroll-container th {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* Sfondo coprente per non far sovrapporre il testo sotto */
+    z-index: 10;               /* Mantiene l'intestazione sopra le altre righe */
+    box-shadow: inset 0 -2px 0 #ccc; /* Opzionale: aggiunge una linea di separazione sotto i titoli */
+}
+</style>
+
+<h2>Impegno per la cittadinanza</h2>
 
 ::: {.drop-cap}
-Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su argomenti di astronomia ed astronautica.
+Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su argomenti di astronomia ed astronautica. I lavori sono suddivisi in quattro categorie, in particolare: 
 :::
 
-:::: {layout="[60, 40]"}
-::: {}
+* conferenze tenute in sede, biblioteche o strutture esterne.
+* ingegneria per l'Apollo: un corso tenuto in sede dedicato al Programma Apollo, con particolare attenzione all'aspetto ingegneristico delle missioni.
+* conferenze _online_: conferenze tenute via Zoom durante il periodo della pandemia Covid-19
+* caffe' astronomici: dibattiti aperti con i presenti su un argomento prefissato a priori con la moderazione dell'autore insieme ad altri soci del gruppo astrofili.
 
+---
 
-::: {.hello-quarto .alt-background}
-::: {.content-block .mt-2 .pt-4 .pb-2 .text-center .align-items-center}
+::: {layout="[ 60, 40 ]"}
 
-::: {.hello-quarto-banner}
-::: {.grid .gap-1 .text-center .align-items-center}
-::: {.g-col-12 .align-items-center}   
+::: {#prima-colonna .g-col-12 .align-items-center}
+
 <ul class="nav nav-pills d-flex flex-wrap" id="hello-quarto-tab" role="tablist" text-align="center">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="python-tab" data-bs-toggle="tab" data-bs-target="#Conferenze" type="button" role="tab" aria-controls="Conferenze" aria-selected="true">Conferenze</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffè</br>astronomico</button>
+    <button class="nav-link" id="Caffe-tab" data-bs-toggle="tab" data-bs-target="#Caffe" type="button" role="tab" aria-controls="Caffe" aria-selected="false" >Caffè<br/>astronomico</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Corsi-tab" data-bs-toggle="tab" data-bs-target="#Corsi" type="button" role="tab" aria-controls="Corsi" aria-selected="false" >Corsi di</br>astronomia</button>
+    <button class="nav-link" id="Corsi-tab" data-bs-toggle="tab" data-bs-target="#Corsi" type="button" role="tab" aria-controls="Corsi" aria-selected="false" >Corsi di<br/>astronomia</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="Apollo-tab" data-bs-toggle="tab" data-bs-target="#Apollo" type="button" role="tab" aria-controls="Apollo" aria-selected="false" >Ingegneria</br>per l'Apollo</button>
+    <button class="nav-link" id="OnLine-tab" data-bs-toggle="tab" data-bs-target="#OnLine" type="button" role="tab" aria-controls="OnLine" aria-selected="false" >Corsi online</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Apollo-tab" data-bs-toggle="tab" data-bs-target="#Apollo" type="button" role="tab" aria-controls="Apollo" aria-selected="false" >Ingegneria<br/>per l'Apollo</button>
   </li>
 </ul>
-:::
-:::
-:::
 
-<div class="tab-content mt-2" id="hello-quarto-tabcontent">
-<div class="tab-pane fade  show active" id="Conferenze" role="tabpanel" aria-labelledby="Conferenze-tab">
-::: {.grid .gap-3}
-::: {.g-col-md-11 .g-col-12}
+<div class="tab-content mt-3" id="hello-quarto-tabContent">
+  <div class="tab-pane fade show active" id="Conferenze" role="tabpanel" aria-labelledby="conferenze-tab">
 
 {{< include /Portfolio/conferenze.qmd >}}
-:::
-:::
-</div>
-
-<div class="tab-pane fade" id="Caffe" role="tabpanel" aria-labelledby="Caffe-tab">
-::: {.grid}
-::: {.g-col-md-11 .g-col-12}
+  
+  </div>
+  <div class="tab-pane fade" id="Caffe" role="tabpanel" aria-labelledby="caffe-tab">
 
 {{< include /Portfolio/caffe.qmd >}}
-:::
-:::
-</div>
-
-<div class="tab-pane fade" id="Corsi" role="tabpanel" aria-labelledby="Corsi-tab">
-::: {.grid}
-::: {.g-col-md-11 .g-col-12}
+  
+  </div>
+  <div class="tab-pane fade" id="Corsi" role="tabpanel" aria-labelledby="corsi-tab">
 
 {{< include /Portfolio/corsi.qmd >}}
-:::
-:::
-</div>
-
-<div class="tab-pane fade" id="Corsi" role="tabpanel" aria-labelledby="Corsi-tab">
-::: {.grid}
-::: {.g-col-md-11 .g-col-12}
+  
+  </div>
+  <div class="tab-pane fade" id="OnLine" role="tabpanel" aria-labelledby="corsi-tab">
 
 {{< include /Portfolio/online.qmd >}}
-:::
-:::
-</div>
-
-
-<div class="tab-pane fade" id="Apollo" role="tabpanel" aria-labelledby="Apollo-tab">
-::: {.grid}
-::: {.g-col-md-11 .g-col-12}
+  
+  </div>
+  <div class="tab-pane fade" id="Apollo" role="tabpanel" aria-labelledby="apollo-tab">
 
 {{< include /Portfolio/corsoApollo.qmd >}}
-:::
-:::
+
+  </div>
 </div>
-</div>
-
-::: {.grid}
-
-:::
-:::
-:::
 
 :::
 
-::: {}
-
-<!-- Un solo riquadro dinamico per il video -->
-<div id="video-wrapper" style="display: none; margin-top: 20px; padding: 15px;">
-  <h4 id="video-title" style="margin-top: 0;"></h4>
+::: {#seconda-colonna}
+<div id="video-wrapper" style="display: none; margin-top: 20px; padding: 15px;  display: flex; justify-content: center; align-items: center;">
+  <h5 id="video-title" style="margin-top: 0;"></h5>
   <div id="video-summary" style="margin-top: 0; text-align: justify;" ></div>
 </div>
 :::
-::::
 
----
+:::
 
 <div id="video-wrapper-3" style="display: none; margin-top: 20px; padding: 15px;">
-  <img id="myImage" src=""/>
+  <img id="myImage" src="" />
 </div>
 
 <div id="video-wrapper-2" style="display: none; margin-top: 20px; padding: 15px;">
-<video id="main-video" width="960" height="540" controls controlslist="nodownload">  
+<video id="main-video" width="100%; max-width: 1200px;" height="auto" controls controlslist="nodownload">  
   <source id="video-source" src="" type="video/mp4">
   Il tuo browser non supporta il tag video.
 </video>
 </div>
+
 
 <script>
 const videoData = {
@@ -210,7 +193,7 @@ const videoData = {
   'Dante': {
     title: "L'astronomia ne La Divina Commedia",
     src: "",
-    img: "./images/Conferenze/Astronomia-e-la-divina-commedia.png",
+    img: "./images/Conferenze/Astronomia-e-la-divina-commedia.jpg",
     summary: "Dante era un uomo molto colto per l'epoca in cui visse: aveva studiato le arti liberali del trivio e del quadrivio (e quindi anche l'astronomia) e questo ci consente di ricostruire la visione cosmologica dell'uomo medioevale che, seppur con i propri limiti, metteva in luce alcuni aspetti e problemi ben noti all'epoca (come il problema del calendario giuliano) ed ha consentito agli studiosi contemporanei di far luce su falsi preconcetti che molti di noi hanno sui Secoli Bui (la sfericità' della Terra è un concetto ben noto per l'uomo del Medioevo). </br> Sebbene Dante rimanga un uomo dalla visione geocentrica dell'Universo, “La Divina Commedia” considerata come un'opera che parla della salvezza dell'Uomo, ci sono moltissimi riferimenti al cielo (per alcuni storici ci sono più di centinaia riferimenti astronomici). La conferenza si pone come obiettivo di illustrare una selezione di essi, catalogati per tipologia tramite il commento di alcuni passi selezionati dalle tre Cantiche: in particolare: la geografia terrestre, la precessione degli equinozi, la longitudine, l'eclittica, il cielo australe, la misura del tempo, il calendario giuliano ed il modello tolemaico."
   },
   'Copernico': {
@@ -304,11 +287,11 @@ const videoData = {
     img: "./images/Conferenze/Noether.png",
     summary: "Le leggi di conservazione sono un pilastro fondamentale della fisica: esse affermano che alcune grandezze in un sistema isolato sono costanti. Durante il XVIII Laplace ed altri matematici formalizzarono matematicamente questo concetto usando le leggi del moto di Newton, ma quando nel 1915 Einstein pubblicò la Teoria della Relatività egli non fu in grado di contestualizzare ed estendere i principi conservativi nella nuova visione della fisica. La soluzione venne proposta da Emmy Noether, matematica tedesca, che con l'omonimo teorema associò le leggi di conservazione al concetto di simmetria. </br> Il suo pionieristico lavoro continuò anche dopo la sua morte e ha contribuito alla descrizione del Modello Standard."
   },
-  'Abitabile_1': {
-    title: "Abitabilita",
+  'Abitabilita': {
+    title: "Abitabilita'",
     src: "",
-    img: "./images/Conferenze/Abitabilita.jpg",
-    summary: "Sono passati piu' di trent'anni dalla scoperta del primo esopianeta orbitante intorno ad una stella di sequenza principale, e sebbene i telescopi spaziali/terrestri abbiano scrutato una frazione molto piccola di cielo, la loro numerosità e tipologia è in continuo aumento. Gli astronomi quindi si chiedono se la vita sulla Terra sia un unicum oppure esista la possibilità che possa svilupparsi su uno di questi nuovi mondi. Affinchè sia possibile formulare ipotesi in tal senso, è necessario analizzarne le loro caratteristiche, conoscere le condizioni che si pensa siano favorevoli allo sviluppo della vita (basata sul carbonio) e identificare quali parametri rendono un esopianeta abitabile. </br> Allo stato attuale questi parametri poggiano su due ipotesi fondamentali: la presenza continua nel tempo di H2O allo stato liquido in superficie e un ciclo biogeochimico basato su   H2O, CO2 e N2. L'ulteriore ricerca di biomarcatori, assieme ad un approccio statistico  al problema, consente di approfondire l'analisi per indirizzare le future osservazioni verso le classi di pianeti più idonei. Considerata la complessità dell'argomento, la conferenza affronta il tema non solo dal punto di vista astronomico, ma necessariamente coinvolge discipline strettamente collegate ad essa quali biologia, chimica, ecologia, strettroscopia e geologia."
+    img: "./images/Conferenze/abitabile.jpg",
+    summary: "Sono passati piu' di trent'anni dalla scoperta del primo esopianeta orbitante intorno ad una stella di sequenza principale, e sebbene i telescopi spaziali/terrestri abbiano scrutato una frazione molto piccola di cielo, la loro numerosità e tipologia è in continuo aumento. Gli astronomi quindi si chiedono se la vita sulla Terra sia un unicum oppure esista la possibilità che possa svilupparsi su uno di questi nuovi mondi. Affinchè sia possibile formulare ipotesi in tal senso, è necessario analizzarne le loro caratteristiche, conoscere le condizioni che si pensa siano favorevoli allo sviluppo della vita (basata sul carbonio) e identificare quali parametri rendono un esopianeta abitabile. </br> Allo stato attuale questi parametri poggiano su due ipotesi fondamentali: la presenza continua nel tempo di H<sub>2</sub>O allo stato liquido in superficie e un ciclo biogeochimico basato su H<sub>2</sub>O, CO<sub>2</sub> e N<sub>2</sub>. L'ulteriore ricerca di biomarcatori, assieme ad un approccio statistico  al problema, consente di approfondire l'analisi per indirizzare le future osservazioni verso le classi di pianeti più idonei. Considerata la complessità dell'argomento, la conferenza affronta il tema non solo dal punto di vista astronomico, ma necessariamente coinvolge discipline strettamente collegate ad essa quali biologia, chimica, ecologia, strettroscopia e geologia."
   },
   'Multiversi': {
     title: "Molti universi",
@@ -320,7 +303,7 @@ const videoData = {
     title: "Analisi dei NEA con l'apprendimento automatico",
     src: "",
     img: "./images/Conferenze/NEO_IA.jpg",
-    summary: "Quando venne scoperto 433 Eros (1898) gli astronomi rimasero sorpresi del fatto che la sua traiettoria avesse un perielio (1,12 UA) molto vicino alla distanza della Terra dal Sole: si trattava del primo di una nuova classe di oggetti chiamati NEO a cui appartengono sia asteroidi che nuclei cometari, che rappresentano le briciole della formazione del Sistema Solare. Le orbite di alcuni di questi corpi possono avvicinarsi di tanto in tanto all'orbita terrestre ed intersecarla: nel caso particolare di asteroidi si parla di NEA. </br> Il CNEOS li classifica in base al tipo di orbita ed alla pericolosità (PHA) a seconda di alcuni parametri orbitali. </br> Utilizzando i dati forniti da quest'ultimo ente di ricerca, la conferenza si pone l'obiettivo di mostrare un semplice modello di Machine Learning (ML) per la classificazione in base alla pericolosità e tipo di NEA."
+    summary: "Quando venne scoperto 433 Eros (1898) gli astronomi rimasero sorpresi del fatto che la sua traiettoria avesse un perielio (1,12 UA) molto vicino alla distanza della Terra dal Sole: si trattava del primo di una nuova classe di oggetti chiamati NEO a cui appartengono sia asteroidi che nuclei cometari, che rappresentano le briciole della formazione del Sistema Solare. Le orbite di alcuni di questi corpi possono avvicinarsi di tanto in tanto all'orbita terrestre ed intersecarla: nel caso particolare di asteroidi si parla di NEA. </br> Il CNEOS li classifica in base al tipo di orbita ed alla pericolosità (PHA) a seconda di alcuni parametri orbitali. Utilizzando i dati forniti da quest'ultimo ente di ricerca, la conferenza si pone l'obiettivo di mostrare un semplice modello di Machine Learning (ML) per la classificazione in base alla pericolosità e tipo di NEA."
   },
   'Islam': {
     title: "Astronomia islamica",
@@ -353,13 +336,13 @@ const videoData = {
   'GPS': {
     title: "Sistemi di posizionamento satellitari",
     src: "",
-    img: "./images/Conferenze/GPS.jpg",
+    img: "./images/Conferenze/GPS.png",
     summary: "Non disponibile"
   },
   'Giordano': {
     title: "Giordano Bruno: il filosofo dell'infinito",
     src: "",
-    img: "./images/Conferenze/Giordano-Bruno.jpg",
+    img: "./images/Conferenze/GiordanoBruno.jpg",
     summary: "Non disponibile"
   },
   'Artificiali': {
@@ -410,7 +393,7 @@ function showVideo(videoId) {
   }
 
   // Aggiorna titolo e sorgente video
-  title.innerText = videoData[videoId].title;
+  title.innerHTML = "<h3>" + videoData[videoId].title + "</h3>";
   if (videoData[videoId].src == "") {
       summary.innerHTML = videoData[videoId].summary;
       wrapper.style.display = 'block';

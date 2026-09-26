@@ -42,7 +42,7 @@ h3 {
 h4 { 
     color: #444; 
     border-bottom: 2px solid #555; 
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 }
 
 /* 3. BOX AUTORE */
@@ -326,14 +326,17 @@ nav ul li a {
 
 /* Gestione fluidità del Carousel e delle immagini */
 .carousel-item {
-  max-height: 460px;
-  min-height: 250px;
+  /*max-height: 460px;
+  min-height: 250px;*/
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Mantiene le proporzioni dell'immagine ritagliando gli eccessi */
 }
 
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantiene le proporzioni dell'immagine ritagliando gli eccessi */
+  object-fit: fill; /* Mantiene le proporzioni dell'immagine ritagliando gli eccessi */
 }
 
 /* Styling del pulsante responsive */

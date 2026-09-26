@@ -1,6 +1,6 @@
 ---
 title: ""
-css: css/custom.css    
+css: /css/custom.css    
 format:
   html:
     page-layout: full
@@ -13,7 +13,7 @@ format:
 | **2025** | Apollo 13: il problema, le soluzioni e la missione (Parte I)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_1')">Registrazione</button> |
 | | Apollo 13: il problema, le soluzioni e la missione (Parte II)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_2')">Registrazione</button> |
 | | Apollo 13: il problema, le soluzioni e la missione (Parte III)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo13_3')">Registrazione</button> |
-| **2024** | Apollo 8: politica uomini e missione (Parte I)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8')">Registrazione</button> |
+| **2024** | Apollo 8: politica uomini e missione (Parte I)| <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('Apollo8')">Preview</button> |
 | **2023** | Un filtro per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px; border-radius: 20px;  text-decoration: none;" onclick="showVideo('FiltroLuna')">Sommario</button> |
 | | La Biglia Blu | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('BigliaBlu')">Sommario</button> |
 | | Una finestra per la Luna | <button  style="background-color: #f0e4cc; color: green; padding: 5px 12px;border-radius: 20px;  text-decoration: none;" onclick="showVideo('FinestraLuna')">Sommario</button> |

@@ -1,6 +1,6 @@
 ---
 title: ""
-css: css/custom.css    
+css: /css/custom.css    
 format:
   html:
     page-layout: full
