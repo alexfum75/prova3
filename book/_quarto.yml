@@ -96,7 +96,7 @@ book:
 format:
   html:
     fontsize: 14pt 
-    mainfont: "Baskerville BT, sans-serif;"
+    mainfont: "Georgia, sans-serif;"
     grid:
       sidebar-width: 270px  # default 250px
       body-width: 960px # default 800px
