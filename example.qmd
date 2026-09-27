@@ -9,7 +9,8 @@ This is a Shinylive application embedded in a Quarto doc.
 
 ```{shinylive-python}
 #| standalone: true
-
+#| components: [editor, viewer]
+#| 
 from shiny import *
 
 app_ui = ui.page_fluid(
