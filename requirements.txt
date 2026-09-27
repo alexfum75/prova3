@@ -8,3 +8,5 @@ skyfield
 folium
 geocoder
 yml
+seaborn
+shiny
