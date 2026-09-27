@@ -1,30 +1,28 @@
 ---
-title: "Penguin Bills"
-format: dashboard
-server: shiny
+title: Shinylive in Quarto example
+format: html
+filters:
+  - shinylive
 ---
 
-```{python}
-import seaborn as sns
-penguins = sns.load_dataset("penguins")
-```
+This is a Shinylive application embedded in a Quarto doc.
 
-## {.sidebar}
+```{shinylive-python}
+#| standalone: true
 
-```{python}
-from shiny.express import render, ui
-ui.input_select("x", "Variable:",
-                choices=["bill_length_mm", "bill_depth_mm"])
-ui.input_select("dist", "Distribution:", choices=["hist", "kde"])
-ui.input_checkbox("rug", "Show rug marks", value = False)
-```
+from shiny import *
 
-## Column
+app_ui = ui.page_fluid(
+    ui.input_slider("n", "N", 0, 100, 40),
+    ui.output_text_verbatim("txt"),
+)
 
-```{python}
-@render.plot
-def displot():
-    sns.displot(
-        data=penguins, hue="species", multiple="stack",
-        x=input.x(), rug=input.rug(), kind=input.dist())
+def server(input, output, session):
+    @output
+    @render.text
+    def txt():
+        return f"The value of n*2 is {input.n() * 2}"
+
+app = App(app_ui, server)
+
 ```

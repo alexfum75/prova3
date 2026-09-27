@@ -9,4 +9,4 @@ folium
 geocoder
 yml
 seaborn
-shiny
+shinylive
