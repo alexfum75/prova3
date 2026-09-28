@@ -1,11 +1,8 @@
----
-title: ""
----
 
 ::: {.license-container .p-3 .bg-white .rounded}
 ::: {.d-flex .flex-column .flex-sm-row .align-items-center .justify-content-center .gap-2 .text-center}
 <span>Quest'opera di Alessandro Fumagalli è concessa sotto la Licenza</span>
 ![](/images/Licenza.png){.lightbox .img-fluid width="90px"}
-<span>Copyright © 2026.</span>
+<span>Copyright © 2026. Ver. 1.0.beta</span>
 :::
 :::

@@ -1,0 +1,233 @@
+---
+toc: false
+css: css/custom.css
+format:
+  html:
+    page-layout: full
+execute:
+  echo: false      
+  warning: false  
+---
+
+::: {.epigraph}
+"Keep your eyes on the stars, and your feet on the ground.” 
+<span class="epigraph-source">Theodore Roosevelt (1858-1919)</span>
+:::
+
+<h2>Il cielo di noi</h2>
+
+::: {.drop-cap}
+Qui di seguito viene riportato cosa e' visibile in cielo nei prossimi giorni per la posizione rilevata automaticamente dal browser. Sono riportate le tabelle con l'eta' della Luna, la posizione dei pianeti e gli eventuali transiti della ISS.
+::: 
+
+
+```{python}
+#| label: setup-functions
+import requests
+
+def get_location_from_ip():
+    try:
+        response = requests.get("https://ipwho.is/")
+        response.raise_for_status()
+        
+        data = response.json()
+        
+        # Check if the request was successful
+        if data.get("success"):
+            #print(f"IP Address : {data.get('ip')}")
+            #print(f"Region     : {data.get('region')}")
+            #print(f"Latitude   : {data.get('latitude')}")
+            #print(f"Longitude  : {data.get('longitude')}")
+            #print(f"Timezone   : {data.get('timezone', {}).get('id')}")
+            return (data.get('latitude'),data.get('longitude'), data.get('city'), data.get('country')) 
+        return (None, None, None, None)
+            
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred: {e}")
+```
+
+
+:::: {.columns}
+
+::: {.column width="50%" .text-center}
+
+<h5>Visibilita' della Luna</h5>
+
+```{python}
+from datetime import datetime, timezone
+import ephem
+import requests
+from IPython.display import HTML, display
+
+def ottieni_fase_nome(fase_percentuale, eta_giorni):
+    if fase_percentuale < 1.0:
+        return "Luna Nuova"
+    elif fase_percentuale < 45.0:
+        return "Luna Crescente" if eta_giorni < 14.7 else "Luna Calante"
+    elif 45.0 <= fase_percentuale <= 55.0:
+        return "Primo Quarto" if eta_giorni < 14.7 else "Ultimo Quarto"
+    elif fase_percentuale < 98.0:
+        return "Gobba Crescente" if eta_giorni < 14.7 else "Gobba Calante"
+    else:
+        return "Luna Piena"
+
+
+def elementi_visibili_terminatore(eta_giorni):
+    """Restituisce crateri e siti di allunaggio storici posizionati vicino al terminatore."""
+    giorno = eta_giorni % 29.53
+
+    if giorno < 1.5 or giorno > 28.0:
+        return (
+            ["Visibilità scarsa (fase vicina alla Luna Nuova)"],
+            ["Nessun sito visibile sul disco illuminato"],
+        )
+
+    elif 1.5 <= giorno < 4.5:
+        crateri = [
+            "Petavius (struttura con rima centrale)",
+            "Langrenus (pareti terrazzate)",
+            "Cleomedes e Mare Crisium",
+        ]
+        siti = [
+            "Luna 16 / Luna 20 / Luna 24 (Mare Fecunditatis / Mare Crisium)"
+        ]
+
+    elif 4.5 <= giorno < 7.5:
+        crateri = [
+            "Theophilus, Cyrillus e Catharina (trio di crateri)",
+            "Posidonius (bordo Mare Serenitatis)",
+            "Fracastorius",
+        ]
+        siti = [
+            "Apollo 11 (Mare Tranquillitatis - 0.67°N, 23.47°E)",
+            "Apollo 17 (Taurus-Littrow - 20.19°N, 30.77°E)"
+        ]
+
+    elif 7.5 <= giorno < 10.5:  # Intorno al Primo Quarto
+        crateri = [
+            "Tycho (spettacolare picco centrale)",
+            "Clavius (vasto cratere con catena di craterini)",
+            "Ptolemaeus, Alphonsus e Arzachel",
+            "Monti Appennini lunari",
+        ]
+        siti = [
+            "Apollo 15 (Rima Hadley / Monti Appennini - 26.13°N, 3.63°E)",
+            "Apollo 16 (Altopiani di Descartes - 8.97°S, 15.50°E)",
+            "Surveyor 6 (Sinus Medii)",
+        ]
+
+    elif 10.5 <= giorno < 13.5:
+        crateri = [
+            "Copernicus (struttura a pareti terrazzate)",
+            "Plato (fondo basaltico scuro)",
+            "Sinus Iridum (Baia delle Arcate)",
+            "Gassendi (Mare Humorum)",
+        ]
+        siti = [
+            "Apollo 12 & Surveyor 3 (Oceanus Procellarum - 3.01°S, 23.42°W)",
+            "Apollo 14 (Formazione di Fra Mauro - 3.65°S, 17.47°W)"
+        ]
+
+    elif 13.5 <= giorno < 16.0:  # Piena Luna
+        crateri = [
+            "Aristarchus (il punto più luminoso)",
+            "Raggiera d'impatto di Tycho e Kepler"
+        ]
+        siti = [
+            "Tutti i siti Apollo sono illuminati"
+        ]
+
+    elif 16.0 <= giorno < 22.0:  # Fase Calante (Tramonto Lunare)
+        crateri = [
+            "Grimaldi e Gassendi",
+            "Copernicus e Ptolemaeus"
+        ]
+        siti = [
+            "Siti Apollo 12 e 14 vicini al terminatore serale",
+            "Siti Apollo 15 e 16 al tramonto lunare"
+        ]
+
+    else:
+        crateri = [
+            "Theophilus e Langrenus (luce tangenziale serale)",
+        ]
+        siti = [
+            "Siti Apollo 11 e 17 vicini all'entrata nella notte lunare",
+        ]
+
+    return crateri, siti
+
+
+def calcola_dati_lunari_completi(latitudine, longitudine, city, country, data_utc=None):
+    if data_utc is None:
+        data_utc = datetime.now(timezone.utc)
+
+    osservatore = ephem.Observer()
+    osservatore.lat = str(latitudine)
+    osservatore.lon = str(longitudine)
+    osservatore.date = data_utc
+
+    luna = ephem.Moon()
+    luna.compute(osservatore)
+
+    fase_pct = luna.phase
+    luna_nuova_prec = ephem.previous_new_moon(osservatore.date)
+    eta_giorni = (osservatore.date - luna_nuova_prec) * 1.0
+
+    fase_nome = ottieni_fase_nome(fase_pct, eta_giorni)
+
+    try:
+        str_alba = ephem.localtime(osservatore.next_rising(luna)).strftime("%Y-%m-%d %H:%M:%S")
+    except (ephem.AlwaysUpError, ephem.NeverUpError):
+        str_alba = "N/D"
+
+    try:
+        str_tramonto = ephem.localtime(osservatore.next_setting(luna)).strftime("%Y-%m-%d %H:%M:%S")
+    except (ephem.AlwaysUpError, ephem.NeverUpError):
+        str_tramonto = "N/D"
+
+    crateri, siti = elementi_visibili_terminatore(eta_giorni)
+
+    location = get_location_from_ip()
+    print (f"Coordinate: {location[0]}, {location[1]}")
+    print (f"Posizione stimata: {location[2]}, ({location[3]})")
+    print(f"Orario: {data_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+    print(f"Citta': {city.upper()} ({country})")
+    print(f"Fase:     {fase_nome} ({fase_pct:.1f}% illuminata)")
+    print(f"Età:      {eta_giorni:.1f} giorni")
+    print(f"Luna sorge:  {str_alba}")
+    print(f"Luna tramonta: {str_tramonto}")
+    print("-" * 80)
+    print("Crateri sul terminatore:")
+    for c in crateri:
+        print(f"  • {c}")
+    print("-" * 80)
+    print("Siti Apollo visibili:")
+    for s in siti:
+        print(f"  • {s}")
+
+location = get_location_from_ip()
+if location:
+    calcola_dati_lunari_completi(location[0], location[1], location[2], location[3])
+```
+
+:::
+
+::: {.column width="50%" .text-center}
+
+<h5>Mappa del cielo</h5>
+
+<figure style="text-align: center;">
+  <img src="/images/Moon.jpg" width="70%">
+    <figcaption>
+      <a href="https://en.wikipedia.org/wiki/File:Moon_names.svg" target="_blank" rel="noopener noreferrer">Fonte: Wikimedia Commons, CC BY-SA 3.0</a>
+    </figcaption>  
+</figure>
+
+:::
+
+::::
+
+---
+
+{{< include footer.qmd >}}
