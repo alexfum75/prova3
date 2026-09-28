@@ -133,7 +133,7 @@ const videoData = {
   'FiltroLuna': {
     title: "Un filtro per la Luna",
     src: '',
-    img: "Images/Conferenze/Kalman.png", 
+    img: "./images/Conferenze/Kalman.png", 
     summary: "La conoscenza sia del _vettore di stato_ che delle equazioni della traiettoria gestite dal FDO non era sufficiente a garantire il successo della missione: l'inevitabile presenza di errori nella misura ed approssimazioni nelle equazioni del moto portavano ad errori significativi su lunghe distanze e quindi a mancare l'obiettivo. Era necessario implementare un metodo affidabile che, in un ambiente rumoroso, potesse valutare in senso statistico le migliori azioni da intraprendere: il problema venne affrontato e risolto tramite l'implementazione di un sistema di intelligenza artificiale per identificare lo stimatore ottimo. </br> La terza parte della conferenza si sofferma sull'analisi del filtro inventato dall'Ing. Rudolf Kalman, oggi usato in tanti settori dell'industria (nell'automotive, nell'aviazione, nell'elettronica ...). Per il suo impegno, egli ha ricevuto in seguito numerosi riconoscimenti."
   },
   'BigliaBlu': {
@@ -290,7 +290,7 @@ const videoData = {
   'Abitabilita': {
     title: "Abitabilita'",
     src: "",
-    img: "./images/Conferenze/abitabile.jpg",
+    img: "./images/Conferenze/Abitabile.jpg",
     summary: "Sono passati piu' di trent'anni dalla scoperta del primo esopianeta orbitante intorno ad una stella di sequenza principale, e sebbene i telescopi spaziali/terrestri abbiano scrutato una frazione molto piccola di cielo, la loro numerosità e tipologia è in continuo aumento. Gli astronomi quindi si chiedono se la vita sulla Terra sia un unicum oppure esista la possibilità che possa svilupparsi su uno di questi nuovi mondi. Affinchè sia possibile formulare ipotesi in tal senso, è necessario analizzarne le loro caratteristiche, conoscere le condizioni che si pensa siano favorevoli allo sviluppo della vita (basata sul carbonio) e identificare quali parametri rendono un esopianeta abitabile. </br> Allo stato attuale questi parametri poggiano su due ipotesi fondamentali: la presenza continua nel tempo di H<sub>2</sub>O allo stato liquido in superficie e un ciclo biogeochimico basato su H<sub>2</sub>O, CO<sub>2</sub> e N<sub>2</sub>. L'ulteriore ricerca di biomarcatori, assieme ad un approccio statistico  al problema, consente di approfondire l'analisi per indirizzare le future osservazioni verso le classi di pianeti più idonei. Considerata la complessità dell'argomento, la conferenza affronta il tema non solo dal punto di vista astronomico, ma necessariamente coinvolge discipline strettamente collegate ad essa quali biologia, chimica, ecologia, strettroscopia e geologia."
   },
   'Multiversi': {
@@ -336,7 +336,7 @@ const videoData = {
   'GPS': {
     title: "Sistemi di posizionamento satellitari",
     src: "",
-    img: "./images/Conferenze/GPS.png",
+    img: "./images/Conferenze/GPS.jpg",
     summary: "Non disponibile"
   },
   'Giordano': {
@@ -355,6 +355,12 @@ const videoData = {
     title: "Spazio e geometria",
     src: "",
     img: "",
+    summary: "Non disponibile"
+  }
+  'ViaLattea': {
+    title: "La Via Lattea e i suoi vicini",
+    src: "",
+    img: "./images/Conferenze/Via-Lattea.jpg",
     summary: "Non disponibile"
   }
 };
