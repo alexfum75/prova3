@@ -10,3 +10,4 @@ geocoder
 yml
 seaborn
 shinylive
+skyfield

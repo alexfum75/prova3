@@ -228,6 +228,54 @@ if location:
 
 ::::
 
+
+
+```{python}
+from datetime import datetime
+from skyfield.api import Loader, wgs84
+
+# Carica i dati delle effemeridi (richiede connessione internet al primo avvio)
+load = Loader('~/skyfield-data')
+ts = load.timescale()
+planet_data = load('de421.bsp')  # Modello delle orbite planetarie
+
+# Definisci la posizione di osservazione (es. coordinate di Monza)
+observer_location = wgs84.latlon(45.5845, 9.2744)  # Latitudine e Longitudine di Monza
+
+# Tempo attuale
+t = ts.now()
+
+# Elenco dei pianeti da tracciare
+planets = {
+    'Mercurio': planet_data['mercury'],
+    'Venere': planet_data['venus'],
+    'Marte': planet_data['mars'],
+    'Giove': planet_data['JUPITER BARYCENTER'],
+    'Saturno': planet_data['SATURN BARYCENTER'],
+  'Urano': planet_data['URANUS BARYCENTER'],
+      'Nettuno': planet_data['NEPTUNE BARYCENTER'],
+      'Pluto': planet_data['PLUTO BARYCENTER'],
+    'Luna': planet_data['Moon']
+} 
+
+# Calcola posizione per ogni pianeta nel cielo dell'osservatore
+earth = planet_data['earth']
+observer = earth + observer_location 
+
+print(f"Posizione dei pianeti nel cielo a {datetime.now().strftime('%Y-%m-%d %H:%M')}:\n")
+
+for name, planet in planets.items():
+  astrometric = observer.at(t).observe(planet)
+  alt, az, distance = astrometric.apparent().altaz()
+
+  # Se l'altezza (alt) è maggiore di 0°, il pianeta è sopra l'orizzonte
+  visibile = 'Visibile' if alt.degrees > 0 else 'NON visibile'
+  print(
+      f'{name}: Altezza {alt.degrees:.1f}°, Azimuth {az.degrees:.1f}° ->'
+      f' {visibile}'
+  )
+
+```
 ---
 
 {{< include footer.qmd >}}
