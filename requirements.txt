@@ -12,7 +12,7 @@ seaborn
 shinylive
 skyfield
 planetmapper
-contextlib
+#contextlib
 logging
-os
+#os
 rebound
