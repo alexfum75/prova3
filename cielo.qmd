@@ -278,6 +278,9 @@ for name, planet in planets.items():
 ```
 
 
+:::: {.columns}
+
+::: {.column width="48%"}
 ```{python}
 import matplotlib.pyplot as plt2
 import planetmapper
@@ -300,8 +303,43 @@ body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7,
                           'limb_illuminated': {'color': 'b'},},
                         )
 plt2.show()
-
 ```
+
+:::
+
+::: {.column width="4%"}
+<!-- empty spacer column -->
+:::
+
+::: {.column width="48%"}
+Right side text or content goes here.
+```{python}
+import matplotlib.pyplot as plt2
+import planetmapper
+from planetmapper.kernel_downloader import download_urls
+
+#planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
+download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/")
+download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/")
+#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/")
+
+ora_corrente = datetime.now()
+now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
+body2 = planetmapper.Body("Earth", now, observer="moon")
+# 6. Generate and display a wireframe plot of the observation geometry
+fig2, ax2 = plt2.subplots(figsize=(6, 6), dpi=600)
+ax2.grid(True)
+body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
+                          formatting={
+                          'terminator': {'color': 'r'}, 
+                          'limb_illuminated': {'color': 'b'},},
+                        )
+plt2.show()
+```
+:::
+
+::::
+
 ---
 
 {{< include footer.qmd >}}
