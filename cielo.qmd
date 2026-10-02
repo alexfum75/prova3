@@ -305,7 +305,9 @@ now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
 
 body2 = planetmapper.Body("moon", now, observer="earth")
 # 6. Generate and display a wireframe plot of the observation geometry
-fig2, ax2 = plt2.subplots(figsize=(3, 3), dpi=300)
+#fig2, ax2 = plt2.subplots(figsize=(3, 3), dpi=300)
+plt2.figure(figsize=(6, 6))
+ax2 = plt.gca()
 ax2.grid(True)
 body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                             formatting={
@@ -344,7 +346,9 @@ ora_corrente = datetime.now()
 now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
 body2 = planetmapper.Body("Earth", now, observer="moon")
 # 6. Generate and display a wireframe plot of the observation geometry
-fig2, ax2 = plt2.subplots(figsize=(6, 6), dpi=600)
+#fig2, ax2 = plt2.subplots(figsize=(6, 6), dpi=600)
+plt2.figure(figsize=(6, 4))
+ax2 = plt.gca()
 ax2.grid(True)
 body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                           formatting={
