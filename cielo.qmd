@@ -46,12 +46,12 @@ def get_location_from_ip():
         print(f"An error occurred: {e}")
 ```
 
+<h4>Visibilita' della Luna</h4>
+
 
 :::: {.columns}
 
 ::: {.column width="50%" .text-center}
-
-<h5>Visibilita' della Luna</h5>
 
 ```{python}
 from datetime import datetime, timezone
@@ -218,7 +218,7 @@ if location:
 <h5>Mappa del cielo</h5>
 
 <figure style="text-align: center;">
-  <img src="/images/Moon.jpg" width="70%">
+  <img src="/images/Moon.jpg" width="75%">
     <figcaption>
       <a href="https://en.wikipedia.org/wiki/File:Moon_names.svg" target="_blank" rel="noopener noreferrer">Fonte: Wikimedia Commons, CC BY-SA 3.0</a>
     </figcaption>  
@@ -227,6 +227,8 @@ if location:
 :::
 
 ::::
+
+<h4>VIsibilita' dei pianeti</h4>
 
 ---
 
@@ -279,9 +281,12 @@ for name, planet in planets.items():
 
 ---
 
+<h4>La Terra e la Luna</h4>
+
 :::: {.columns}
 
 ::: {.column width="48%"}
+
 ```{python}
 
 import matplotlib.pyplot as plt2
@@ -311,7 +316,7 @@ ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7,
                             'terminator': {'color': 'r'}, 
                             'limb_illuminated': {'color': 'b'},},
                         )
-ax2.set_title("La Luna vista dalla Terra.", fontsize=11, fontweight="bold")
+ax2.set_title("La Luna vista dalla Terra.", fontsize=15, fontweight="bold")
 ax2.set_xlabel("Ascensione Retta", fontsize=11)
 ax2.set_ylabel("Declinazione", fontsize=11)
 plt2.show()
@@ -352,7 +357,7 @@ ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7,
                           'terminator': {'color': 'r'}, 
                           'limb_illuminated': {'color': 'b'},},
                         )
-ax2.set_title("La Terra vista dalla Luna.", fontsize=11, fontweight="bold")
+ax2.set_title("La Terra vista dalla Luna.", fontsize=15, fontweight="bold")
 ax2.set_xlabel("Ascensione Retta", fontsize=11)
 ax2.set_ylabel("Declinazione", fontsize=11)
 plt2.show()
