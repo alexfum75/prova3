@@ -11,3 +11,4 @@ yml
 seaborn
 shinylive
 skyfield
+planetmapper
