@@ -285,6 +285,7 @@ for name, planet in planets.items():
 import matplotlib.pyplot as plt2
 import planetmapper
 import contextlib
+import os
 from planetmapper.kernel_downloader import download_urls
 
 #planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
