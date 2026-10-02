@@ -309,12 +309,14 @@ body2 = planetmapper.Body("moon", now, observer="earth")
 plt2.figure(figsize=(6, 6))
 ax2 = plt2.gca()
 ax2.grid(True)
-body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
+ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                             formatting={
                             'terminator': {'color': 'r'}, 
                             'limb_illuminated': {'color': 'b'},},
                         )
-plt2.title("Moon from earth", fontsize=3)
+ax2.set_title("La Luna vista dalla Terra.", fontsize=11, fontweight="bold")
+ax2.set_xlabel("Ascensione Retta (gradi)", fontsize=11)
+ax2.set_ylabel("Declinazione (gradi)", fontsize=11)
 plt2.show()
 ```
 
@@ -350,11 +352,14 @@ body2 = planetmapper.Body("Earth", now, observer="moon")
 plt2.figure(figsize=(6, 4))
 ax2 = plt2.gca()
 ax2.grid(True)
-body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
+ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                           formatting={
                           'terminator': {'color': 'r'}, 
                           'limb_illuminated': {'color': 'b'},},
                         )
+ax2.set_title("La Terra vista dalla Luna.", fontsize=11, fontweight="bold")
+ax2.set_xlabel("Ascensione Retta (gradi)", fontsize=11)
+ax2.set_ylabel("Declinazione (gradi)", fontsize=11)
 plt2.show()
 ```
 :::
