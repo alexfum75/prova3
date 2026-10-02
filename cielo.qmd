@@ -282,28 +282,37 @@ for name, planet in planets.items():
 
 ::: {.column width="48%"}
 ```{python}
+
 import matplotlib.pyplot as plt2
 import planetmapper
+import logging
+import contextlib
 import os
 from planetmapper.kernel_downloader import download_urls
 
+# 1. Silenzia il logger interno per i messaggi INFO
+logging.getLogger('planetmapper').setLevel(logging.WARNING)
+
 #planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
-#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/")
-#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/")
-#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp")
+
+with contextlib.redirect_stdout(open(os.devnull, 'w')):
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/", force_download = False)
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/", force_download = False)
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp", force_download = False)
 
 ora_corrente = datetime.now()
 now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
 
 body2 = planetmapper.Body("moon", now, observer="earth")
 # 6. Generate and display a wireframe plot of the observation geometry
-fig2, ax2 = plt2.subplots(figsize=(1, 1), dpi=600)
+fig2, ax2 = plt2.subplots(figsize=(3, 3), dpi=300)
 ax2.grid(True)
 body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                             formatting={
                             'terminator': {'color': 'r'}, 
                             'limb_illuminated': {'color': 'b'},},
                         )
+plt2.title("Moon from earth", fontsize=3)
 plt2.show()
 ```
 
