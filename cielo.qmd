@@ -284,29 +284,27 @@ for name, planet in planets.items():
 ```{python}
 import matplotlib.pyplot as plt2
 import planetmapper
-import contextlib
 import os
 from planetmapper.kernel_downloader import download_urls
 
 #planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
-download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/")
-download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/")
-download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp")
+#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/")
+#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/")
+#download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp")
 
 ora_corrente = datetime.now()
 now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
 
-with contextlib.redirect_stdout(open(os.devnull, 'w')), contextlib.redirect_stderr(open(os.devnull, 'w')):
-    body2 = planetmapper.Body("moon", now, observer="earth")
-    # 6. Generate and display a wireframe plot of the observation geometry
-    fig2, ax2 = plt2.subplots(figsize=(6, 6), dpi=600)
-    ax2.grid(True)
-    body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
-                              formatting={
-                              'terminator': {'color': 'r'}, 
-                              'limb_illuminated': {'color': 'b'},},
-                            )
-    plt2.show()
+body2 = planetmapper.Body("moon", now, observer="earth")
+# 6. Generate and display a wireframe plot of the observation geometry
+fig2, ax2 = plt2.subplots(figsize=(1, 1), dpi=600)
+ax2.grid(True)
+body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
+                            formatting={
+                            'terminator': {'color': 'r'}, 
+                            'limb_illuminated': {'color': 'b'},},
+                        )
+plt2.show()
 ```
 
 :::
@@ -331,7 +329,7 @@ ora_corrente = datetime.now()
 now = ora_corrente.strftime("%Y-%m-%dT%H:%M:%S")
 body2 = planetmapper.Body("Earth", now, observer="moon")
 # 6. Generate and display a wireframe plot of the observation geometry
-fig2, ax2 = plt2.subplots(figsize=(3, 3), dpi=600)
+fig2, ax2 = plt2.subplots(figsize=(1, 1), dpi=600)
 ax2.grid(True)
 body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
                           formatting={
