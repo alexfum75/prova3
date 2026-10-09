@@ -30,7 +30,9 @@ Qui potete trovare conferenze, caffè astronomici e corsi tenuti dall'autore su 
 * conferenze tenute in sede, biblioteche o strutture esterne.
 * ingegneria per l'Apollo: un corso tenuto in sede dedicato al Programma Apollo, con particolare attenzione all'aspetto ingegneristico delle missioni.
 * conferenze _online_: conferenze tenute via Zoom durante il periodo della pandemia Covid-19
-* caffe' astronomici: dibattiti aperti con i presenti su un argomento prefissato a priori con la moderazione dell'autore insieme ad altri soci del gruppo astrofili.
+* caffè astronomici: dibattiti aperti con i presenti su un argomento prefissato a priori con la moderazione dell'autore insieme ad altri soci del gruppo astrofili.
+
+Alcune conferenze sono state registrate ed in seguito effettuato un montaggio post produzione dall'autore.
 
 ---
 
@@ -218,7 +220,7 @@ const videoData = {
     title: "Space X: Crew Demo 2",
     src: "",
     img: "./images/Conferenze/Crew-demo-2.png",
-    summary: "Luglio 2011 è stato l'ultima volta che un gruppo di astronauti americani sono (andati) e rientrati dallo spazio con un vettore di produzione propria (lo Shuttle) senza chiedere un passaggio ai russi (Soyuz). Mercoledì 27 Maggio 2020, condizioni meteo permettendo, una nuova capsula spaziale di società aerospaziale privata americana (SpaceX), partirà dalla piattaforma 39A in Florida con un razzo Falcon 9 per la ISS con a bordo un equipaggio di due astronauti. </br> La SpaceX è un'azienda privata americana che ha iniziato circa 10 anni fa la collaborazione con la NASA per portare sulla ISS rifornimenti e strumentazione con la capsula la Dragon 1 cargo. La breve tele-conferenza affronta cosa vuol dire aprire lo spazio ai privati, analizza le caratteristiche della Dragon 2 (versione Crew) e come, secondo il progetti di Elon Musk, la capsula (e il vettore Falcon) porterà gli astronauti a destinazione."
+    summary: "Luglio 2011 è stato l'ultima volta che un gruppo di astronauti americani sono andati e rientrati dallo spazio con un vettore di produzione propria (lo Shuttle) senza chiedere un passaggio ai russi (Soyuz). Mercoledì 27 Maggio 2020una nuova capsula spaziale di società aerospaziale privata americana (SpaceX), e' partita dalla piattaforma 39A in Florida con un razzo Falcon 9 per la ISS con a bordo un equipaggio di due astronauti. </br> La SpaceX è un'azienda privata americana che ha iniziato circa 10 anni fa la collaborazione con la NASA per portare sulla ISS rifornimenti e strumentazione con la capsula la Dragon 1 cargo. La breve tele-conferenza affronta cosa vuol dire aprire lo spazio ai privati, analizza le caratteristiche della Dragon 2 (versione Crew) e come, secondo il progetti di Elon Musk, la capsula (e il vettore Falcon) porterà gli astronauti a destinazione."
   },
   /*  CAFFÈ */
   'Auriga': {
@@ -356,7 +358,7 @@ const videoData = {
     src: "",
     img: "",
     summary: "Non disponibile"
-  }
+  },
   'ViaLattea': {
     title: "La Via Lattea e i suoi vicini",
     src: "",
@@ -369,7 +371,6 @@ const videoData = {
 let currentVideoId = null;
 
 function showVideo(videoId) {
-  
   const wrapper = document.getElementById('video-wrapper');
   const video = document.getElementById('main-video');
   const wrapper_2 = document.getElementById('video-wrapper-2');

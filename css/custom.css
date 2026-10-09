@@ -51,7 +51,7 @@ h4 {
     flex-direction: column; /* Su mobile: layout verticale */
     align-items: center;
     gap: 1.5rem;
-    background-color: #f0e4cc;
+    background-color: #c68504;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -199,7 +199,7 @@ nav ul li a {
         flex-direction: row; /* Layout orizzontale */
         align-items: flex-start;
         padding: 2rem;
-        background-color: #f0e4cc;
+        background-color: #c68504;
         gap: 2rem;
     }
 
@@ -272,7 +272,7 @@ nav ul li a {
 
 /* button */
 .btn-custom {
-  background-color: #f0e4cc;
+  background-color: #c68504;
   color: green;
   border-radius: 2px;
   padding: 8px 15px;
@@ -341,7 +341,7 @@ nav ul li a {
 
 /* Styling del pulsante responsive */
 .btn-summary {
-  background-color: #f0e4cc;
+  background-color: #c68504;
   color: green;
   padding: 6px 14px;
   border-radius: 20px;
@@ -404,7 +404,7 @@ nav ul li a {
   border-radius: 4px 0 0 4px;        /* Arrotonda solo gli angoli a sinistra */
   
   /* Tipografia raffinata e allineamento testo */
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: "Georgia ", "Times New Roman",serif;
   font-size: 1.05rem;
   line-height: 1.6;
   font-style: italic;

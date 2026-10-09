@@ -35,8 +35,10 @@ website:
 
 format:
   html:
-    fontsize: 14pt 
-    mainfont: "Georgia, sans-serif;"
+    #fontsize: 14pt 
+    #mainfont: "Georgia, sans-serif;"
+    fontsize: 16pt 
+    mainfont: "Goudy Old Style, sans-serif;"
     theme:         
         light: cosmos        
         dark: solar

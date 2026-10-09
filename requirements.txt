@@ -16,3 +16,4 @@ planetmapper
 logging
 #os
 rebound
+kaleido
