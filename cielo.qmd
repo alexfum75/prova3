@@ -14,7 +14,7 @@ execute:
 <span class="epigraph-source">Theodore Roosevelt (1858-1919)</span>
 :::
 
-<h2>Il cielo sopra di noi</h2>
+<h2>Il cielo sopra di noi {{< bi globe >}} </h2>
 
 ::: {.drop-cap}
 Qui di seguito sono visualizzate tre sezioni in cui viene riportato gli oggetti visibili in cielo  per la posizione rilevata automaticamente dal browser. In alto e' mostrata la tabella i dati principali della Luna con i principali artefatti visibili in questo momento: crateri e luoghi dell'allunaggio delle missioni Apollo. La seconda sezione mostra l'elenco dei pianeti ora presenti sopra l'orizzonte e la mappa del cielo. In basso due disegni: a sinistra la parte illuminata della Luna delimitata dal limbo lunare in blu e dal terminatore in rosso; alla sua destra la Terra vista dalla Luna con il terminatore terrestre in rosso ed il limbo in blu.
@@ -57,6 +57,10 @@ def print_location():
 
 ::: {.text-center .fs-4 .fw-bold .my-3}
 ```{python} 
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
 coord_string, pos_string = print_location()
 HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;">' + get_now().strftime("%d/%m/%Y %H:%M:%S") + "</b> &ensp; " + coord_string + " &ensp; " + pos_string)
 ``` 
@@ -71,6 +75,10 @@ HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;"
 <h5 style="text-align: center;">Visibilita' della Luna</h5>
 
 ```{python}
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
 from datetime import datetime, timezone
 import ephem
 import requests
@@ -245,6 +253,10 @@ calcola_dati_lunari_completi()
 <h5 style="text-align: center;">Visibilita' dei pianeti</h5>
 
 ```{python}
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
 
 from skyfield.api import Loader, wgs84
 
@@ -363,6 +375,10 @@ genera_mappa_cielo()
 <h5 style="text-align: center;">La Luna vista dalla Terra</h5>
 
 ```{python}
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
 
 import matplotlib.pyplot as plt2
 import planetmapper
@@ -382,7 +398,7 @@ with contextlib.redirect_stdout(open(os.devnull, 'w')):
 now = get_now().strftime("%Y-%m-%dT%H:%M:%S")
 
 body = planetmapper.Body("moon", now, observer="earth")
-plt.figure(figsize=(7, 7))
+plt.figure(figsize=(6, 6))
 ax = plt.gca()
 ax.grid(True)
 ax = body.plot_wireframe_radec(ax,  color='royalblue', alpha=0.7, 
@@ -407,6 +423,11 @@ plt.show()
 <h5 style="text-align: center;">La Terra vista dalla Luna</h5>
 
 ```{python}
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
+
 import matplotlib.pyplot as plt2
 import planetmapper
 from planetmapper.kernel_downloader import download_urls
@@ -424,7 +445,7 @@ with contextlib.redirect_stdout(open(os.devnull, 'w')):
 
 now = get_now().strftime("%Y-%m-%dT%H:%M:%S")
 body2 = planetmapper.Body("Earth", now, observer="moon")
-plt2.figure(figsize=(7, 7))
+plt2.figure(figsize=(6, 6))
 ax2 = plt2.gca()
 ax2.grid(True)
 ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
