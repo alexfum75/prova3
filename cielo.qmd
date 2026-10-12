@@ -214,17 +214,17 @@ def calcola_dati_lunari_completi():
     crateri, siti = elementi_visibili_terminatore(eta_giorni)
 
     out = '<p style="margin-top: 20px;"></p>'
-    out = out + f'<font style="display: flex; justify-content: center; align-items: center;">Fase: &nbsp; \
+    out = out + f'<font style="display: flex; justify-content: center; align-items: center;"><b>Fase:</b> &nbsp; \
         <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{fase_pct:.1f}% illuminata &nbsp;</font>  </font>\
-        <font style="display: flex; justify-content: center; align-items: center;">Età: &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{eta_giorni:.1f} giorni</font></font> \
-        <p></p><font style="display: flex; justify-content: center; align-items: center;">Sorge alle: &nbsp; \
+        <font style="display: flex; justify-content: center; align-items: center;"><b>Età:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{eta_giorni:.1f} giorni</font></font> \
+        <p></p><font style="display: flex; justify-content: center; align-items: center;"><b>Sorge alle:</b> &nbsp; \
         <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{str_alba}</font></font> \
-        <font style="display: flex; justify-content: center; align-items: center;">Tramonta alle: &nbsp; \
+        <font style="display: flex; justify-content: center; align-items: center;"><b>Tramonta alle:</b> &nbsp; \
         <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{str_tramonto}</font></font> \
-        <p></p><p style="display: flex; justify-content: center; align-items: center;">Crateri sul terminatore: &nbsp; </p>'
+        <p></p><p style="display: flex; justify-content: center; align-items: center;"><b>Crateri sul terminatore: &nbsp; </b></p>'
     for c in crateri:
         out = out +f'<font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{c} &nbsp;</font>'
-    out = out + '<p></p><p style="display: flex; justify-content: center; align-items: center;">Siti Apollo visibili: &nbsp; </p>'
+    out = out + '<p></p><p style="display: flex; justify-content: center; align-items: center;"><b>Siti Apollo visibili:</b> &nbsp; </p>'
     for s in siti:
         out = out +f'<font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{s} &nbsp;</font>'        
     return out
