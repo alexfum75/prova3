@@ -4,9 +4,11 @@ css: css/custom.css
 format:
   html:
     page-layout: full
+    fig-width: 6
+    fig-height: 6   
 execute:
   echo: false      
-  warning: false  
+  warning: false 
 ---
 
 ::: {.epigraph}
@@ -17,13 +19,12 @@ execute:
 <h2>Il cielo sopra di noi {{< bi stars >}} </h2>
 
 ::: {.drop-cap}
-Qui di seguito sono visualizzate tre sezioni in cui viene riportato gli oggetti visibili in cielo  per la posizione rilevata automaticamente dal browser. In alto e' mostrata la tabella i dati principali della Luna con i principali artefatti visibili in questo momento: crateri e luoghi dell'allunaggio delle missioni Apollo. La seconda sezione mostra l'elenco dei pianeti ora presenti sopra l'orizzonte e la mappa del cielo. In basso due disegni: a sinistra la parte illuminata della Luna delimitata dal limbo lunare in blu e dal terminatore in rosso; alla sua destra la Terra vista dalla Luna con il terminatore terrestre in rosso ed il limbo in blu.
+Qui di seguito sono visualizzate tre sezioni in cui viene riportato gli oggetti visibili in cielo per Monza. In alto a sinistra e' mostrata la tabella i dati principali della Luna con i principali artefatti visibili in questo momento: crateri e luoghi dell'allunaggio delle missioni Apollo. In alto a destra e' disegnata la parte illuminata della Luna delimitata dal limbo lunare in blu e dal terminatore in rosso. La seconda sezione mostra l'elenco dei pianeti ora presenti sopra l'orizzonte e la mappa del cielo in proiezione polare.
 ::: 
 
 ```{python}
 #| 
 from datetime import datetime
-from IPython.core.display import HTML
 
 def get_now():
     return datetime.now()
@@ -34,7 +35,10 @@ def get_now():
 #| label: setup-functions
 import requests
 
-def get_location_from_ip():
+def get_location_from_ip(home = None):
+    if home is "Monza":
+        return (45.5834, 9.2759, "Monza", "Italy")
+
     try:
         response = requests.get("https://ipwho.is/")
         response.raise_for_status()
@@ -48,10 +52,11 @@ def get_location_from_ip():
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
 
+location = get_location_from_ip("Monza")
+
 def print_location():
-    pos = get_location_from_ip()
-    coord_string = f'<b style="text-align: center;">Coordinate: </b> <b style="color: #c68504;">{str(pos[0])}, {str(pos[1])} </b>'
-    pos_string = f'<b style="text-align: center;">Posizione:</b> <b style="color: #c68504;">{pos[2].strip()}, {pos[3].strip()} </b>'
+    coord_string = f'<b style="text-align: center;">Coordinate: </b> <b style="color: #c68504;">{str(location[0])}, {str(location[1])} </b>'
+    pos_string = f'<b style="text-align: center;">Posizione:</b> <b style="color: #c68504;">{location[2].strip()}, {location[3].strip()} </b>'
     return coord_string, pos_string
 ```
 
@@ -60,7 +65,9 @@ def print_location():
 #| out-width: "100%"
 #| fig-asp: 0.618
 #| fig-format: svg
-#| 
+
+from IPython.core.display import HTML
+
 coord_string, pos_string = print_location()
 HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;">' + get_now().strftime("%d/%m/%Y %H:%M:%S") + "</b> &ensp; " + coord_string + " &ensp; " + pos_string)
 ``` 
@@ -68,10 +75,11 @@ HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;"
 
 ---
 
-:::: {.columns}
+<!--:::: {.columns}-->
+:::: {.grid}
 
-::: {.column width="50%"}
-
+<!--::: {.column width="50%"}-->
+::: {.g-col-md-6 .g-col-12 .text-center}
 <h5 style="text-align: center;">Visibilita' della Luna</h5>
 
 ```{python}
@@ -82,7 +90,7 @@ HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;"
 from datetime import datetime, timezone
 import ephem
 import requests
-from IPython.display import HTML, display
+from IPython.core.display import HTML
 
 def ottieni_fase_nome(fase_percentuale, eta_giorni):
     if fase_percentuale < 1.0:
@@ -98,64 +106,61 @@ def ottieni_fase_nome(fase_percentuale, eta_giorni):
 
 
 def elementi_visibili_terminatore(eta_giorni):
-    """Restituisce crateri e siti di allunaggio storici posizionati vicino al terminatore."""
     giorno = eta_giorni % 29.53
 
     if giorno < 1.5 or giorno > 28.0:
         return (
-            ["Visibilità scarsa (fase vicina alla Luna Nuova)"],
-            ["Nessun sito visibile sul disco illuminato"],
+            ["Visibilità scarsa"],
+            ["Nessun sito visibile"],
         )
 
     elif 1.5 <= giorno < 4.5:
         crateri = [
-            "Petavius (struttura con rima centrale)",
-            "Langrenus (pareti terrazzate)",
+            "Petavius",
+            "Langrenus",
             "Cleomedes e Mare Crisium",
         ]
         siti = [
-            "Luna 16 / Luna 20 / Luna 24 (Mare Fecunditatis / Mare Crisium)"
         ]
 
     elif 4.5 <= giorno < 7.5:
         crateri = [
-            "Theophilus, Cyrillus e Catharina (trio di crateri)",
+            "Theophilus, Cyrillus e Catharina",
             "Posidonius (bordo Mare Serenitatis)",
             "Fracastorius",
         ]
         siti = [
-            "Apollo 11 (Mare Tranquillitatis - 0.67°N, 23.47°E)",
-            "Apollo 17 (Taurus-Littrow - 20.19°N, 30.77°E)"
+            "Apollo 11 ",
+            "Apollo 17 "
         ]
 
     elif 7.5 <= giorno < 10.5:  # Intorno al Primo Quarto
         crateri = [
-            "Tycho (spettacolare picco centrale)",
-            "Clavius (vasto cratere con catena di craterini)",
+            "Tycho ",
+            "Clavius ",
             "Ptolemaeus, Alphonsus e Arzachel",
             "Monti Appennini lunari",
         ]
         siti = [
-            "Apollo 15 (Rima Hadley / Monti Appennini - 26.13°N, 3.63°E)",
-            "Apollo 16 (Altopiani di Descartes - 8.97°S, 15.50°E)",
-            "Surveyor 6 (Sinus Medii)",
+            "Apollo 15 ",
+            "Apollo 16 ",
         ]
 
     elif 10.5 <= giorno < 13.5:
         crateri = [
-            "Copernicus (struttura a pareti terrazzate)",
-            "Plato (fondo basaltico scuro)",
-            "Sinus Iridum (Baia delle Arcate)",
-            "Gassendi (Mare Humorum)",
+            "Copernicus ",
+            "Plato ",
+            "Sinus Iridum ",
+            "Gassendi ",
         ]
         siti = [
-            "Apollo 12 & Surveyor 3 (Oceanus Procellarum - 3.01°S, 23.42°W)",
-            "Apollo 14 (Formazione di Fra Mauro - 3.65°S, 17.47°W)"
+            "Apollo 12 ",
+            "Apollo 14 "
         ]
 
     elif 13.5 <= giorno < 16.0:  # Piena Luna
         crateri = [
-            "Aristarchus (il punto più luminoso)",
+            "Aristarchus",
             "Raggiera d'impatto di Tycho e Kepler"
         ]
         siti = [
@@ -174,7 +179,7 @@ def elementi_visibili_terminatore(eta_giorni):
 
     else:
         crateri = [
-            "Theophilus e Langrenus (luce tangenziale serale)",
+            "Theophilus e Langrenus",
         ]
         siti = [
             "Siti Apollo 11 e 17 vicini all'entrata nella notte lunare",
@@ -184,12 +189,9 @@ def elementi_visibili_terminatore(eta_giorni):
 
 
 def calcola_dati_lunari_completi():
-    location = get_location_from_ip()
-
     osservatore = ephem.Observer()
     osservatore.lat = str(location[0])
     osservatore.lon = str(location[1])
-    #osservatore.date = data_utc
     osservatore.date = get_now()
 
     luna = ephem.Moon()
@@ -199,7 +201,6 @@ def calcola_dati_lunari_completi():
     luna_nuova_prec = ephem.previous_new_moon(osservatore.date)
     eta_giorni = (osservatore.date - luna_nuova_prec) * 1.0
     fase_nome = ottieni_fase_nome(fase_pct, eta_giorni)
-
     try:
         str_alba = ephem.localtime(osservatore.next_rising(luna)).strftime("%Y-%m-%d %H:%M:%S")
     except (ephem.AlwaysUpError, ephem.NeverUpError):
@@ -212,33 +213,69 @@ def calcola_dati_lunari_completi():
 
     crateri, siti = elementi_visibili_terminatore(eta_giorni)
 
-    print(f"Fase: {fase_nome} ({fase_pct:.1f}% illuminata)")
-    print(f"Età:  {eta_giorni:.1f} giorni")
-    print(f"Sorge alle {str_alba} e tramonta alle {str_tramonto}")
-    print("")
-    print("Crateri sul terminatore:")
+    out = '<p style="margin-top: 20px;"></p>'
+    out = out + f'<font style="display: flex; justify-content: center; align-items: center;">Fase: &nbsp; \
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{fase_pct:.1f}% illuminata &nbsp;</font>  </font>\
+        <font style="display: flex; justify-content: center; align-items: center;">Età: &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{eta_giorni:.1f} giorni</font></font> \
+        <p></p><font style="display: flex; justify-content: center; align-items: center;">Sorge alle: &nbsp; \
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{str_alba}</font></font> \
+        <font style="display: flex; justify-content: center; align-items: center;">Tramonta alle: &nbsp; \
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{str_tramonto}</font></font> \
+        <p></p><p style="display: flex; justify-content: center; align-items: center;">Crateri sul terminatore: &nbsp; </p>'
     for c in crateri:
-        print(f"  • {c}")
-    print("")
-    print("Siti Apollo visibili:")
+        out = out +f'<font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{c} &nbsp;</font>'
+    out = out + '<p></p><p style="display: flex; justify-content: center; align-items: center;">Siti Apollo visibili: &nbsp; </p>'
     for s in siti:
-        print(f"  • {s}")
+        out = out +f'<font style="display: flex; color: #c68504;justify-content: center; align-items: center;">{s} &nbsp;</font>'        
+    return out
 
-calcola_dati_lunari_completi()
+HTML(calcola_dati_lunari_completi())
 ```
 
 :::
 
-::: {.column width="50%" .text-center}
+<!--::: {.column width="50%" .text-center}-->
+::: {.g-col-md-6 .g-col-12 .text-center}
 
-<h5 style="text-align: center;">Nomenclatura dei crateri luari</h5>
+<h5 style="text-align: center;">La Luna vista dalla Terra</h5>
 
-<figure style="text-align: center;">
-  <img src="/images/Moon.jpg" width="75%">
-    <figcaption>
-      <a href="https://en.wikipedia.org/wiki/File:Moon_names.svg" target="_blank" rel="noopener noreferrer">Fonte: Wikimedia Commons, CC BY-SA 3.0</a>
-    </figcaption>  
-</figure>
+```{python}
+#| out-width: "100%"
+#| fig-asp: 0.618
+#| fig-format: svg
+#| 
+
+import planetmapper
+import logging
+import contextlib
+import os
+from planetmapper.kernel_downloader import download_urls
+import matplotlib.pyplot as plt
+
+logging.getLogger('planetmapper').setLevel(logging.WARNING)
+
+#planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
+with contextlib.redirect_stdout(open(os.devnull, 'w')):
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/", force_download = False)
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/", force_download = False)
+    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp", force_download = False)
+
+now = get_now().strftime("%Y-%m-%dT%H:%M:%S")
+
+body = planetmapper.Body("moon", now, observer="earth")
+#plt.figure(figsize=(params['fig_w'], params['fig_h']))
+ax = plt.gca()
+ax.grid(True)
+ax = body.plot_wireframe_radec(ax,  color='royalblue', alpha=0.7, 
+                            formatting={
+                            'terminator': {'color': 'r'}, 
+                            'limb_illuminated': {'color': 'b'},},
+                        )
+ax.set_title("")                        
+ax.set_xlabel("AR", fontsize=11)
+ax.set_ylabel("DEC", fontsize=11)
+plt.show()
+```
 
 :::
 
@@ -259,8 +296,7 @@ calcola_dati_lunari_completi()
 #| 
 
 from skyfield.api import Loader, wgs84
-
-location = get_location_from_ip()
+from IPython.core.display import HTML
 
 # Carica i dati delle effemeridi 
 load = Loader('~/skyfield-data')
@@ -285,19 +321,21 @@ earth = planet_data['earth']
 observer = earth + observer_location 
 
 visible_planets = ['Polaris']
+out = '<p style="margin-top: 40px;"></p>'
 for name, planet in planets.items():
   astrometric = observer.at(t).observe(planet)
   alt, az, distance = astrometric.apparent().altaz()
-
   if alt.degrees > 0:
-    visibile = 'Visibile'
-    print(f'{name}: Altezza {alt.degrees:.1f}°, Azimuth {az.degrees:.1f}°')
+    out = out + "<div style='display: flex; justify-content: center; align-items: center; height: 30px;'>"
+    out = out + f"<p><b style='text-align: center;'>{name}</b> &nbsp; <b style='text-align: center;'>Altezza: </b> <b style='color: #c68504;'>{alt.degrees:.1f}°</b>&nbsp;<b style='text-align: center;'>Azimuth: </b><b style='color: #c68504;'>{az.degrees:.1f}°</b></p>"
     visible_planets.append(name)
+    out = out + "</div>"
+HTML(out)
 ```
 
 :::
 
-::: {.g-col-md-6 .g-col-12}
+::: {.g-col-md-6 .g-col-12 .text-center}
 
 <h5 style="text-align: center;">Mappa del cielo</h5>
 
@@ -306,7 +344,7 @@ import matplotlib.pyplot as plt
 import math
 
 def genera_mappa_cielo():   
-    location = get_location_from_ip()
+    #location = get_location_from_ip()
     lat = location[0]
     lon = location[1]
 
@@ -327,7 +365,8 @@ def genera_mappa_cielo():
     }
 
     # Creazione della figura e assi polari
-    fig = plt.figure(figsize=(6, 6), facecolor='#ffffff')
+    #fig = plt.figure(figsize=(params['fig_w'], params['fig_h']), facecolor='#ffffff')
+    fig = plt.figure( facecolor='#ffffff')
     ax = fig.add_subplot(111, polar=True, facecolor='#16191a')
 
     ax.set_theta_zero_location('N')
@@ -365,102 +404,6 @@ genera_mappa_cielo()
 :::
 
 :::
-
----
-
-:::: {.columns}
-
-::: {.column width="48%"}
-
-<h5 style="text-align: center;">La Luna vista dalla Terra</h5>
-
-```{python}
-#| out-width: "100%"
-#| fig-asp: 0.618
-#| fig-format: svg
-#| 
-
-import matplotlib.pyplot as plt2
-import planetmapper
-import logging
-import contextlib
-import os
-from planetmapper.kernel_downloader import download_urls
-
-logging.getLogger('planetmapper').setLevel(logging.WARNING)
-
-#planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
-with contextlib.redirect_stdout(open(os.devnull, 'w')):
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/", force_download = False)
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/", force_download = False)
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp", force_download = False)
-
-now = get_now().strftime("%Y-%m-%dT%H:%M:%S")
-
-body = planetmapper.Body("moon", now, observer="earth")
-plt.figure(figsize=(6, 6))
-ax = plt.gca()
-ax.grid(True)
-ax = body.plot_wireframe_radec(ax,  color='royalblue', alpha=0.7, 
-                            formatting={
-                            'terminator': {'color': 'r'}, 
-                            'limb_illuminated': {'color': 'b'},},
-                        )
-ax.set_title("")                        
-ax.set_xlabel("AR", fontsize=11)
-ax.set_ylabel("DEC", fontsize=11)
-plt.show()
-```
-
-:::
-
-::: {.column width="4%"}
-<!-- empty spacer column -->
-:::
-
-::: {.column width="48%"}
-
-<h5 style="text-align: center;">La Terra vista dalla Luna</h5>
-
-```{python}
-#| out-width: "100%"
-#| fig-asp: 0.618
-#| fig-format: svg
-#| 
-
-import matplotlib.pyplot as plt2
-import planetmapper
-from planetmapper.kernel_downloader import download_urls
-import logging
-import contextlib
-import os
-
-logging.getLogger('planetmapper').setLevel(logging.WARNING)
-
-#planetmapper.set_kernel_path(r"C:\Users\alfumaga2001\spice_kernels\\naif\\generic_kernels")
-with contextlib.redirect_stdout(open(os.devnull, 'w')):
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/", force_download = False)
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/", force_download = False)
-    download_urls("https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de442s.bsp", force_download = False)
-
-now = get_now().strftime("%Y-%m-%dT%H:%M:%S")
-body2 = planetmapper.Body("Earth", now, observer="moon")
-plt2.figure(figsize=(6, 6))
-ax2 = plt2.gca()
-ax2.grid(True)
-ax2 = body2.plot_wireframe_radec(ax2,  color='royalblue', alpha=0.7, 
-                          formatting={
-                          'terminator': {'color': 'r'}, 
-                          'limb_illuminated': {'color': 'b'},},
-                        )
-ax2.set_title("")
-ax2.set_xlabel("AR", fontsize=11)
-ax2.set_ylabel("DEC", fontsize=11)
-plt2.show()
-```
-:::
-
-::::
 
 ---
 
