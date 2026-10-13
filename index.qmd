@@ -13,7 +13,11 @@ filters:
 ::: {.grid .text-center}
 
 ::: {.g-col-12 .g-col-md-4 .p-3 .d-flex .flex-column .justify-content-between style="background-color: #ffffff; color: #3182ce;"}
-**Benvenuti**: se siete appassionati di astronomia ed astronautica siete sul sito giusto.</br> Questo non è un blog né rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità. Non può  considerarsi un prodotto editoriale ai sensi della legge n° 62 del 7.03.2001. 
+::: {.drop-cap}
+**Benvenuti**: se siete appassionati di astronomia ed astronautica siete sul sito giusto.
+:::
+
+Questo non è un blog né rappresenta una testata giornalistica in quanto viene aggiornato senza alcuna periodicità. 
 
 ::: {.grid .mt-3 .text-center}
 ::: {.g-col-6}
