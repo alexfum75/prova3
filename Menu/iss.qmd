@@ -23,12 +23,6 @@ execute:
 #| 
 import requests
 from datetime import datetime
-from skyfield.api import load, wgs84, Topos
-import requests
-from datetime import datetime
-from skyfield.api import load, wgs84
-
-import requests
 
 # Definisci un User-Agent valido per evitare il blocco "Access Blocked"
 HEADERS = {
@@ -69,12 +63,13 @@ import requests
 from IPython.core.display import HTML
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "referrer": "origin"
 }
 
 url = "http://api.open-notify.org/iss-now.json"
 
-response = requests.get(url, headers=HEADERS, timeout=15)
+response = requests.get(url,  timeout=25)
 response.raise_for_status()
 
 data = response.json()
@@ -84,16 +79,25 @@ timestamp = datetime.fromtimestamp(data["timestamp"]).strftime(
     "%Y-%m-%d %H:%M:%S"
 )
 
-iss_map = folium.Map(width=700,height=500,location=[lat, lon], zoom_start=2, tiles="OpenTopoMap")
+iss_map = folium.Map(width=700,height=500,location=[lat, lon], zoom_start=3, tiles="OpenTopoMap",title="ISS")
 
-popup_text = f"<b>ISS</b><br>Lat: {lat}<br>Lon: {lon}<br>Data: {timestamp} UTC"
-HTML (popup_text)
+#popup_text = f"<b>ISS</b><br>Lat: {lat}<br>Lon: {lon}<br>Data: {timestamp} UTC"
+#HTML (popup_text)
 folium.Marker(
     location=[lat, lon],
     popup=popup_text,
     icon=folium.Icon(color="red", icon="info-sign"),
 ).add_to(iss_map)
 
-iss_map
+#iss_map
 
+import io
+from PIL import Image
+import selenium
+
+img_data = iss_map._to_png(5)
+img = Image.open(io.BytesIO(img_data))
+img.save('image.png')
 ```
+
+<img src="image.png" alt="Trulli" width="500" height="333">
