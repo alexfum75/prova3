@@ -437,7 +437,7 @@ try:
     lat = float(data["iss_position"]["latitude"])
     lon = float(data["iss_position"]["longitude"])
     out = out + f'<font style="display: flex; justify-content: center; align-items: center;"><b>Timestamp:</b> &nbsp; \
-        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{dt}cd ..</b> &nbsp;</font> </font>\
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{dt}</b> &nbsp;</font> </font>\
         <font style="display: flex; justify-content: center; align-items: center;"><b>Latitudine:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lat:.4f}°</b></font></font> \
         <font style="display: flex; justify-content: center; align-items: center;"><b>Longitudine:</b> &nbsp; \
         <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lon:.4f}°</b></font></font>'
