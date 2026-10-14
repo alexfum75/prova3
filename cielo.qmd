@@ -16,7 +16,7 @@ execute:
 <span class="epigraph-source">Theodore Roosevelt (1858-1919)</span>
 :::
 
-<h2>Il cielo sopra di noi {{< bi stars >}} </h2>
+<h2>Il cielo sopra di noi</h2>
 
 ::: {.drop-cap}
 Qui di seguito sono visualizzate tre sezioni in cui viene riportato gli oggetti visibili in cielo per Monza. In alto a sinistra e' mostrata la tabella i dati principali della Luna con i principali artefatti visibili in questo momento: crateri e luoghi dell'allunaggio delle missioni Apollo. In alto a destra e' disegnata la parte illuminata della Luna delimitata dal limbo lunare in blu e dal terminatore in rosso. La seconda sezione mostra l'elenco dei pianeti ora presenti sopra l'orizzonte e la mappa del cielo in proiezione polare.
@@ -51,6 +51,7 @@ def get_location_from_ip(home = None):
             
     except requests.exceptions.RequestException as e:
         print(f"An error occurred: {e}")
+        return (None, None, None, None)
 
 location = get_location_from_ip("Monza")
 
@@ -403,6 +404,94 @@ genera_mappa_cielo()
 :::
 
 :::
+
+---
+
+:::: {.grid}
+
+<!--::: {.column width="50%"}-->
+::: {.g-col-md-6 .g-col-12 .text-center}
+
+<h5 style="text-align: center;">Coordinate in tempo reale della ISS {{< bi globe >}}</h5>
+
+```{python}
+#| echo: false
+#| 
+import requests
+from datetime import datetime
+from IPython.core.display import HTML
+
+# Definisci un User-Agent valido per evitare il blocco "Access Blocked"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+url = "http://api.open-notify.org/iss-now.json"
+out = '<p style="margin-top: 15px;"></p>'
+try:
+    response = requests.get(url, headers=HEADERS, timeout=15)
+    response.raise_for_status() # to validate
+
+    data = response.json()
+    dt = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
+    lat = float(data["iss_position"]["latitude"])
+    lon = float(data["iss_position"]["longitude"])
+    out = out + f'<font style="display: flex; justify-content: center; align-items: center;"><b>Timestamp:</b> &nbsp; \
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{dt}cd ..</b> &nbsp;</font> </font>\
+        <font style="display: flex; justify-content: center; align-items: center;"><b>Latitudine:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lat:.4f}°</b></font></font> \
+        <font style="display: flex; justify-content: center; align-items: center;"><b>Longitudine:</b> &nbsp; \
+        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lon:.4f}°</b></font></font>'
+
+    #print(f"Timestamp    : {dt} (UTC)")
+    #print(f"Latitudine   : {lat:.4f}°")
+    #print(f"Longitudine  : {lon:.4f}°")
+except Exception as e:
+    out = out + f"Errore nel recupero della posizione: {e}"
+HTML(out)
+```
+
+:::
+
+<!--::: {.column width="50%" .text-center}-->
+::: {.g-col-md-6 .g-col-12 .text-center}
+
+<h5 style="text-align: center;">Posizione in tempo reale della  ISS {{< bi globe >}}</h5>
+
+```{python}
+#| echo: false
+#| 
+import webbrowser
+from datetime import datetime
+import folium
+import requests
+from IPython.core.display import HTML
+import io
+from PIL import Image
+import selenium
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "referrer": "origin"
+}
+
+url = "http://api.open-notify.org/iss-now.json"
+
+response = requests.get(url,  timeout=25)
+response.raise_for_status()
+
+data = response.json()
+lat = float(data["iss_position"]["latitude"])
+lon = float(data["iss_position"]["longitude"])
+timestamp = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
+
+iss_map_4 = folium.Map(width=700,height=450,location=[lat, lon], zoom_start=4, tiles="OpenTopoMap",title="ISS")
+folium.Marker(location=[lat, lon], icon=folium.Icon(color="blu", icon="info-sign")).add_to(iss_map_4)
+iss_map_4
+
+```
+:::
+
+::::
 
 ---
 
