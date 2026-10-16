@@ -406,7 +406,7 @@ genera_mappa_cielo()
 
 ::: {.column width="50%"}
 
-<h5 style="text-align: center;">Posizione in tempo reale della ISS {{< bi globe >}}</h5>
+<h5 style="text-align: center;">Posizione in tempo reale della  ISS {{< bi globe >}}</h5>
 
 ```{python}
 #| echo: false
@@ -444,7 +444,7 @@ out = out + f'<font style="display: flex; justify-content: center; align-items: 
     <font style="display: flex; justify-content: center; align-items: center;"><b>Latitudine:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lat:.4f}°</b></font></font> \
     <font style="display: flex; justify-content: center; align-items: center;"><b>Longitudine:</b> &nbsp; \
     <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lon:.4f}°</b></font></font>'
-HTML(out)
+#HTML(out)
 #response = requests.get(url,  timeout=25)
 #response.raise_for_status()
 #data = response.json()
