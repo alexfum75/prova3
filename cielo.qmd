@@ -23,7 +23,6 @@ Qui di seguito sono visualizzate tre sezioni in cui viene riportato gli oggetti 
 ::: 
 
 ```{python}
-#| 
 from datetime import datetime
 
 def get_now():
@@ -36,7 +35,7 @@ def get_now():
 import requests
 
 def get_location_from_ip(home = None):
-    if home is "Monza":
+    if home == "Monza":
         return (45.5834, 9.2759, "Monza", "Italy")
 
     try:
@@ -56,8 +55,8 @@ def get_location_from_ip(home = None):
 location = get_location_from_ip("Monza")
 
 def print_location():
-    coord_string = f'<b style="text-align: center;">Coordinate: </b> <b style="color: #c68504;">{str(location[0])}, {str(location[1])} </b>'
-    pos_string = f'<b style="text-align: center;">Posizione:</b> <b style="color: #c68504;">{location[2].strip()}, {location[3].strip()} </b>'
+    coord_string = f'<b style="text-align: center;">Coordinate: </b> <b style="color: #c68504;">({str(location[0])}°,{str(location[1])}°)</b>'
+    pos_string = f'<b style="text-align: center;">Posizione:</b> <b style="color: #c68504;">{location[2].strip()}, {location[3].strip()}</b>'
     return coord_string, pos_string
 ```
 
@@ -71,15 +70,13 @@ from IPython.core.display import HTML
 
 coord_string, pos_string = print_location()
 HTML('<b style="text-align: center;">Ora locale: </b> <b style="color: #c68504;">' + get_now().strftime("%d/%m/%Y %H:%M:%S") + "</b> &ensp; " + coord_string + " &ensp; " + pos_string)
-``` 
+```
 :::
 
 ---
 
-<!--:::: {.columns}-->
 :::: {.grid}
 
-<!--::: {.column width="50%"}-->
 ::: {.g-col-md-6 .g-col-12 .text-center}
 <h5 style="text-align: center;">Visibilita' della Luna</h5>
 
@@ -235,7 +232,6 @@ HTML(calcola_dati_lunari_completi())
 
 :::
 
-<!--::: {.column width="50%" .text-center}-->
 ::: {.g-col-md-6 .g-col-12 .text-center}
 
 <h5 style="text-align: center;">La Luna vista dalla Terra</h5>
@@ -286,7 +282,7 @@ plt.show()
 
 :::: {.grid}
 
-::: {.g-col-md-6 .g-col-12}
+::: {.g-col-md-6 .g-col-12 .text-center}
 
 <h5 style="text-align: center;">Visibilita' dei pianeti</h5>
 
@@ -345,7 +341,6 @@ import matplotlib.pyplot as plt
 import math
 
 def genera_mappa_cielo():   
-    #location = get_location_from_ip()
     lat = location[0]
     lon = location[1]
 
@@ -403,59 +398,15 @@ genera_mappa_cielo()
 
 :::
 
-:::
+::::
 
 ---
 
-:::: {.grid}
+::: {.columns}
 
-<!--::: {.column width="50%"}-->
-::: {.g-col-md-6 .g-col-12 .text-center}
+::: {.column width="50%"}
 
-<h5 style="text-align: center;">Coordinate in tempo reale della ISS {{< bi globe >}}</h5>
-
-```{python}
-#| echo: false
-#| 
-import requests
-from datetime import datetime
-from IPython.core.display import HTML
-
-# Definisci un User-Agent valido per evitare il blocco "Access Blocked"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-}
-
-url = "http://api.open-notify.org/iss-now.json"
-out = '<p style="margin-top: 15px;"></p>'
-try:
-    response = requests.get(url, headers=HEADERS, timeout=25)
-    response.raise_for_status() # to validate
-
-    data = response.json()
-    dt = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
-    lat = float(data["iss_position"]["latitude"])
-    lon = float(data["iss_position"]["longitude"])
-    out = out + f'<font style="display: flex; justify-content: center; align-items: center;"><b>Timestamp:</b> &nbsp; \
-        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{dt}cd ..</b> &nbsp;</font> </font>\
-        <font style="display: flex; justify-content: center; align-items: center;"><b>Latitudine:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lat:.4f}°</b></font></font> \
-        <font style="display: flex; justify-content: center; align-items: center;"><b>Longitudine:</b> &nbsp; \
-        <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lon:.4f}°</b></font></font>'
-
-    #print(f"Timestamp    : {dt} (UTC)")
-    #print(f"Latitudine   : {lat:.4f}°")
-    #print(f"Longitudine  : {lon:.4f}°")
-except Exception as e:
-    out = out + f"Errore nel recupero della posizione: {e}"
-HTML(out)
-```
-
-:::
-
-<!--::: {.column width="50%" .text-center}-->
-::: {.g-col-md-6 .g-col-12 .text-center}
-
-<h5 style="text-align: center;">Posizione in tempo reale della  ISS {{< bi globe >}}</h5>
+<h5 style="text-align: center;">Posizione in tempo reale della ISS {{< bi globe >}}</h5>
 
 ```{python}
 #| echo: false
@@ -469,29 +420,118 @@ import io
 from PIL import Image
 import selenium
 
+# Definisci un User-Agent valido per evitare il blocco "Access Blocked"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     "referrer": "origin"
 }
 
 url = "http://api.open-notify.org/iss-now.json"
-
-response = requests.get(url,  timeout=25)
-response.raise_for_status()
-
-data = response.json()
+out = '<p style="margin-top: 15px;"></p>'
+data = None
+response = None
+try:
+    response = requests.get(url, headers=HEADERS, timeout=25)
+    response.raise_for_status() # to validate
+    data = response.json()
+except Exception as e:
+    out = out + f"Errore nel recupero della posizione: {e}"
+dt = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
 lat = float(data["iss_position"]["latitude"])
 lon = float(data["iss_position"]["longitude"])
+out = out + f'<font style="display: flex; justify-content: center; align-items: center;"><b>Timestamp:</b> &nbsp; \
+    <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{dt}</b> &nbsp;</font> </font>\
+    <font style="display: flex; justify-content: center; align-items: center;"><b>Latitudine:</b> &nbsp;  <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lat:.4f}°</b></font></font> \
+    <font style="display: flex; justify-content: center; align-items: center;"><b>Longitudine:</b> &nbsp; \
+    <font style="display: flex; color: #c68504;justify-content: center; align-items: center;"><b>{lon:.4f}°</b></font></font>'
+HTML(out)
+#response = requests.get(url,  timeout=25)
+#response.raise_for_status()
+#data = response.json()
+
+#lat = float(data["iss_position"]["latitude"])
+#lon = float(data["iss_position"]["longitude"])
 timestamp = datetime.fromtimestamp(data["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
 
 iss_map_4 = folium.Map(width=700,height=450,location=[lat, lon], zoom_start=4, tiles="OpenTopoMap",title="ISS")
 folium.Marker(location=[lat, lon], icon=folium.Icon(color="blu", icon="info-sign")).add_to(iss_map_4)
 iss_map_4
+```
 
+:::
+
+::: {.column width="50%"}
+
+<h5 style="text-align: center;">Prossimi passaggi della ISS {{< bi globe >}}</h5>
+
+```{python}
+#| echo: false
+#| 
+import json 
+import zoneinfo
+from IPython.core.display import HTML
+
+PARAMS = {
+    "lat": float(location[0]), 
+    "lon": float(location[1]),
+    "days_ahead": 7,
+    "alt": 0,
+    "visible_only": "True" 
+}
+
+def convertLocalTime(timestamp_UTC):
+    utc_dt = datetime.fromisoformat(timestamp_UTC.replace('Z', '+00:00'))
+    local_tz = zoneinfo.ZoneInfo("Europe/Rome")
+    local_dt = utc_dt.astimezone(local_tz)
+    return local_dt.strftime('%Y-%m-%d %H:%M:%S %Z')
+
+out = '<p style="margin-top: 15px;"></p>'
+
+url = "https://iss-api.polluxlabs.io/iss-pass"
+response = requests.get(url, params=PARAMS)
+if response.status_code == 200:
+    data = response.json()
+    #print(json.dumps(data, indent=4))
+    if data.get("passes"):
+        out = out + "<table><thead><tr><th>Sorge</th><th>Tramonta</th><th>Elevazione</th></tr></thead>"
+        lista_passaggi = data["passes"]
+        for i, next_pass in enumerate(lista_passaggi):        
+            # Parse the ISO timestamp
+            rise_time = convertLocalTime (next_pass["rise"]["time"])
+            rise_time_az = next_pass["rise"]["azimuth_deg"]
+            rise_time_compass = next_pass["rise"]["compass"]
+
+            culmination_time = convertLocalTime (next_pass["culmination"]["time"])
+            culmination_elevation = next_pass["culmination"]["elevation_deg"]
+            
+            set_time = convertLocalTime (next_pass["set"]["time"])
+            set_time_az = next_pass["set"]["azimuth_deg"]
+            set_time_compass = next_pass["set"]["compass"]
+
+            duration = next_pass["duration_sec"]
+            above_horizon = next_pass["above_horizon"]
+            visible = next_pass["visible"]
+
+            visible_start = convertLocalTime (next_pass["visible_start"])
+            visible_end = convertLocalTime (next_pass["visible_end"])
+
+            if above_horizon:
+                out = out + "<tr>"                
+                out = out + f'<th style="padding: 5px 7px;color: #c68504;justify-content: center; align-items: center;"><b>{visible_start}</b></th>'
+                out = out + f'<th style="padding: 5px 7px;color: #c68504;justify-content: center; align-items: center;"><b>{visible_end}</b></th>'
+                out = out + f'<th style="padding: 5px 7px;color: #c68504;justify-content: center; align-items: center;"><b>{culmination_elevation}°</b></th>'
+                out = out + "</tr>"
+        out = out + "</table>"
+    else:
+        out = '<b style="padding: 5px 7px;color: #c68504;justify-content: center; align-items: center;">No visible passes found for the upcoming period</b>'
+else:
+    out = out + f"API Error: {response.status_code}"
+
+HTML(out)
 ```
 :::
 
-::::
+:::
 
 ---
 

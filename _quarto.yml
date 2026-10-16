@@ -20,8 +20,6 @@ website:
             text: Home
           - href: Menu/LunaMarte.qmd
             text: Perché la Luna
-          - href: Menu/iss.qmd
-            text: ISS
           - href: Menu/friends.qmd
             text: "Link esterni"
           - text: "Astronomia e arte"
